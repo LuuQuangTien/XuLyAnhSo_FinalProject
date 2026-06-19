@@ -1,0 +1,1712 @@
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Low Contrast): (1337, 2358), Intensity: 121.6
+Rejected (Low Contrast): (1362, 2356), Intensity: 124.2
+Rejected (Low Contrast): (1390, 2355), Intensity: 136.2
+Rejected (Low Contrast): (1366, 2356), Intensity: 124.5
+Rejected (Low Contrast): (1376, 2348), Intensity: 130.8
+Rejected (Low Contrast): (1385, 2346), Intensity: 131.8
+Rejected (Low Contrast): (1398, 2346), Intensity: 130.1
+Rejected (Low Contrast): (1390, 2346), Intensity: 132.3
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Low Contrast): (1390, 2325), Intensity: 133.9
+Rejected (Low Contrast): (1399, 2321), Intensity: 136.8
+Rejected (Low Contrast): (1402, 2298), Intensity: 128.0
+Rejected (Low Contrast): (1402, 2293), Intensity: 127.3
+Rejected (Low Contrast): (1418, 2288), Intensity: 132.3
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Low Contrast): (1436, 2278), Intensity: 120.9
+Rejected (Low Contrast): (1435, 2270), Intensity: 122.9
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Low Contrast): (1348, 2239), Intensity: 120.8
+Rejected (Low Contrast): (1356, 2237), Intensity: 120.9
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Low Contrast): (1383, 2223), Intensity: 123.8
+Rejected (Low Contrast): (1373, 2222), Intensity: 123.7
+Rejected (Low Contrast): (1388, 2213), Intensity: 127.2
+Rejected (Low Contrast): (1354, 2213), Intensity: 122.9
+Rejected (Low Contrast): (1332, 2212), Intensity: 120.9
+Rejected (Low Contrast): (1363, 2210), Intensity: 120.7
+Rejected (Low Contrast): (1375, 2208), Intensity: 123.5
+Rejected (Low Contrast): (1357, 2201), Intensity: 122.3
+Rejected (Low Contrast): (1346, 2201), Intensity: 121.4
+Rejected (Low Contrast): (1312, 2193), Intensity: 121.7
+Rejected (Low Contrast): (1421, 2192), Intensity: 125.9
+Rejected (Low Contrast): (1374, 2184), Intensity: 124.0
+Rejected (Low Contrast): (1370, 2183), Intensity: 124.3
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Rejected (Low Contrast): (1168, 1910), Intensity: 165.4
+Rejected (Low Contrast): (1219, 1904), Intensity: 165.5
+Rejected (Low Contrast): (1269, 1899), Intensity: 166.2
+Rejected (Low Contrast): (1319, 1892), Intensity: 169.2
+Rejected (Low Contrast): (1162, 1867), Intensity: 165.9
+Rejected (Low Contrast): (1212, 1862), Intensity: 165.0
+Rejected (Low Contrast): (1263, 1857), Intensity: 163.7
+Rejected (Low Contrast): (1313, 1851), Intensity: 169.1
+Rejected (Low Contrast): (1235, 1838), Intensity: 150.6
+Rejected (Low Contrast): (1156, 1826), Intensity: 165.5
+Rejected (Low Contrast): (1206, 1820), Intensity: 163.4
+Rejected (Low Contrast): (1257, 1815), Intensity: 162.9
+Rejected (Low Contrast): (1307, 1809), Intensity: 166.7
+Rejected (Low Contrast): (1150, 1785), Intensity: 162.9
+Rejected (Low Contrast): (1200, 1779), Intensity: 160.7
+Rejected (Low Contrast): (1250, 1773), Intensity: 161.9
+Rejected (Low Contrast): (1301, 1768), Intensity: 167.0
+Rejected (Low Contrast): (1144, 1744), Intensity: 164.0
+Rejected (Low Contrast): (1194, 1738), Intensity: 162.9
+Rejected (Low Contrast): (1244, 1733), Intensity: 169.4
+Rejected (Low Contrast): (1294, 1727), Intensity: 171.0
+Rejected (Low Contrast): (1138, 1703), Intensity: 167.2
+Rejected (Low Contrast): (1188, 1697), Intensity: 166.3
+Rejected (Low Contrast): (1237, 1691), Intensity: 168.4
+Rejected (Low Contrast): (1287, 1685), Intensity: 171.6
+Rejected (Low Contrast): (1132, 1662), Intensity: 170.9
+Rejected (Low Contrast): (1180, 1656), Intensity: 170.0
+Rejected (Low Contrast): (1230, 1650), Intensity: 172.7
+Rejected (Low Contrast): (1280, 1644), Intensity: 170.4
+Rejected (Low Contrast): (1125, 1621), Intensity: 170.1
+Rejected (Low Contrast): (1437, 1605), Intensity: 132.3
+Rejected (Low Contrast): (1174, 1615), Intensity: 169.3
+Rejected (Low Contrast): (1433, 1632), Intensity: 129.0
+Rejected (Low Contrast): (1223, 1609), Intensity: 171.1
+Rejected (Low Contrast): (1273, 1603), Intensity: 170.1
+Rejected (Low Contrast): (1432, 1590), Intensity: 144.4
+Rejected (Low Contrast): (1428, 1575), Intensity: 163.8
+Rejected (Low Contrast): (1118, 1581), Intensity: 170.4
+Rejected (Low Contrast): (1422, 1564), Intensity: 170.9
+Rejected (Low Contrast): (1429, 1561), Intensity: 168.6
+Rejected (Low Contrast): (1167, 1575), Intensity: 168.6
+Rejected (Low Contrast): (1436, 1560), Intensity: 156.6
+Rejected (Low Contrast): (1216, 1569), Intensity: 171.2
+Rejected (Low Contrast): (1420, 1555), Intensity: 155.7
+Rejected (Low Contrast): (1431, 1551), Intensity: 170.0
+Rejected (Low Contrast): (1266, 1563), Intensity: 170.9
+Rejected (Low Contrast): (1433, 1545), Intensity: 167.8
+Rejected (Low Contrast): (1423, 1542), Intensity: 170.4
+Rejected (Low Contrast): (1275, 1542), Intensity: 162.2
+Rejected (Low Contrast): (1437, 1540), Intensity: 163.0
+Rejected (Low Contrast): (1423, 1533), Intensity: 181.5
+Rejected (Low Contrast): (1112, 1541), Intensity: 171.6
+Rejected (Low Contrast): (1437, 1524), Intensity: 163.7
+Rejected (Low Contrast): (1161, 1535), Intensity: 167.8
+Rejected (Low Contrast): (1420, 1521), Intensity: 172.5
+Rejected (Low Contrast): (1210, 1530), Intensity: 170.8
+Rejected (Low Contrast): (1417, 1512), Intensity: 170.5
+Rejected (Low Contrast): (1259, 1524), Intensity: 172.0
+Rejected (Low Contrast): (1410, 1506), Intensity: 169.3
+Rejected (Low Contrast): (1427, 1502), Intensity: 165.7
+Rejected (Low Contrast): (1434, 1488), Intensity: 186.6
+Rejected (Low Contrast): (1106, 1502), Intensity: 169.7
+Rejected (Low Contrast): (1154, 1496), Intensity: 166.9
+Rejected (Low Contrast): (1424, 1479), Intensity: 201.5
+Rejected (Low Contrast): (1203, 1490), Intensity: 169.3
+Rejected (Low Contrast): (1406, 1476), Intensity: 194.3
+Rejected (Low Contrast): (1434, 1476), Intensity: 190.3
+Rejected (Low Contrast): (1439, 1472), Intensity: 195.3
+Rejected (Low Contrast): (1252, 1484), Intensity: 171.1
+Rejected (Low Contrast): (1426, 1469), Intensity: 205.3
+Rejected (Low Contrast): (1429, 1457), Intensity: 201.2
+Rejected (Low Contrast): (1414, 1458), Intensity: 200.4
+Rejected (Low Contrast): (1400, 1453), Intensity: 191.1
+Rejected (Low Contrast): (1413, 1451), Intensity: 201.3
+Rejected (Low Contrast): (1100, 1463), Intensity: 169.9
+Rejected (Low Contrast): (1148, 1457), Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Rejected (Low Contrast): (1411, 1443), Intensity: 167.1
+Rejected (Low Contrast): (1427, 1440), Intensity: 206.5
+Rejected (Low Contrast): (1196, 1451), Intensity: 172.8
+Rejected (Low Contrast): (1396, 1434), Intensity: 192.9
+Rejected (Low Contrast): (1245, 1445), Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1405, 1425), Intensity: 208.2
+Rejected (Low Contrast): (1399, 1427), Intensity: 202.9
+Rejected (Low Contrast): (1411, 1415), Intensity: 208.8
+Rejected (Low Contrast): (1397, 1416), Intensity: 201.6
+Rejected (Low Contrast): (1423, 1413), Intensity: 209.9
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Rejected (Low Contrast): (1094, 1424), Intensity: 170.1
+Rejected (Low Contrast): (1405, 1409), Intensity: 203.0
+Rejected (Low Contrast): (1142, 1418), Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Rejected (Low Contrast): (1190, 1412), Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Rejected (Low Contrast): (1389, 1397), Intensity: 205.8
+Rejected (Low Contrast): (1238, 1406), Intensity: 174.8
+Rejected (Low Contrast): (1387, 1392), Intensity: 204.0
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1406, 1390), Intensity: 210.0
+Rejected (Low Contrast): (1387, 1387), Intensity: 204.3
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Rejected (Low Contrast): (1396, 1374), Intensity: 203.6
+Rejected (Low Contrast): (1088, 1385), Intensity: 171.8
+Rejected (Low Contrast): (1135, 1379), Intensity: 172.9
+Rejected (Low Contrast): (1390, 1364), Intensity: 204.2
+Rejected (Low Contrast): (1398, 1367), Intensity: 206.9
+Rejected (Low Contrast): (1183, 1374), Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Rejected (Low Contrast): (1231, 1368), Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Rejected (Low Contrast): (1385, 1354), Intensity: 195.6
+Rejected (Low Contrast): (1405, 1346), Intensity: 205.3
+Rejected (Low Contrast): (1387, 1345), Intensity: 190.0
+Rejected (Low Contrast): (1417, 1338), Intensity: 186.1
+Rejected (Low Contrast): (1082, 1346), Intensity: 173.5
+Rejected (Low Contrast): (1402, 1331), Intensity: 204.4
+Rejected (Low Contrast): (1129, 1341), Intensity: 172.5
+Rejected (Low Contrast): (1425, 1328), Intensity: 181.4
+Rejected (Low Contrast): (1396, 1326), Intensity: 209.5
+Rejected (Low Contrast): (1438, 1323), Intensity: 174.1
+Rejected (Low Contrast): (1177, 1336), Intensity: 174.3
+Rejected (Low Contrast): (1388, 1319), Intensity: 195.7
+Rejected (Low Contrast): (1376, 1330), Intensity: 203.8
+Rejected (Low Contrast): (1397, 1319), Intensity: 206.5
+Rejected (Low Contrast): (1224, 1330), Intensity: 176.1
+Rejected (Low Contrast): (1438, 1312), Intensity: 151.9
+Rejected (Low Contrast): (1206, 1313), Intensity: 165.7
+Rejected (Low Contrast): (1404, 1307), Intensity: 171.8
+Rejected (Low Contrast): (1372, 1310), Intensity: 206.5
+Rejected (Low Contrast): (1394, 1303), Intensity: 200.9
+Rejected (Low Contrast): (1439, 1298), Intensity: 164.0
+Rejected (Low Contrast): (1075, 1309), Intensity: 173.5
+Rejected (Low Contrast): (1392, 1296), Intensity: 183.3
+Rejected (Low Contrast): (1123, 1304), Intensity: 173.1
+Rejected (Low Contrast): (1409, 1291), Intensity: 179.3
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Rejected (Low Contrast): (1170, 1298), Intensity: 177.1
+Rejected (Low Contrast): (1406, 1281), Intensity: 193.7
+Rejected (Low Contrast): (1218, 1292), Intensity: 176.6
+Rejected (Low Contrast): (1391, 1278), Intensity: 209.7
+Rejected (Low Contrast): (1417, 1280), Intensity: 182.2
+Rejected (Low Contrast): (1368, 1279), Intensity: 199.3
+Rejected (Low Contrast): (1403, 1270), Intensity: 199.9
+Rejected (Low Contrast): (1438, 1268), Intensity: 169.7
+Rejected (Low Contrast): (1424, 1269), Intensity: 169.0
+Rejected (Low Contrast): (1409, 1266), Intensity: 198.5
+Rejected (Low Contrast): (1430, 1261), Intensity: 173.5
+Rejected (Low Contrast): (1069, 1273), Intensity: 174.7
+Rejected (Low Contrast): (1382, 1256), Intensity: 192.4
+Rejected (Low Contrast): (1116, 1267), Intensity: 176.2
+Rejected (Low Contrast): (1422, 1254), Intensity: 177.4
+Rejected (Low Contrast): (1433, 1254), Intensity: 166.1
+Rejected (Low Contrast): (1403, 1251), Intensity: 184.8
+Rejected (Low Contrast): (1367, 1254), Intensity: 189.4
+Rejected (Low Contrast): (1439, 1249), Intensity: 157.2
+Rejected (Low Contrast): (1163, 1261), Intensity: 176.9
+Rejected (Low Contrast): (1428, 1248), Intensity: 163.8
+Rejected (Low Contrast): (1417, 1249), Intensity: 174.5
+Rejected (Low Contrast): (1412, 1244), Intensity: 175.3
+Rejected (Low Contrast): (1388, 1243), Intensity: 180.8
+Rejected (Low Contrast): (1211, 1256), Intensity: 177.3
+Rejected (Low Contrast): (1437, 1243), Intensity: 120.9
+Rejected (Low Contrast): (1398, 1244), Intensity: 174.3
+Rejected (Low Contrast): (1417, 1240), Intensity: 162.4
+Rejected (Low Contrast): (1429, 1238), Intensity: 147.1
+Rejected (Low Contrast): (1362, 1240), Intensity: 176.9
+Rejected (Low Contrast): (1414, 1234), Intensity: 154.9
+Rejected (Low Contrast): (1379, 1238), Intensity: 158.0
+Rejected (Low Contrast): (1439, 1233), Intensity: 140.0
+Rejected (Low Contrast): (1062, 1237), Intensity: 176.6
+Rejected (Low Contrast): (1430, 1226), Intensity: 125.5
+Rejected (Low Contrast): (1402, 1229), Intensity: 157.4
+Rejected (Low Contrast): (1377, 1226), Intensity: 157.0
+Rejected (Low Contrast): (1109, 1232), Intensity: 178.7
+Rejected (Low Contrast): (1405, 1217), Intensity: 151.8
+Rejected (Low Contrast): (1156, 1227), Intensity: 180.1
+Rejected (Low Contrast): (1382, 1214), Intensity: 161.2
+Rejected (Low Contrast): (1363, 1223), Intensity: 159.7
+Rejected (Low Contrast): (1396, 1215), Intensity: 148.3
+Rejected (Low Contrast): (1382, 1209), Intensity: 150.8
+Rejected (Low Contrast): (1203, 1220), Intensity: 178.6
+Rejected (Low Contrast): (1392, 1207), Intensity: 143.9
+Rejected (Low Contrast): (1358, 1207), Intensity: 156.2
+Rejected (Low Contrast): (1177, 1206), Intensity: 172.1
+Rejected (Low Contrast): (1210, 1201), Intensity: 170.1
+Rejected (Low Contrast): (1388, 1200), Intensity: 133.4
+Rejected (Low Contrast): (1400, 1195), Intensity: 123.4
+Rejected (Low Contrast): (1382, 1194), Intensity: 136.2
+Rejected (Low Contrast): (1364, 1200), Intensity: 149.1
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Rejected (Low Contrast): (1055, 1202), Intensity: 178.0
+Rejected (Low Contrast): (1102, 1197), Intensity: 180.0
+Rejected (Low Contrast): (1148, 1192), Intensity: 182.1
+Rejected (Low Contrast): (1076, 1183), Intensity: 172.0
+Rejected (Low Contrast): (1195, 1186), Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Low Contrast): (1142, 1175), Intensity: 173.6
+Rejected (Low Contrast): (1196, 1169), Intensity: 174.4
+Rejected (Low Contrast): (1207, 1168), Intensity: 174.2
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Rejected (Low Contrast): (1048, 1169), Intensity: 179.6
+Rejected (Low Contrast): (1141, 1158), Intensity: 151.9
+Rejected (Low Contrast): (1036, 1154), Intensity: 167.3
+Rejected (Low Contrast): (1094, 1164), Intensity: 178.3
+Rejected (Low Contrast): (1067, 1150), Intensity: 174.5
+Rejected (Low Contrast): (1140, 1159), Intensity: 159.8
+Rejected (Low Contrast): (1113, 1145), Intensity: 176.3
+Rejected (Low Contrast): (1186, 1153), Intensity: 183.5
+Rejected (Low Contrast): (1156, 1140), Intensity: 178.4
+Rejected (Low Contrast): (1190, 1137), Intensity: 171.8
+Rejected (Low Contrast): (1042, 1137), Intensity: 138.8
+Rejected (Low Contrast): (1087, 1132), Intensity: 147.8
+Rejected (Low Contrast): (1041, 1138), Intensity: 155.5
+Rejected (Low Contrast): (1133, 1127), Intensity: 161.7
+Rejected (Low Contrast): (1087, 1132), Intensity: 158.0
+Rejected (Low Contrast): (1132, 1128), Intensity: 161.9
+Rejected (Low Contrast): (1059, 1119), Intensity: 171.7
+Rejected (Low Contrast): (1134, 1116), Intensity: 170.8
+Rejected (Low Contrast): (1094, 1116), Intensity: 168.0
+Rejected (Low Contrast): (1112, 1114), Intensity: 173.6
+Rejected (Low Contrast): (1178, 1122), Intensity: 184.0
+Rejected (Low Contrast): (1132, 1111), Intensity: 167.9
+Rejected (Low Contrast): (1162, 1108), Intensity: 173.3
+Rejected (Low Contrast): (1188, 1105), Intensity: 179.6
+Rejected (Low Contrast): (1036, 1104), Intensity: 170.9
+Rejected (Low Contrast): (1081, 1099), Intensity: 171.7
+Rejected (Low Contrast): (1126, 1094), Intensity: 178.9
+Rejected (Low Contrast): (1171, 1088), Intensity: 179.9
+Rejected (Low Contrast): (1146, 1073), Intensity: 172.6
+Rejected (Low Contrast): (1180, 1069), Intensity: 172.1
+Rejected (Low Contrast): (1032, 1067), Intensity: 175.4
+Rejected (Low Contrast): (1076, 1062), Intensity: 179.1
+Rejected (Low Contrast): (1021, 1050), Intensity: 165.3
+Rejected (Low Contrast): (1122, 1057), Intensity: 184.3
+Rejected (Low Contrast): (1048, 1047), Intensity: 171.3
+Rejected (Low Contrast): (1166, 1053), Intensity: 184.5
+Rejected (Low Contrast): (1095, 1042), Intensity: 174.0
+Rejected (Low Contrast): (1149, 1036), Intensity: 174.5
+Rejected (Low Contrast): (1027, 1031), Intensity: 178.3
+Rejected (Low Contrast): (1071, 1027), Intensity: 181.0
+Rejected (Low Contrast): (1013, 1015), Intensity: 165.7
+Rejected (Low Contrast): (1116, 1022), Intensity: 185.8
+Rejected (Low Contrast): (1045, 1011), Intensity: 171.3
+Rejected (Low Contrast): (1161, 1017), Intensity: 186.0
+Rejected (Low Contrast): (1093, 1006), Intensity: 173.7
+Rejected (Low Contrast): (1154, 1000), Intensity: 176.0
+Rejected (Low Contrast): (1131, 1001), Intensity: 178.3
+Rejected (Low Contrast): (1173, 998), Intensity: 176.0
+Rejected (Low Contrast): (1021, 996), Intensity: 177.6
+Rejected (Low Contrast): (1011, 980), Intensity: 168.6
+Rejected (Low Contrast): (1066, 991), Intensity: 179.7
+Rejected (Low Contrast): (1111, 986), Intensity: 184.8
+Rejected (Low Contrast): (1037, 976), Intensity: 171.8
+Rejected (Low Contrast): (1061, 974), Intensity: 170.8
+Rejected (Low Contrast): (1156, 982), Intensity: 186.4
+Rejected (Low Contrast): (1082, 971), Intensity: 176.2
+Rejected (Low Contrast): (1132, 966), Intensity: 178.1
+Rejected (Low Contrast): (1161, 963), Intensity: 172.8
+Rejected (Low Contrast): (1016, 962), Intensity: 179.0
+Rejected (Low Contrast): (1105, 951), Intensity: 161.2
+Rejected (Low Contrast): (1060, 957), Intensity: 179.6
+Rejected (Low Contrast): (1105, 951), Intensity: 165.3
+Rejected (Low Contrast): (1034, 942), Intensity: 173.2
+Rejected (Low Contrast): (1150, 946), Intensity: 185.0
+Rejected (Low Contrast): (1081, 936), Intensity: 176.4
+Rejected (Low Contrast): (1126, 931), Intensity: 177.7
+Rejected (Low Contrast): (1160, 927), Intensity: 173.6
+Rejected (Low Contrast): (1011, 928), Intensity: 136.9
+Rejected (Low Contrast): (1055, 922), Intensity: 147.0
+Rejected (Low Contrast): (1010, 928), Intensity: 154.5
+Rejected (Low Contrast): (997, 912), Intensity: 166.8
+Rejected (Low Contrast): (1055, 922), Intensity: 157.1
+Rejected (Low Contrast): (1029, 908), Intensity: 175.4
+Rejected (Low Contrast): (1100, 917), Intensity: 183.9
+Rejected (Low Contrast): (1076, 902), Intensity: 176.9
+Rejected (Low Contrast): (1145, 911), Intensity: 184.8
+Rejected (Low Contrast): (1119, 897), Intensity: 177.9
+Rejected (Low Contrast): (1148, 894), Intensity: 173.9
+Rejected (Low Contrast): (1049, 889), Intensity: 146.6
+Rejected (Low Contrast): (1005, 894), Intensity: 180.2
+Rejected (Low Contrast): (989, 880), Intensity: 171.7
+Rejected (Low Contrast): (324, 1463), Intensity: 167.2
+Rejected (Low Contrast): (1049, 889), Intensity: 158.8
+Rejected (Low Contrast): (1025, 875), Intensity: 176.2
+Rejected (Low Contrast): (1094, 884), Intensity: 185.2
+Rejected (Low Contrast): (1065, 870), Intensity: 177.2
+Rejected (Low Contrast): (1139, 878), Intensity: 184.2
+Rejected (Low Contrast): (1108, 865), Intensity: 180.5
+Rejected (Low Contrast): (1124, 863), Intensity: 179.1
+Rejected (Low Contrast): (597, 1433), Intensity: 181.8
+Rejected (Low Contrast): (1044, 856), Intensity: 148.0
+Rejected (Low Contrast): (999, 862), Intensity: 179.0
+Rejected (Low Contrast): (1087, 851), Intensity: 162.3
+Rejected (Low Contrast): (1043, 857), Intensity: 161.4
+Rejected (Low Contrast): (1009, 844), Intensity: 174.9
+Rejected (Low Contrast): (1017, 843), Intensity: 181.0
+Rejected (Low Contrast): (1132, 846), Intensity: 161.7
+Rejected (Low Contrast): (1097, 851), Intensity: 163.1
+Rejected (Low Contrast): (1026, 842), Intensity: 178.9
+Rejected (Low Contrast): (1083, 851), Intensity: 166.0
+Rejected (Low Contrast): (1069, 837), Intensity: 180.8
+Rejected (Low Contrast): (1137, 846), Intensity: 163.9
+Rejected (Low Contrast): (1125, 845), Intensity: 166.3
+Rejected (Low Contrast): (1108, 832), Intensity: 182.0
+Rejected (Low Contrast): (994, 829), Intensity: 143.1
+Rejected (Low Contrast): (868, 1400), Intensity: 183.4
+Rejected (Low Contrast): (1084, 822), Intensity: 168.7
+Rejected (Low Contrast): (1038, 824), Intensity: 152.0
+Rejected (Low Contrast): (986, 830), Intensity: 157.5
+Rejected (Low Contrast): (1001, 830), Intensity: 160.0
+Rejected (Low Contrast): (1081, 818), Intensity: 163.2
+Rejected (Low Contrast): (1038, 825), Intensity: 161.7
+Rejected (Low Contrast): (1126, 814), Intensity: 165.6
+Rejected (Low Contrast): (1075, 820), Intensity: 163.4
+Rejected (Low Contrast): (1089, 819), Intensity: 167.0
+Rejected (Low Contrast): (1126, 815), Intensity: 166.2
+Rejected (Low Contrast): (708, 802), Intensity: 132.3
+Rejected (Low Contrast): (1137, 1368), Intensity: 176.2
+Rejected (Low Contrast): (770, 782), Intensity: 171.0
+Rejected (Low Contrast): (705, 775), Intensity: 134.9
+Rejected (Low Contrast): (1001, 770), Intensity: 139.2
+Rejected (Low Contrast): (708, 761), Intensity: 170.2
+Rejected (Low Contrast): (1042, 758), Intensity: 176.8
+Rejected (Low Contrast): (205, 762), Intensity: 135.2
+Rejected (Low Contrast): (1028, 763), Intensity: 165.8
+Rejected (Low Contrast): (178, 763), Intensity: 132.5
+Rejected (Low Contrast): (1066, 760), Intensity: 166.5
+Rejected (Low Contrast): (1038, 753), Intensity: 172.8
+Rejected (Low Contrast): (235, 759), Intensity: 139.9
+Rejected (Low Contrast): (851, 756), Intensity: 158.5
+Rejected (Low Contrast): (902, 766), Intensity: 164.2
+Rejected (Low Contrast): (891, 753), Intensity: 159.7
+Rejected (Low Contrast): (701, 747), Intensity: 140.6
+Rejected (Low Contrast): (373, 744), Intensity: 163.7
+Rejected (Low Contrast): (997, 742), Intensity: 134.9
+Rejected (Low Contrast): (1037, 740), Intensity: 166.3
+Rejected (Low Contrast): (310, 739), Intensity: 159.6
+Rejected (Low Contrast): (988, 729), Intensity: 172.0
+Rejected (Low Contrast): (1023, 735), Intensity: 160.3
+Rejected (Low Contrast): (1113, 745), Intensity: 172.0
+Rejected (Low Contrast): (1075, 738), Intensity: 169.3
+Rejected (Low Contrast): (351, 735), Intensity: 165.3
+Rejected (Low Contrast): (372, 728), Intensity: 171.6
+Rejected (Low Contrast): (860, 735), Intensity: 164.5
+Rejected (Low Contrast): (846, 730), Intensity: 157.8
+Rejected (Low Contrast): (1100, 727), Intensity: 164.5
+Rejected (Low Contrast): (899, 729), Intensity: 165.8
+Rejected (Low Contrast): (452, 740), Intensity: 165.1
+Rejected (Low Contrast): (698, 719), Intensity: 137.1
+Rejected (Low Contrast): (935, 725), Intensity: 162.2
+Rejected (Low Contrast): (490, 721), Intensity: 156.6
+Rejected (Low Contrast): (468, 723), Intensity: 155.1
+Rejected (Low Contrast): (992, 713), Intensity: 140.9
+Rejected (Low Contrast): (1069, 721), Intensity: 168.1
+Rejected (Low Contrast): (1032, 713), Intensity: 167.3
+Rejected (Low Contrast): (1018, 708), Intensity: 158.9
+Rejected (Low Contrast): (773, 711), Intensity: 135.1
+Rejected (Low Contrast): (816, 738), Intensity: 162.5
+Rejected (Low Contrast): (1057, 703), Intensity: 161.6
+Rejected (Low Contrast): (1027, 696), Intensity: 175.0
+Rejected (Low Contrast): (176, 702), Intensity: 132.2
+Rejected (Low Contrast): (223, 698), Intensity: 138.1
+Rejected (Low Contrast): (894, 711), Intensity: 163.9
+Rejected (Low Contrast): (852, 702), Intensity: 143.1
+Rejected (Low Contrast): (898, 689), Intensity: 170.7
+Rejected (Low Contrast): (1106, 699), Intensity: 139.6
+Rejected (Low Contrast): (1085, 695), Intensity: 162.6
+Rejected (Low Contrast): (695, 691), Intensity: 142.7
+Rejected (Low Contrast): (932, 694), Intensity: 140.6
+Rejected (Low Contrast): (989, 685), Intensity: 135.8
+Rejected (Low Contrast): (1028, 685), Intensity: 163.7
+Rejected (Low Contrast): (776, 686), Intensity: 156.3
+Rejected (Low Contrast): (809, 682), Intensity: 164.1
+Rejected (Low Contrast): (1111, 675), Intensity: 159.4
+Rejected (Low Contrast): (1062, 677), Intensity: 138.7
+Rejected (Low Contrast): (310, 673), Intensity: 158.1
+Rejected (Low Contrast): (854, 676), Intensity: 155.5
+Rejected (Low Contrast): (1093, 669), Intensity: 165.2
+Rejected (Low Contrast): (442, 685), Intensity: 158.8
+Rejected (Low Contrast): (451, 664), Intensity: 165.7
+Rejected (Low Contrast): (890, 682), Intensity: 163.5
+Rejected (Low Contrast): (691, 664), Intensity: 131.9
+Rejected (Low Contrast): (390, 665), Intensity: 158.2
+Rejected (Low Contrast): (934, 668), Intensity: 156.5
+Rejected (Low Contrast): (919, 665), Intensity: 158.1
+Rejected (Low Contrast): (469, 661), Intensity: 170.9
+Rejected (Low Contrast): (984, 657), Intensity: 140.0
+Rejected (Low Contrast): (876, 650), Intensity: 172.8
+Rejected (Low Contrast): (768, 669), Intensity: 163.3
+Rejected (Low Contrast): (1021, 667), Intensity: 166.2
+Rejected (Low Contrast): (805, 656), Intensity: 162.4
+Rejected (Low Contrast): (190, 645), Intensity: 165.3
+Rejected (Low Contrast): (1009, 650), Intensity: 159.5
+Rejected (Low Contrast): (1067, 650), Intensity: 163.4
+Rejected (Low Contrast): (1048, 646), Intensity: 163.8
+Rejected (Low Contrast): (1103, 648), Intensity: 166.8
+Rejected (Low Contrast): (886, 656), Intensity: 162.0
+Rejected (Low Contrast): (1054, 636), Intensity: 177.2
+Rejected (Low Contrast): (154, 642), Intensity: 146.2
+Rejected (Low Contrast): (1088, 641), Intensity: 160.3
+Rejected (Low Contrast): (875, 640), Intensity: 151.3
+Rejected (Low Contrast): (688, 636), Intensity: 141.8
+Rejected (Low Contrast): (175, 639), Intensity: 140.7
+Rejected (Low Contrast): (980, 628), Intensity: 133.9
+Rejected (Low Contrast): (752, 629), Intensity: 159.5
+Rejected (Low Contrast): (1018, 630), Intensity: 168.5
+Rejected (Low Contrast): (764, 641), Intensity: 164.2
+Rejected (Low Contrast): (1006, 622), Intensity: 162.5
+Rejected (Low Contrast): (801, 623), Intensity: 139.6
+Rejected (Low Contrast): (1059, 624), Intensity: 169.6
+Rejected (Low Contrast): (831, 617), Intensity: 158.2
+Rejected (Low Contrast): (1096, 620), Intensity: 168.5
+Rejected (Low Contrast): (845, 644), Intensity: 163.7
+Rejected (Low Contrast): (800, 609), Intensity: 161.0
+Rejected (Low Contrast): (881, 615), Intensity: 137.4
+Rejected (Low Contrast): (685, 609), Intensity: 141.6
+Rejected (Low Contrast): (923, 628), Intensity: 163.3
+Rejected (Low Contrast): (415, 624), Intensity: 170.1
+Rejected (Low Contrast): (910, 608), Intensity: 158.8
+Rejected (Low Contrast): (976, 601), Intensity: 142.6
+Rejected (Low Contrast): (760, 605), Intensity: 168.8
+Rejected (Low Contrast): (749, 600), Intensity: 165.1
+Rejected (Low Contrast): (1016, 602), Intensity: 168.5
+Rejected (Low Contrast): (919, 594), Intensity: 173.0
+Rejected (Low Contrast): (1001, 595), Intensity: 160.9
+Rejected (Low Contrast): (807, 598), Intensity: 157.2
+Rejected (Low Contrast): (788, 596), Intensity: 163.5
+Rejected (Low Contrast): (1051, 606), Intensity: 165.6
+Rejected (Low Contrast): (1040, 590), Intensity: 162.2
+Rejected (Low Contrast): (841, 595), Intensity: 167.0
+Rejected (Low Contrast): (828, 590), Intensity: 158.9
+Rejected (Low Contrast): (1057, 585), Intensity: 174.4
+Rejected (Low Contrast): (1091, 600), Intensity: 165.5
+Rejected (Low Contrast): (886, 588), Intensity: 159.9
+Rejected (Low Contrast): (681, 582), Intensity: 141.2
+Rejected (Low Contrast): (1081, 584), Intensity: 161.8
+Rejected (Low Contrast): (925, 583), Intensity: 159.2
+Rejected (Low Contrast): (868, 584), Intensity: 162.2
+Rejected (Low Contrast): (835, 578), Intensity: 174.0
+Rejected (Low Contrast): (906, 580), Intensity: 160.3
+Rejected (Low Contrast): (827, 573), Intensity: 174.0
+Rejected (Low Contrast): (183, 576), Intensity: 137.7
+Rejected (Low Contrast): (157, 577), Intensity: 143.6
+Rejected (Low Contrast): (972, 573), Intensity: 147.8
+Rejected (Low Contrast): (1014, 574), Intensity: 167.9
+Rejected (Low Contrast): (755, 578), Intensity: 167.3
+Rejected (Low Contrast): (197, 573), Intensity: 134.3
+Rejected (Low Contrast): (334, 574), Intensity: 148.8
+Rejected (Low Contrast): (229, 572), Intensity: 139.0
+Rejected (Low Contrast): (794, 572), Intensity: 168.7
+Rejected (Low Contrast): (998, 566), Intensity: 162.2
+Rejected (Low Contrast): (843, 566), Intensity: 159.9
+Rejected (Low Contrast): (1049, 569), Intensity: 168.0
+Rejected (Low Contrast): (823, 563), Intensity: 161.9
+Rejected (Low Contrast): (295, 562), Intensity: 165.8
+Rejected (Low Contrast): (1091, 564), Intensity: 170.8
+Rejected (Low Contrast): (320, 556), Intensity: 161.9
+Rejected (Low Contrast): (284, 567), Intensity: 163.7
+Rejected (Low Contrast): (862, 558), Intensity: 164.0
+Rejected (Low Contrast): (876, 563), Intensity: 166.2
+Rejected (Low Contrast): (392, 561), Intensity: 151.2
+Rejected (Low Contrast): (1076, 555), Intensity: 164.4
+Rejected (Low Contrast): (679, 554), Intensity: 144.5
+Rejected (Low Contrast): (915, 558), Intensity: 165.3
+Rejected (Low Contrast): (363, 557), Intensity: 159.0
+Rejected (Low Contrast): (902, 551), Intensity: 160.8
+Rejected (Low Contrast): (452, 546), Intensity: 166.2
+Rejected (Low Contrast): (439, 545), Intensity: 164.8
+Rejected (Low Contrast): (865, 543), Intensity: 173.3
+Rejected (Low Contrast): (541, 552), Intensity: 177.9
+Rejected (Low Contrast): (437, 559), Intensity: 147.7
+Rejected (Low Contrast): (968, 546), Intensity: 145.5
+Rejected (Low Contrast): (678, 541), Intensity: 177.0
+Rejected (Low Contrast): (751, 551), Intensity: 169.0
+Rejected (Low Contrast): (1008, 547), Intensity: 167.4
+Rejected (Low Contrast): (992, 540), Intensity: 161.1
+Rejected (Low Contrast): (793, 546), Intensity: 169.4
+Rejected (Low Contrast): (781, 541), Intensity: 162.5
+Rejected (Low Contrast): (749, 533), Intensity: 170.6
+Rejected (Low Contrast): (820, 536), Intensity: 163.7
+Rejected (Low Contrast): (835, 541), Intensity: 169.5
+Rejected (Low Contrast): (1071, 601), Intensity: 164.3
+Rejected (Low Contrast): (1043, 549), Intensity: 165.3
+Rejected (Low Contrast): (1032, 535), Intensity: 160.6
+Rejected (Low Contrast): (790, 529), Intensity: 169.5
+Rejected (Low Contrast): (1088, 535), Intensity: 170.2
+Rejected (Low Contrast): (874, 535), Intensity: 169.4
+Rejected (Low Contrast): (912, 533), Intensity: 170.0
+Rejected (Low Contrast): (832, 525), Intensity: 168.5
+Rejected (Low Contrast): (1071, 527), Intensity: 167.1
+Rejected (Low Contrast): (898, 525), Intensity: 165.8
+Rejected (Low Contrast): (964, 519), Intensity: 150.2
+Rejected (Low Contrast): (1028, 514), Intensity: 172.7
+Rejected (Low Contrast): (886, 550), Intensity: 168.0
+Rejected (Low Contrast): (769, 512), Intensity: 132.3
+Rejected (Low Contrast): (751, 514), Intensity: 144.5
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Low Contrast): (961, 506), Intensity: 178.6
+Rejected (Low Contrast): (998, 515), Intensity: 145.4
+Rejected (Low Contrast): (786, 510), Intensity: 138.3
+Rejected (Low Contrast): (1042, 514), Intensity: 167.7
+Rejected (Low Contrast): (804, 508), Intensity: 140.6
+Rejected (Low Contrast): (997, 502), Intensity: 160.6
+Rejected (Low Contrast): (826, 506), Intensity: 133.3
+Rejected (Low Contrast): (1085, 505), Intensity: 171.0
+Rejected (Low Contrast): (1028, 587), Intensity: 163.2
+Rejected (Low Contrast): (788, 494), Intensity: 176.1
+Rejected (Low Contrast): (778, 494), Intensity: 175.8
+Rejected (Low Contrast): (1036, 501), Intensity: 166.1
+Rejected (Low Contrast): (802, 492), Intensity: 176.5
+Rejected (Low Contrast): (1058, 508), Intensity: 168.0
+Rejected (Low Contrast): (819, 490), Intensity: 175.6
+Rejected (Low Contrast): (812, 491), Intensity: 174.4
+Rejected (Low Contrast): (1075, 494), Intensity: 171.9
+Rejected (Low Contrast): (987, 484), Intensity: 133.4
+Rejected (Low Contrast): (811, 648), Intensity: 173.0
+Rejected (Low Contrast): (999, 481), Intensity: 133.9
+Rejected (Low Contrast): (1017, 478), Intensity: 139.9
+Rejected (Low Contrast): (1036, 475), Intensity: 140.8
+Rejected (Low Contrast): (1048, 472), Intensity: 144.5
+Rejected (Low Contrast): (988, 466), Intensity: 176.1
+Rejected (Low Contrast): (1012, 462), Intensity: 175.3
+Rejected (Low Contrast): (1052, 455), Intensity: 180.5
+Rejected (Low Contrast): (1040, 618), Intensity: 154.3
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 4
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Valid Center added: (1168, 1910), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 165.4
+Valid Center added: (1219, 1904), Area: 759.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.5
+Valid Center added: (1269, 1899), Area: 763.0, Ratio: 0.00021, Extent: 0.79, Intensity: 166.2
+Valid Center added: (1319, 1892), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 169.2
+Valid Center added: (1162, 1867), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 165.9
+Valid Center added: (1212, 1862), Area: 760.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.0
+Valid Center added: (1263, 1857), Area: 769.5, Ratio: 0.00021, Extent: 0.80, Intensity: 163.7
+Valid Center added: (1313, 1851), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 169.1
+Rejected (Size/Extent): (1235, 1838), Area: 342.0, Ratio: 0.00009, Extent: 0.48
+Valid Center added: (1156, 1826), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 165.5
+Valid Center added: (1206, 1820), Area: 746.0, Ratio: 0.00020, Extent: 0.80, Intensity: 163.4
+Valid Center added: (1257, 1815), Area: 772.0, Ratio: 0.00021, Extent: 0.80, Intensity: 162.9
+Valid Center added: (1307, 1809), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 166.7
+Valid Center added: (1150, 1785), Area: 714.5, Ratio: 0.00019, Extent: 0.82, Intensity: 162.9
+Valid Center added: (1200, 1779), Area: 745.0, Ratio: 0.00020, Extent: 0.80, Intensity: 160.7
+Valid Center added: (1250, 1773), Area: 759.0, Ratio: 0.00021, Extent: 0.79, Intensity: 161.9
+Valid Center added: (1301, 1768), Area: 746.0, Ratio: 0.00020, Extent: 0.78, Intensity: 167.0
+Valid Center added: (1144, 1744), Area: 726.5, Ratio: 0.00020, Extent: 0.81, Intensity: 164.0
+Valid Center added: (1194, 1738), Area: 745.5, Ratio: 0.00020, Extent: 0.83, Intensity: 162.9
+Valid Center added: (1244, 1733), Area: 743.0, Ratio: 0.00020, Extent: 0.77, Intensity: 169.4
+Valid Center added: (1294, 1727), Area: 748.5, Ratio: 0.00020, Extent: 0.78, Intensity: 171.0
+Valid Center added: (1138, 1703), Area: 713.0, Ratio: 0.00019, Extent: 0.82, Intensity: 167.2
+Valid Center added: (1188, 1697), Area: 734.0, Ratio: 0.00020, Extent: 0.79, Intensity: 166.3
+Valid Center added: (1237, 1691), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 168.4
+Valid Center added: (1287, 1685), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 171.6
+Valid Center added: (1132, 1662), Area: 700.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.9
+Valid Center added: (1180, 1656), Area: 724.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.0
+Valid Center added: (1230, 1650), Area: 727.5, Ratio: 0.00020, Extent: 0.81, Intensity: 172.7
+Valid Center added: (1280, 1644), Area: 720.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.4
+Valid Center added: (1125, 1621), Area: 698.5, Ratio: 0.00019, Extent: 0.80, Intensity: 170.1
+Valid Center added: (1174, 1615), Area: 718.5, Ratio: 0.00019, Extent: 0.80, Intensity: 169.3
+Rejected (Size/Extent): (1433, 1632), Area: 244.0, Ratio: 0.00007, Extent: 0.30
+Valid Center added: (1223, 1609), Area: 721.0, Ratio: 0.00020, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1273, 1603), Area: 721.0, Ratio: 0.00020, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1118, 1581), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 170.4
+Valid Center added: (1167, 1575), Area: 713.0, Ratio: 0.00019, Extent: 0.79, Intensity: 168.6
+Valid Center added: (1216, 1569), Area: 710.0, Ratio: 0.00019, Extent: 0.79, Intensity: 171.2
+Valid Center added: (1266, 1563), Area: 712.5, Ratio: 0.00019, Extent: 0.79, Intensity: 170.9
+Valid Center added: (1112, 1541), Area: 674.0, Ratio: 0.00018, Extent: 0.80, Intensity: 171.6
+Valid Center added: (1161, 1535), Area: 710.0, Ratio: 0.00019, Extent: 0.77, Intensity: 167.8
+Valid Center added: (1210, 1530), Area: 697.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.8
+Valid Center added: (1259, 1524), Area: 699.5, Ratio: 0.00019, Extent: 0.80, Intensity: 172.0
+Rejected (Size/Extent): (1427, 1502), Area: 163.5, Ratio: 0.00004, Extent: 0.48
+Valid Center added: (1106, 1502), Area: 675.0, Ratio: 0.00018, Extent: 0.80, Intensity: 169.7
+Valid Center added: (1154, 1496), Area: 704.0, Ratio: 0.00019, Extent: 0.81, Intensity: 166.9
+Valid Center added: (1203, 1490), Area: 703.0, Ratio: 0.00019, Extent: 0.81, Intensity: 169.3
+Valid Center added: (1252, 1484), Area: 696.5, Ratio: 0.00019, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1100, 1463), Area: 667.0, Ratio: 0.00018, Extent: 0.79, Intensity: 169.9
+Valid Center added: (1148, 1457), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Valid Center added: (1196, 1451), Area: 679.0, Ratio: 0.00018, Extent: 0.78, Intensity: 172.8
+Valid Center added: (1245, 1445), Area: 675.0, Ratio: 0.00018, Extent: 0.78, Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Valid Center added: (1094, 1424), Area: 658.0, Ratio: 0.00018, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1142, 1418), Area: 685.5, Ratio: 0.00019, Extent: 0.82, Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Valid Center added: (1190, 1412), Area: 672.5, Ratio: 0.00018, Extent: 0.83, Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Valid Center added: (1238, 1406), Area: 667.5, Ratio: 0.00018, Extent: 0.79, Intensity: 174.8
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Valid Center added: (1088, 1385), Area: 640.0, Ratio: 0.00017, Extent: 0.79, Intensity: 171.8
+Valid Center added: (1135, 1379), Area: 661.5, Ratio: 0.00018, Extent: 0.79, Intensity: 172.9
+Valid Center added: (1183, 1374), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Valid Center added: (1231, 1368), Area: 652.0, Ratio: 0.00018, Extent: 0.80, Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Valid Center added: (1082, 1346), Area: 640.5, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1129, 1341), Area: 654.5, Ratio: 0.00018, Extent: 0.81, Intensity: 172.5
+Valid Center added: (1177, 1336), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.3
+Valid Center added: (1224, 1330), Area: 646.0, Ratio: 0.00018, Extent: 0.80, Intensity: 176.1
+Valid Center added: (1075, 1309), Area: 623.0, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1123, 1304), Area: 649.5, Ratio: 0.00018, Extent: 0.83, Intensity: 173.1
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Valid Center added: (1170, 1298), Area: 641.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.1
+Valid Center added: (1218, 1292), Area: 632.5, Ratio: 0.00017, Extent: 0.78, Intensity: 176.6
+Valid Center added: (1069, 1273), Area: 612.5, Ratio: 0.00017, Extent: 0.78, Intensity: 174.7
+Valid Center added: (1116, 1267), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.2
+Valid Center added: (1163, 1261), Area: 612.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.9
+Valid Center added: (1211, 1256), Area: 616.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.3
+Valid Center added: (1062, 1237), Area: 578.0, Ratio: 0.00016, Extent: 0.79, Intensity: 176.6
+Valid Center added: (1109, 1232), Area: 589.0, Ratio: 0.00016, Extent: 0.81, Intensity: 178.7
+Valid Center added: (1156, 1227), Area: 587.0, Ratio: 0.00016, Extent: 0.81, Intensity: 180.1
+Rejected (Size/Extent): (1363, 1223), Area: 137.5, Ratio: 0.00004, Extent: 0.33
+Valid Center added: (1203, 1220), Area: 584.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.6
+Rejected (Size/Extent): (1364, 1200), Area: 120.5, Ratio: 0.00003, Extent: 0.27
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Valid Center added: (1055, 1202), Area: 552.5, Ratio: 0.00015, Extent: 0.82, Intensity: 178.0
+Valid Center added: (1102, 1197), Area: 557.5, Ratio: 0.00015, Extent: 0.80, Intensity: 180.0
+Valid Center added: (1148, 1192), Area: 567.0, Ratio: 0.00015, Extent: 0.81, Intensity: 182.1
+Valid Center added: (1195, 1186), Area: 562.0, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Valid Center added: (1048, 1169), Area: 512.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.6
+Valid Center added: (1094, 1164), Area: 537.0, Ratio: 0.00015, Extent: 0.83, Intensity: 178.3
+Rejected (Size/Extent): (1140, 1159), Area: 153.5, Ratio: 0.00004, Extent: 0.24
+Valid Center added: (1186, 1153), Area: 501.0, Ratio: 0.00014, Extent: 0.81, Intensity: 183.5
+Rejected (Size/Extent): (1041, 1138), Area: 135.0, Ratio: 0.00004, Extent: 0.23
+Rejected (Size/Extent): (1087, 1132), Area: 133.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1132, 1128), Area: 118.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (1178, 1122), Area: 504.0, Ratio: 0.00014, Extent: 0.82, Intensity: 184.0
+Valid Center added: (1036, 1104), Area: 596.5, Ratio: 0.00016, Extent: 0.82, Intensity: 170.9
+Valid Center added: (1081, 1099), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 171.7
+Valid Center added: (1126, 1094), Area: 590.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.9
+Valid Center added: (1171, 1088), Area: 587.5, Ratio: 0.00016, Extent: 0.81, Intensity: 179.9
+Valid Center added: (1032, 1067), Area: 571.5, Ratio: 0.00016, Extent: 0.81, Intensity: 175.4
+Valid Center added: (1076, 1062), Area: 577.0, Ratio: 0.00016, Extent: 0.79, Intensity: 179.1
+Valid Center added: (1122, 1057), Area: 571.0, Ratio: 0.00015, Extent: 0.81, Intensity: 184.3
+Valid Center added: (1166, 1053), Area: 556.5, Ratio: 0.00015, Extent: 0.80, Intensity: 184.5
+Valid Center added: (1027, 1031), Area: 555.0, Ratio: 0.00015, Extent: 0.79, Intensity: 178.3
+Valid Center added: (1071, 1027), Area: 570.5, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Valid Center added: (1116, 1022), Area: 560.5, Ratio: 0.00015, Extent: 0.80, Intensity: 185.8
+Valid Center added: (1161, 1017), Area: 552.5, Ratio: 0.00015, Extent: 0.79, Intensity: 186.0
+Valid Center added: (1021, 996), Area: 542.0, Ratio: 0.00015, Extent: 0.80, Intensity: 177.6
+Valid Center added: (1066, 991), Area: 564.0, Ratio: 0.00015, Extent: 0.77, Intensity: 179.7
+Valid Center added: (1111, 986), Area: 550.5, Ratio: 0.00015, Extent: 0.85, Intensity: 184.8
+Valid Center added: (1156, 982), Area: 544.0, Ratio: 0.00015, Extent: 0.81, Intensity: 186.4
+Valid Center added: (1016, 962), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 179.0
+Valid Center added: (1060, 957), Area: 550.0, Ratio: 0.00015, Extent: 0.79, Intensity: 179.6
+Rejected (Size/Extent): (1105, 951), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Valid Center added: (1150, 946), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 185.0
+Rejected (Size/Extent): (1010, 928), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1055, 922), Area: 138.0, Ratio: 0.00004, Extent: 0.21
+Valid Center added: (1100, 917), Area: 538.5, Ratio: 0.00015, Extent: 0.83, Intensity: 183.9
+Valid Center added: (1145, 911), Area: 526.5, Ratio: 0.00014, Extent: 0.81, Intensity: 184.8
+Valid Center added: (1005, 894), Area: 509.0, Ratio: 0.00014, Extent: 0.79, Intensity: 180.2
+Rejected (Size/Extent): (324, 1463), Area: 279150.5, Ratio: 0.07572, Extent: 0.94
+Rejected (Size/Extent): (1049, 889), Area: 135.5, Ratio: 0.00004, Extent: 0.20
+Valid Center added: (1094, 884), Area: 518.0, Ratio: 0.00014, Extent: 0.83, Intensity: 185.2
+Valid Center added: (1139, 878), Area: 515.0, Ratio: 0.00014, Extent: 0.79, Intensity: 184.2
+Rejected (Size/Extent): (597, 1433), Area: 274115.0, Ratio: 0.07436, Extent: 0.94
+Valid Center added: (999, 862), Area: 498.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.0
+Rejected (Size/Extent): (1043, 857), Area: 140.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (868, 1400), Area: 271943.5, Ratio: 0.07377, Extent: 0.94
+Rejected (Size/Extent): (1038, 825), Area: 113.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (1137, 1368), Area: 63515.0, Ratio: 0.01723, Extent: 0.22
+Rejected (Size/Extent): (178, 763), Area: 400.0, Ratio: 0.00011, Extent: 0.63
+Rejected (Size/Extent): (235, 759), Area: 286.0, Ratio: 0.00008, Extent: 0.61
+Rejected (Size/Extent): (902, 766), Area: 116.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (310, 739), Area: 101.5, Ratio: 0.00003, Extent: 0.42
+Rejected (Size/Extent): (452, 740), Area: 1580.0, Ratio: 0.00043, Extent: 0.12
+Rejected (Size/Extent): (935, 725), Area: 103.5, Ratio: 0.00003, Extent: 0.17
+Rejected (Size/Extent): (490, 721), Area: 138.0, Ratio: 0.00004, Extent: 0.41
+Rejected (Size/Extent): (468, 723), Area: 128.5, Ratio: 0.00003, Extent: 0.35
+Valid Center added: (773, 711), Area: 411.5, Ratio: 0.00011, Extent: 0.78, Intensity: 135.1
+Rejected (Size/Extent): (816, 738), Area: 376.0, Ratio: 0.00010, Extent: 0.17
+Rejected (Size/Extent): (176, 702), Area: 484.0, Ratio: 0.00013, Extent: 0.65
+Rejected (Size/Extent): (223, 698), Area: 289.0, Ratio: 0.00008, Extent: 0.60
+Rejected (Size/Extent): (894, 711), Area: 103.0, Ratio: 0.00003, Extent: 0.18
+Valid Center added: (852, 702), Area: 410.0, Ratio: 0.00011, Extent: 0.80, Intensity: 143.1
+Valid Center added: (1106, 699), Area: 396.5, Ratio: 0.00011, Extent: 0.77, Intensity: 139.6
+Valid Center added: (932, 694), Area: 391.0, Ratio: 0.00011, Extent: 0.81, Intensity: 140.6
+Rejected (Size/Extent): (809, 682), Area: 120.0, Ratio: 0.00003, Extent: 0.19
+Valid Center added: (1062, 677), Area: 372.0, Ratio: 0.00010, Extent: 0.78, Intensity: 138.7
+Rejected (Size/Extent): (442, 685), Area: 2085.0, Ratio: 0.00057, Extent: 0.12
+Rejected (Size/Extent): (890, 682), Area: 115.5, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (768, 669), Area: 113.0, Ratio: 0.00003, Extent: 0.19
+Rejected (Size/Extent): (805, 656), Area: 106.5, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (886, 656), Area: 107.0, Ratio: 0.00003, Extent: 0.25
+Rejected (Size/Extent): (175, 639), Area: 316.0, Ratio: 0.00009, Extent: 0.62
+Rejected (Size/Extent): (764, 641), Area: 102.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (801, 623), Area: 389.5, Ratio: 0.00011, Extent: 0.76, Intensity: 139.6
+Rejected (Size/Extent): (845, 644), Area: 248.0, Ratio: 0.00007, Extent: 0.15
+Valid Center added: (881, 615), Area: 385.0, Ratio: 0.00010, Extent: 0.80, Intensity: 137.4
+Rejected (Size/Extent): (923, 628), Area: 192.0, Ratio: 0.00005, Extent: 0.16
+Rejected (Size/Extent): (415, 624), Area: 1470.5, Ratio: 0.00040, Extent: 0.12
+Rejected (Size/Extent): (183, 576), Area: 103.0, Ratio: 0.00003, Extent: 0.61
+Rejected (Size/Extent): (157, 577), Area: 284.0, Ratio: 0.00008, Extent: 0.66
+Rejected (Size/Extent): (197, 573), Area: 118.5, Ratio: 0.00003, Extent: 0.55
+Rejected (Size/Extent): (334, 574), Area: 389.0, Ratio: 0.00011, Extent: 0.29
+Rejected (Size/Extent): (229, 572), Area: 404.0, Ratio: 0.00011, Extent: 0.55
+Rejected (Size/Extent): (794, 572), Area: 105.0, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (284, 567), Area: 155.5, Ratio: 0.00004, Extent: 0.15
+Rejected (Size/Extent): (392, 561), Area: 283.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (541, 552), Area: 377.5, Ratio: 0.00010, Extent: 0.55
+Rejected (Size/Extent): (437, 559), Area: 477.5, Ratio: 0.00013, Extent: 0.38
+Rejected (Size/Extent): (1071, 601), Area: 220.5, Ratio: 0.00006, Extent: 0.26
+Rejected (Size/Extent): (886, 550), Area: 283.5, Ratio: 0.00008, Extent: 0.07
+Rejected (Size/Extent): (751, 514), Area: 168.5, Ratio: 0.00005, Extent: 0.70
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Size/Extent): (998, 515), Area: 350.5, Ratio: 0.00010, Extent: 0.76
+Rejected (Size/Extent): (786, 510), Area: 139.5, Ratio: 0.00004, Extent: 0.61
+Rejected (Size/Extent): (826, 506), Area: 205.0, Ratio: 0.00006, Extent: 0.67
+Rejected (Size/Extent): (1028, 587), Area: 262.0, Ratio: 0.00007, Extent: 0.13
+Rejected (Size/Extent): (811, 648), Area: 17768.0, Ratio: 0.00482, Extent: 0.20
+Rejected (Size/Extent): (1017, 478), Area: 155.5, Ratio: 0.00004, Extent: 0.64
+Rejected (Size/Extent): (1048, 472), Area: 101.5, Ratio: 0.00003, Extent: 0.62
+Rejected (Size/Extent): (1040, 618), Area: 3192.0, Ratio: 0.00087, Extent: 0.06
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 116
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Valid Center added: (1168, 1910), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 165.4
+Valid Center added: (1219, 1904), Area: 759.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.5
+Valid Center added: (1269, 1899), Area: 763.0, Ratio: 0.00021, Extent: 0.79, Intensity: 166.2
+Valid Center added: (1319, 1892), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 169.2
+Valid Center added: (1162, 1867), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 165.9
+Valid Center added: (1212, 1862), Area: 760.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.0
+Valid Center added: (1263, 1857), Area: 769.5, Ratio: 0.00021, Extent: 0.80, Intensity: 163.7
+Valid Center added: (1313, 1851), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 169.1
+Rejected (Size/Extent): (1235, 1838), Area: 342.0, Ratio: 0.00009, Extent: 0.48
+Valid Center added: (1156, 1826), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 165.5
+Valid Center added: (1206, 1820), Area: 746.0, Ratio: 0.00020, Extent: 0.80, Intensity: 163.4
+Valid Center added: (1257, 1815), Area: 772.0, Ratio: 0.00021, Extent: 0.80, Intensity: 162.9
+Valid Center added: (1307, 1809), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 166.7
+Valid Center added: (1150, 1785), Area: 714.5, Ratio: 0.00019, Extent: 0.82, Intensity: 162.9
+Valid Center added: (1200, 1779), Area: 745.0, Ratio: 0.00020, Extent: 0.80, Intensity: 160.7
+Valid Center added: (1250, 1773), Area: 759.0, Ratio: 0.00021, Extent: 0.79, Intensity: 161.9
+Valid Center added: (1301, 1768), Area: 746.0, Ratio: 0.00020, Extent: 0.78, Intensity: 167.0
+Valid Center added: (1144, 1744), Area: 726.5, Ratio: 0.00020, Extent: 0.81, Intensity: 164.0
+Valid Center added: (1194, 1738), Area: 745.5, Ratio: 0.00020, Extent: 0.83, Intensity: 162.9
+Valid Center added: (1244, 1733), Area: 743.0, Ratio: 0.00020, Extent: 0.77, Intensity: 169.4
+Valid Center added: (1294, 1727), Area: 748.5, Ratio: 0.00020, Extent: 0.78, Intensity: 171.0
+Valid Center added: (1138, 1703), Area: 713.0, Ratio: 0.00019, Extent: 0.82, Intensity: 167.2
+Valid Center added: (1188, 1697), Area: 734.0, Ratio: 0.00020, Extent: 0.79, Intensity: 166.3
+Valid Center added: (1237, 1691), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 168.4
+Valid Center added: (1287, 1685), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 171.6
+Valid Center added: (1132, 1662), Area: 700.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.9
+Valid Center added: (1180, 1656), Area: 724.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.0
+Valid Center added: (1230, 1650), Area: 727.5, Ratio: 0.00020, Extent: 0.81, Intensity: 172.7
+Valid Center added: (1280, 1644), Area: 720.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.4
+Valid Center added: (1125, 1621), Area: 698.5, Ratio: 0.00019, Extent: 0.80, Intensity: 170.1
+Valid Center added: (1174, 1615), Area: 718.5, Ratio: 0.00019, Extent: 0.80, Intensity: 169.3
+Rejected (Size/Extent): (1433, 1632), Area: 244.0, Ratio: 0.00007, Extent: 0.30
+Valid Center added: (1223, 1609), Area: 721.0, Ratio: 0.00020, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1273, 1603), Area: 721.0, Ratio: 0.00020, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1118, 1581), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 170.4
+Valid Center added: (1167, 1575), Area: 713.0, Ratio: 0.00019, Extent: 0.79, Intensity: 168.6
+Valid Center added: (1216, 1569), Area: 710.0, Ratio: 0.00019, Extent: 0.79, Intensity: 171.2
+Valid Center added: (1266, 1563), Area: 712.5, Ratio: 0.00019, Extent: 0.79, Intensity: 170.9
+Valid Center added: (1112, 1541), Area: 674.0, Ratio: 0.00018, Extent: 0.80, Intensity: 171.6
+Valid Center added: (1161, 1535), Area: 710.0, Ratio: 0.00019, Extent: 0.77, Intensity: 167.8
+Valid Center added: (1210, 1530), Area: 697.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.8
+Valid Center added: (1259, 1524), Area: 699.5, Ratio: 0.00019, Extent: 0.80, Intensity: 172.0
+Rejected (Size/Extent): (1427, 1502), Area: 163.5, Ratio: 0.00004, Extent: 0.48
+Valid Center added: (1106, 1502), Area: 675.0, Ratio: 0.00018, Extent: 0.80, Intensity: 169.7
+Valid Center added: (1154, 1496), Area: 704.0, Ratio: 0.00019, Extent: 0.81, Intensity: 166.9
+Valid Center added: (1203, 1490), Area: 703.0, Ratio: 0.00019, Extent: 0.81, Intensity: 169.3
+Valid Center added: (1252, 1484), Area: 696.5, Ratio: 0.00019, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1100, 1463), Area: 667.0, Ratio: 0.00018, Extent: 0.79, Intensity: 169.9
+Valid Center added: (1148, 1457), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Valid Center added: (1196, 1451), Area: 679.0, Ratio: 0.00018, Extent: 0.78, Intensity: 172.8
+Valid Center added: (1245, 1445), Area: 675.0, Ratio: 0.00018, Extent: 0.78, Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Valid Center added: (1094, 1424), Area: 658.0, Ratio: 0.00018, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1142, 1418), Area: 685.5, Ratio: 0.00019, Extent: 0.82, Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Valid Center added: (1190, 1412), Area: 672.5, Ratio: 0.00018, Extent: 0.83, Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Valid Center added: (1238, 1406), Area: 667.5, Ratio: 0.00018, Extent: 0.79, Intensity: 174.8
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Valid Center added: (1088, 1385), Area: 640.0, Ratio: 0.00017, Extent: 0.79, Intensity: 171.8
+Valid Center added: (1135, 1379), Area: 661.5, Ratio: 0.00018, Extent: 0.79, Intensity: 172.9
+Valid Center added: (1183, 1374), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Valid Center added: (1231, 1368), Area: 652.0, Ratio: 0.00018, Extent: 0.80, Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Valid Center added: (1082, 1346), Area: 640.5, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1129, 1341), Area: 654.5, Ratio: 0.00018, Extent: 0.81, Intensity: 172.5
+Valid Center added: (1177, 1336), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.3
+Valid Center added: (1224, 1330), Area: 646.0, Ratio: 0.00018, Extent: 0.80, Intensity: 176.1
+Valid Center added: (1075, 1309), Area: 623.0, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1123, 1304), Area: 649.5, Ratio: 0.00018, Extent: 0.83, Intensity: 173.1
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Valid Center added: (1170, 1298), Area: 641.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.1
+Valid Center added: (1218, 1292), Area: 632.5, Ratio: 0.00017, Extent: 0.78, Intensity: 176.6
+Valid Center added: (1069, 1273), Area: 612.5, Ratio: 0.00017, Extent: 0.78, Intensity: 174.7
+Valid Center added: (1116, 1267), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.2
+Valid Center added: (1163, 1261), Area: 612.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.9
+Valid Center added: (1211, 1256), Area: 616.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.3
+Valid Center added: (1062, 1237), Area: 578.0, Ratio: 0.00016, Extent: 0.79, Intensity: 176.6
+Valid Center added: (1109, 1232), Area: 589.0, Ratio: 0.00016, Extent: 0.81, Intensity: 178.7
+Valid Center added: (1156, 1227), Area: 587.0, Ratio: 0.00016, Extent: 0.81, Intensity: 180.1
+Rejected (Size/Extent): (1363, 1223), Area: 137.5, Ratio: 0.00004, Extent: 0.33
+Valid Center added: (1203, 1220), Area: 584.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.6
+Rejected (Size/Extent): (1364, 1200), Area: 120.5, Ratio: 0.00003, Extent: 0.27
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Valid Center added: (1055, 1202), Area: 552.5, Ratio: 0.00015, Extent: 0.82, Intensity: 178.0
+Valid Center added: (1102, 1197), Area: 557.5, Ratio: 0.00015, Extent: 0.80, Intensity: 180.0
+Valid Center added: (1148, 1192), Area: 567.0, Ratio: 0.00015, Extent: 0.81, Intensity: 182.1
+Valid Center added: (1195, 1186), Area: 562.0, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Valid Center added: (1048, 1169), Area: 512.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.6
+Valid Center added: (1094, 1164), Area: 537.0, Ratio: 0.00015, Extent: 0.83, Intensity: 178.3
+Rejected (Size/Extent): (1140, 1159), Area: 153.5, Ratio: 0.00004, Extent: 0.24
+Valid Center added: (1186, 1153), Area: 501.0, Ratio: 0.00014, Extent: 0.81, Intensity: 183.5
+Rejected (Size/Extent): (1041, 1138), Area: 135.0, Ratio: 0.00004, Extent: 0.23
+Rejected (Size/Extent): (1087, 1132), Area: 133.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1132, 1128), Area: 118.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (1178, 1122), Area: 504.0, Ratio: 0.00014, Extent: 0.82, Intensity: 184.0
+Valid Center added: (1036, 1104), Area: 596.5, Ratio: 0.00016, Extent: 0.82, Intensity: 170.9
+Valid Center added: (1081, 1099), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 171.7
+Valid Center added: (1126, 1094), Area: 590.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.9
+Valid Center added: (1171, 1088), Area: 587.5, Ratio: 0.00016, Extent: 0.81, Intensity: 179.9
+Valid Center added: (1032, 1067), Area: 571.5, Ratio: 0.00016, Extent: 0.81, Intensity: 175.4
+Valid Center added: (1076, 1062), Area: 577.0, Ratio: 0.00016, Extent: 0.79, Intensity: 179.1
+Valid Center added: (1122, 1057), Area: 571.0, Ratio: 0.00015, Extent: 0.81, Intensity: 184.3
+Valid Center added: (1166, 1053), Area: 556.5, Ratio: 0.00015, Extent: 0.80, Intensity: 184.5
+Valid Center added: (1027, 1031), Area: 555.0, Ratio: 0.00015, Extent: 0.79, Intensity: 178.3
+Valid Center added: (1071, 1027), Area: 570.5, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Valid Center added: (1116, 1022), Area: 560.5, Ratio: 0.00015, Extent: 0.80, Intensity: 185.8
+Valid Center added: (1161, 1017), Area: 552.5, Ratio: 0.00015, Extent: 0.79, Intensity: 186.0
+Valid Center added: (1021, 996), Area: 542.0, Ratio: 0.00015, Extent: 0.80, Intensity: 177.6
+Valid Center added: (1066, 991), Area: 564.0, Ratio: 0.00015, Extent: 0.77, Intensity: 179.7
+Valid Center added: (1111, 986), Area: 550.5, Ratio: 0.00015, Extent: 0.85, Intensity: 184.8
+Valid Center added: (1156, 982), Area: 544.0, Ratio: 0.00015, Extent: 0.81, Intensity: 186.4
+Valid Center added: (1016, 962), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 179.0
+Valid Center added: (1060, 957), Area: 550.0, Ratio: 0.00015, Extent: 0.79, Intensity: 179.6
+Rejected (Size/Extent): (1105, 951), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Valid Center added: (1150, 946), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 185.0
+Rejected (Size/Extent): (1010, 928), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1055, 922), Area: 138.0, Ratio: 0.00004, Extent: 0.21
+Valid Center added: (1100, 917), Area: 538.5, Ratio: 0.00015, Extent: 0.83, Intensity: 183.9
+Valid Center added: (1145, 911), Area: 526.5, Ratio: 0.00014, Extent: 0.81, Intensity: 184.8
+Valid Center added: (1005, 894), Area: 509.0, Ratio: 0.00014, Extent: 0.79, Intensity: 180.2
+Rejected (Size/Extent): (324, 1463), Area: 279150.5, Ratio: 0.07572, Extent: 0.94
+Rejected (Size/Extent): (1049, 889), Area: 135.5, Ratio: 0.00004, Extent: 0.20
+Valid Center added: (1094, 884), Area: 518.0, Ratio: 0.00014, Extent: 0.83, Intensity: 185.2
+Valid Center added: (1139, 878), Area: 515.0, Ratio: 0.00014, Extent: 0.79, Intensity: 184.2
+Rejected (Size/Extent): (597, 1433), Area: 274115.0, Ratio: 0.07436, Extent: 0.94
+Valid Center added: (999, 862), Area: 498.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.0
+Rejected (Size/Extent): (1043, 857), Area: 140.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (868, 1400), Area: 271943.5, Ratio: 0.07377, Extent: 0.94
+Rejected (Size/Extent): (1038, 825), Area: 113.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (1137, 1368), Area: 63515.0, Ratio: 0.01723, Extent: 0.22
+Rejected (Size/Extent): (178, 763), Area: 400.0, Ratio: 0.00011, Extent: 0.63
+Rejected (Size/Extent): (235, 759), Area: 286.0, Ratio: 0.00008, Extent: 0.61
+Rejected (Size/Extent): (902, 766), Area: 116.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (310, 739), Area: 101.5, Ratio: 0.00003, Extent: 0.42
+Rejected (Size/Extent): (452, 740), Area: 1580.0, Ratio: 0.00043, Extent: 0.12
+Rejected (Size/Extent): (935, 725), Area: 103.5, Ratio: 0.00003, Extent: 0.17
+Rejected (Size/Extent): (490, 721), Area: 138.0, Ratio: 0.00004, Extent: 0.41
+Rejected (Size/Extent): (468, 723), Area: 128.5, Ratio: 0.00003, Extent: 0.35
+Valid Center added: (773, 711), Area: 411.5, Ratio: 0.00011, Extent: 0.78, Intensity: 135.1
+Rejected (Size/Extent): (816, 738), Area: 376.0, Ratio: 0.00010, Extent: 0.17
+Rejected (Size/Extent): (176, 702), Area: 484.0, Ratio: 0.00013, Extent: 0.65
+Rejected (Size/Extent): (223, 698), Area: 289.0, Ratio: 0.00008, Extent: 0.60
+Rejected (Size/Extent): (894, 711), Area: 103.0, Ratio: 0.00003, Extent: 0.18
+Valid Center added: (852, 702), Area: 410.0, Ratio: 0.00011, Extent: 0.80, Intensity: 143.1
+Valid Center added: (1106, 699), Area: 396.5, Ratio: 0.00011, Extent: 0.77, Intensity: 139.6
+Valid Center added: (932, 694), Area: 391.0, Ratio: 0.00011, Extent: 0.81, Intensity: 140.6
+Rejected (Size/Extent): (809, 682), Area: 120.0, Ratio: 0.00003, Extent: 0.19
+Valid Center added: (1062, 677), Area: 372.0, Ratio: 0.00010, Extent: 0.78, Intensity: 138.7
+Rejected (Size/Extent): (442, 685), Area: 2085.0, Ratio: 0.00057, Extent: 0.12
+Rejected (Size/Extent): (890, 682), Area: 115.5, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (768, 669), Area: 113.0, Ratio: 0.00003, Extent: 0.19
+Rejected (Size/Extent): (805, 656), Area: 106.5, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (886, 656), Area: 107.0, Ratio: 0.00003, Extent: 0.25
+Rejected (Size/Extent): (175, 639), Area: 316.0, Ratio: 0.00009, Extent: 0.62
+Rejected (Size/Extent): (764, 641), Area: 102.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (801, 623), Area: 389.5, Ratio: 0.00011, Extent: 0.76, Intensity: 139.6
+Rejected (Size/Extent): (845, 644), Area: 248.0, Ratio: 0.00007, Extent: 0.15
+Valid Center added: (881, 615), Area: 385.0, Ratio: 0.00010, Extent: 0.80, Intensity: 137.4
+Rejected (Size/Extent): (923, 628), Area: 192.0, Ratio: 0.00005, Extent: 0.16
+Rejected (Size/Extent): (415, 624), Area: 1470.5, Ratio: 0.00040, Extent: 0.12
+Rejected (Size/Extent): (183, 576), Area: 103.0, Ratio: 0.00003, Extent: 0.61
+Rejected (Size/Extent): (157, 577), Area: 284.0, Ratio: 0.00008, Extent: 0.66
+Rejected (Size/Extent): (197, 573), Area: 118.5, Ratio: 0.00003, Extent: 0.55
+Rejected (Size/Extent): (334, 574), Area: 389.0, Ratio: 0.00011, Extent: 0.29
+Rejected (Size/Extent): (229, 572), Area: 404.0, Ratio: 0.00011, Extent: 0.55
+Rejected (Size/Extent): (794, 572), Area: 105.0, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (284, 567), Area: 155.5, Ratio: 0.00004, Extent: 0.15
+Rejected (Size/Extent): (392, 561), Area: 283.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (541, 552), Area: 377.5, Ratio: 0.00010, Extent: 0.55
+Rejected (Size/Extent): (437, 559), Area: 477.5, Ratio: 0.00013, Extent: 0.38
+Rejected (Size/Extent): (1071, 601), Area: 220.5, Ratio: 0.00006, Extent: 0.26
+Rejected (Size/Extent): (886, 550), Area: 283.5, Ratio: 0.00008, Extent: 0.07
+Rejected (Size/Extent): (751, 514), Area: 168.5, Ratio: 0.00005, Extent: 0.70
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Size/Extent): (998, 515), Area: 350.5, Ratio: 0.00010, Extent: 0.76
+Rejected (Size/Extent): (786, 510), Area: 139.5, Ratio: 0.00004, Extent: 0.61
+Rejected (Size/Extent): (826, 506), Area: 205.0, Ratio: 0.00006, Extent: 0.67
+Rejected (Size/Extent): (1028, 587), Area: 262.0, Ratio: 0.00007, Extent: 0.13
+Rejected (Size/Extent): (811, 648), Area: 17768.0, Ratio: 0.00482, Extent: 0.20
+Rejected (Size/Extent): (1017, 478), Area: 155.5, Ratio: 0.00004, Extent: 0.64
+Rejected (Size/Extent): (1048, 472), Area: 101.5, Ratio: 0.00003, Extent: 0.62
+Rejected (Size/Extent): (1040, 618), Area: 3192.0, Ratio: 0.00087, Extent: 0.06
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 116
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Valid Center added: (1168, 1910), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 165.4
+Valid Center added: (1219, 1904), Area: 759.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.5
+Valid Center added: (1269, 1899), Area: 763.0, Ratio: 0.00021, Extent: 0.79, Intensity: 166.2
+Valid Center added: (1319, 1892), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 169.2
+Valid Center added: (1162, 1867), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 165.9
+Valid Center added: (1212, 1862), Area: 760.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.0
+Valid Center added: (1263, 1857), Area: 769.5, Ratio: 0.00021, Extent: 0.80, Intensity: 163.7
+Valid Center added: (1313, 1851), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 169.1
+Rejected (Size/Extent): (1235, 1838), Area: 342.0, Ratio: 0.00009, Extent: 0.48
+Valid Center added: (1156, 1826), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 165.5
+Valid Center added: (1206, 1820), Area: 746.0, Ratio: 0.00020, Extent: 0.80, Intensity: 163.4
+Valid Center added: (1257, 1815), Area: 772.0, Ratio: 0.00021, Extent: 0.80, Intensity: 162.9
+Valid Center added: (1307, 1809), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 166.7
+Valid Center added: (1150, 1785), Area: 714.5, Ratio: 0.00019, Extent: 0.82, Intensity: 162.9
+Valid Center added: (1200, 1779), Area: 745.0, Ratio: 0.00020, Extent: 0.80, Intensity: 160.7
+Valid Center added: (1250, 1773), Area: 759.0, Ratio: 0.00021, Extent: 0.79, Intensity: 161.9
+Valid Center added: (1301, 1768), Area: 746.0, Ratio: 0.00020, Extent: 0.78, Intensity: 167.0
+Valid Center added: (1144, 1744), Area: 726.5, Ratio: 0.00020, Extent: 0.81, Intensity: 164.0
+Valid Center added: (1194, 1738), Area: 745.5, Ratio: 0.00020, Extent: 0.83, Intensity: 162.9
+Valid Center added: (1244, 1733), Area: 743.0, Ratio: 0.00020, Extent: 0.77, Intensity: 169.4
+Valid Center added: (1294, 1727), Area: 748.5, Ratio: 0.00020, Extent: 0.78, Intensity: 171.0
+Valid Center added: (1138, 1703), Area: 713.0, Ratio: 0.00019, Extent: 0.82, Intensity: 167.2
+Valid Center added: (1188, 1697), Area: 734.0, Ratio: 0.00020, Extent: 0.79, Intensity: 166.3
+Valid Center added: (1237, 1691), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 168.4
+Valid Center added: (1287, 1685), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 171.6
+Valid Center added: (1132, 1662), Area: 700.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.9
+Valid Center added: (1180, 1656), Area: 724.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.0
+Valid Center added: (1230, 1650), Area: 727.5, Ratio: 0.00020, Extent: 0.81, Intensity: 172.7
+Valid Center added: (1280, 1644), Area: 720.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.4
+Valid Center added: (1125, 1621), Area: 698.5, Ratio: 0.00019, Extent: 0.80, Intensity: 170.1
+Valid Center added: (1174, 1615), Area: 718.5, Ratio: 0.00019, Extent: 0.80, Intensity: 169.3
+Rejected (Size/Extent): (1433, 1632), Area: 244.0, Ratio: 0.00007, Extent: 0.30
+Valid Center added: (1223, 1609), Area: 721.0, Ratio: 0.00020, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1273, 1603), Area: 721.0, Ratio: 0.00020, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1118, 1581), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 170.4
+Valid Center added: (1167, 1575), Area: 713.0, Ratio: 0.00019, Extent: 0.79, Intensity: 168.6
+Valid Center added: (1216, 1569), Area: 710.0, Ratio: 0.00019, Extent: 0.79, Intensity: 171.2
+Valid Center added: (1266, 1563), Area: 712.5, Ratio: 0.00019, Extent: 0.79, Intensity: 170.9
+Valid Center added: (1112, 1541), Area: 674.0, Ratio: 0.00018, Extent: 0.80, Intensity: 171.6
+Valid Center added: (1161, 1535), Area: 710.0, Ratio: 0.00019, Extent: 0.77, Intensity: 167.8
+Valid Center added: (1210, 1530), Area: 697.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.8
+Valid Center added: (1259, 1524), Area: 699.5, Ratio: 0.00019, Extent: 0.80, Intensity: 172.0
+Rejected (Size/Extent): (1427, 1502), Area: 163.5, Ratio: 0.00004, Extent: 0.48
+Valid Center added: (1106, 1502), Area: 675.0, Ratio: 0.00018, Extent: 0.80, Intensity: 169.7
+Valid Center added: (1154, 1496), Area: 704.0, Ratio: 0.00019, Extent: 0.81, Intensity: 166.9
+Valid Center added: (1203, 1490), Area: 703.0, Ratio: 0.00019, Extent: 0.81, Intensity: 169.3
+Valid Center added: (1252, 1484), Area: 696.5, Ratio: 0.00019, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1100, 1463), Area: 667.0, Ratio: 0.00018, Extent: 0.79, Intensity: 169.9
+Valid Center added: (1148, 1457), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Valid Center added: (1196, 1451), Area: 679.0, Ratio: 0.00018, Extent: 0.78, Intensity: 172.8
+Valid Center added: (1245, 1445), Area: 675.0, Ratio: 0.00018, Extent: 0.78, Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Valid Center added: (1094, 1424), Area: 658.0, Ratio: 0.00018, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1142, 1418), Area: 685.5, Ratio: 0.00019, Extent: 0.82, Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Valid Center added: (1190, 1412), Area: 672.5, Ratio: 0.00018, Extent: 0.83, Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Valid Center added: (1238, 1406), Area: 667.5, Ratio: 0.00018, Extent: 0.79, Intensity: 174.8
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Valid Center added: (1088, 1385), Area: 640.0, Ratio: 0.00017, Extent: 0.79, Intensity: 171.8
+Valid Center added: (1135, 1379), Area: 661.5, Ratio: 0.00018, Extent: 0.79, Intensity: 172.9
+Valid Center added: (1183, 1374), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Valid Center added: (1231, 1368), Area: 652.0, Ratio: 0.00018, Extent: 0.80, Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Valid Center added: (1082, 1346), Area: 640.5, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1129, 1341), Area: 654.5, Ratio: 0.00018, Extent: 0.81, Intensity: 172.5
+Valid Center added: (1177, 1336), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.3
+Valid Center added: (1224, 1330), Area: 646.0, Ratio: 0.00018, Extent: 0.80, Intensity: 176.1
+Valid Center added: (1075, 1309), Area: 623.0, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1123, 1304), Area: 649.5, Ratio: 0.00018, Extent: 0.83, Intensity: 173.1
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Valid Center added: (1170, 1298), Area: 641.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.1
+Valid Center added: (1218, 1292), Area: 632.5, Ratio: 0.00017, Extent: 0.78, Intensity: 176.6
+Valid Center added: (1069, 1273), Area: 612.5, Ratio: 0.00017, Extent: 0.78, Intensity: 174.7
+Valid Center added: (1116, 1267), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.2
+Valid Center added: (1163, 1261), Area: 612.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.9
+Valid Center added: (1211, 1256), Area: 616.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.3
+Valid Center added: (1062, 1237), Area: 578.0, Ratio: 0.00016, Extent: 0.79, Intensity: 176.6
+Valid Center added: (1109, 1232), Area: 589.0, Ratio: 0.00016, Extent: 0.81, Intensity: 178.7
+Valid Center added: (1156, 1227), Area: 587.0, Ratio: 0.00016, Extent: 0.81, Intensity: 180.1
+Rejected (Size/Extent): (1363, 1223), Area: 137.5, Ratio: 0.00004, Extent: 0.33
+Valid Center added: (1203, 1220), Area: 584.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.6
+Rejected (Size/Extent): (1364, 1200), Area: 120.5, Ratio: 0.00003, Extent: 0.27
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Valid Center added: (1055, 1202), Area: 552.5, Ratio: 0.00015, Extent: 0.82, Intensity: 178.0
+Valid Center added: (1102, 1197), Area: 557.5, Ratio: 0.00015, Extent: 0.80, Intensity: 180.0
+Valid Center added: (1148, 1192), Area: 567.0, Ratio: 0.00015, Extent: 0.81, Intensity: 182.1
+Valid Center added: (1195, 1186), Area: 562.0, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Valid Center added: (1048, 1169), Area: 512.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.6
+Valid Center added: (1094, 1164), Area: 537.0, Ratio: 0.00015, Extent: 0.83, Intensity: 178.3
+Rejected (Size/Extent): (1140, 1159), Area: 153.5, Ratio: 0.00004, Extent: 0.24
+Valid Center added: (1186, 1153), Area: 501.0, Ratio: 0.00014, Extent: 0.81, Intensity: 183.5
+Rejected (Size/Extent): (1041, 1138), Area: 135.0, Ratio: 0.00004, Extent: 0.23
+Rejected (Size/Extent): (1087, 1132), Area: 133.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1132, 1128), Area: 118.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (1178, 1122), Area: 504.0, Ratio: 0.00014, Extent: 0.82, Intensity: 184.0
+Valid Center added: (1036, 1104), Area: 596.5, Ratio: 0.00016, Extent: 0.82, Intensity: 170.9
+Valid Center added: (1081, 1099), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 171.7
+Valid Center added: (1126, 1094), Area: 590.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.9
+Valid Center added: (1171, 1088), Area: 587.5, Ratio: 0.00016, Extent: 0.81, Intensity: 179.9
+Valid Center added: (1032, 1067), Area: 571.5, Ratio: 0.00016, Extent: 0.81, Intensity: 175.4
+Valid Center added: (1076, 1062), Area: 577.0, Ratio: 0.00016, Extent: 0.79, Intensity: 179.1
+Valid Center added: (1122, 1057), Area: 571.0, Ratio: 0.00015, Extent: 0.81, Intensity: 184.3
+Valid Center added: (1166, 1053), Area: 556.5, Ratio: 0.00015, Extent: 0.80, Intensity: 184.5
+Valid Center added: (1027, 1031), Area: 555.0, Ratio: 0.00015, Extent: 0.79, Intensity: 178.3
+Valid Center added: (1071, 1027), Area: 570.5, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Valid Center added: (1116, 1022), Area: 560.5, Ratio: 0.00015, Extent: 0.80, Intensity: 185.8
+Valid Center added: (1161, 1017), Area: 552.5, Ratio: 0.00015, Extent: 0.79, Intensity: 186.0
+Valid Center added: (1021, 996), Area: 542.0, Ratio: 0.00015, Extent: 0.80, Intensity: 177.6
+Valid Center added: (1066, 991), Area: 564.0, Ratio: 0.00015, Extent: 0.77, Intensity: 179.7
+Valid Center added: (1111, 986), Area: 550.5, Ratio: 0.00015, Extent: 0.85, Intensity: 184.8
+Valid Center added: (1156, 982), Area: 544.0, Ratio: 0.00015, Extent: 0.81, Intensity: 186.4
+Valid Center added: (1016, 962), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 179.0
+Valid Center added: (1060, 957), Area: 550.0, Ratio: 0.00015, Extent: 0.79, Intensity: 179.6
+Rejected (Size/Extent): (1105, 951), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Valid Center added: (1150, 946), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 185.0
+Rejected (Size/Extent): (1010, 928), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1055, 922), Area: 138.0, Ratio: 0.00004, Extent: 0.21
+Valid Center added: (1100, 917), Area: 538.5, Ratio: 0.00015, Extent: 0.83, Intensity: 183.9
+Valid Center added: (1145, 911), Area: 526.5, Ratio: 0.00014, Extent: 0.81, Intensity: 184.8
+Valid Center added: (1005, 894), Area: 509.0, Ratio: 0.00014, Extent: 0.79, Intensity: 180.2
+Rejected (Size/Extent): (324, 1463), Area: 279150.5, Ratio: 0.07572, Extent: 0.94
+Rejected (Size/Extent): (1049, 889), Area: 135.5, Ratio: 0.00004, Extent: 0.20
+Valid Center added: (1094, 884), Area: 518.0, Ratio: 0.00014, Extent: 0.83, Intensity: 185.2
+Valid Center added: (1139, 878), Area: 515.0, Ratio: 0.00014, Extent: 0.79, Intensity: 184.2
+Rejected (Size/Extent): (597, 1433), Area: 274115.0, Ratio: 0.07436, Extent: 0.94
+Valid Center added: (999, 862), Area: 498.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.0
+Rejected (Size/Extent): (1043, 857), Area: 140.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (868, 1400), Area: 271943.5, Ratio: 0.07377, Extent: 0.94
+Rejected (Size/Extent): (1038, 825), Area: 113.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (1137, 1368), Area: 63515.0, Ratio: 0.01723, Extent: 0.22
+Rejected (Size/Extent): (178, 763), Area: 400.0, Ratio: 0.00011, Extent: 0.63
+Rejected (Size/Extent): (235, 759), Area: 286.0, Ratio: 0.00008, Extent: 0.61
+Rejected (Size/Extent): (902, 766), Area: 116.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (310, 739), Area: 101.5, Ratio: 0.00003, Extent: 0.42
+Rejected (Size/Extent): (452, 740), Area: 1580.0, Ratio: 0.00043, Extent: 0.12
+Rejected (Size/Extent): (935, 725), Area: 103.5, Ratio: 0.00003, Extent: 0.17
+Rejected (Size/Extent): (490, 721), Area: 138.0, Ratio: 0.00004, Extent: 0.41
+Rejected (Size/Extent): (468, 723), Area: 128.5, Ratio: 0.00003, Extent: 0.35
+Valid Center added: (773, 711), Area: 411.5, Ratio: 0.00011, Extent: 0.78, Intensity: 135.1
+Rejected (Size/Extent): (816, 738), Area: 376.0, Ratio: 0.00010, Extent: 0.17
+Rejected (Size/Extent): (176, 702), Area: 484.0, Ratio: 0.00013, Extent: 0.65
+Rejected (Size/Extent): (223, 698), Area: 289.0, Ratio: 0.00008, Extent: 0.60
+Rejected (Size/Extent): (894, 711), Area: 103.0, Ratio: 0.00003, Extent: 0.18
+Valid Center added: (852, 702), Area: 410.0, Ratio: 0.00011, Extent: 0.80, Intensity: 143.1
+Valid Center added: (1106, 699), Area: 396.5, Ratio: 0.00011, Extent: 0.77, Intensity: 139.6
+Valid Center added: (932, 694), Area: 391.0, Ratio: 0.00011, Extent: 0.81, Intensity: 140.6
+Rejected (Size/Extent): (809, 682), Area: 120.0, Ratio: 0.00003, Extent: 0.19
+Valid Center added: (1062, 677), Area: 372.0, Ratio: 0.00010, Extent: 0.78, Intensity: 138.7
+Rejected (Size/Extent): (442, 685), Area: 2085.0, Ratio: 0.00057, Extent: 0.12
+Rejected (Size/Extent): (890, 682), Area: 115.5, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (768, 669), Area: 113.0, Ratio: 0.00003, Extent: 0.19
+Rejected (Size/Extent): (805, 656), Area: 106.5, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (886, 656), Area: 107.0, Ratio: 0.00003, Extent: 0.25
+Rejected (Size/Extent): (175, 639), Area: 316.0, Ratio: 0.00009, Extent: 0.62
+Rejected (Size/Extent): (764, 641), Area: 102.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (801, 623), Area: 389.5, Ratio: 0.00011, Extent: 0.76, Intensity: 139.6
+Rejected (Size/Extent): (845, 644), Area: 248.0, Ratio: 0.00007, Extent: 0.15
+Valid Center added: (881, 615), Area: 385.0, Ratio: 0.00010, Extent: 0.80, Intensity: 137.4
+Rejected (Size/Extent): (923, 628), Area: 192.0, Ratio: 0.00005, Extent: 0.16
+Rejected (Size/Extent): (415, 624), Area: 1470.5, Ratio: 0.00040, Extent: 0.12
+Rejected (Size/Extent): (183, 576), Area: 103.0, Ratio: 0.00003, Extent: 0.61
+Rejected (Size/Extent): (157, 577), Area: 284.0, Ratio: 0.00008, Extent: 0.66
+Rejected (Size/Extent): (197, 573), Area: 118.5, Ratio: 0.00003, Extent: 0.55
+Rejected (Size/Extent): (334, 574), Area: 389.0, Ratio: 0.00011, Extent: 0.29
+Rejected (Size/Extent): (229, 572), Area: 404.0, Ratio: 0.00011, Extent: 0.55
+Rejected (Size/Extent): (794, 572), Area: 105.0, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (284, 567), Area: 155.5, Ratio: 0.00004, Extent: 0.15
+Rejected (Size/Extent): (392, 561), Area: 283.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (541, 552), Area: 377.5, Ratio: 0.00010, Extent: 0.55
+Rejected (Size/Extent): (437, 559), Area: 477.5, Ratio: 0.00013, Extent: 0.38
+Rejected (Size/Extent): (1071, 601), Area: 220.5, Ratio: 0.00006, Extent: 0.26
+Rejected (Size/Extent): (886, 550), Area: 283.5, Ratio: 0.00008, Extent: 0.07
+Rejected (Size/Extent): (751, 514), Area: 168.5, Ratio: 0.00005, Extent: 0.70
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Size/Extent): (998, 515), Area: 350.5, Ratio: 0.00010, Extent: 0.76
+Rejected (Size/Extent): (786, 510), Area: 139.5, Ratio: 0.00004, Extent: 0.61
+Rejected (Size/Extent): (826, 506), Area: 205.0, Ratio: 0.00006, Extent: 0.67
+Rejected (Size/Extent): (1028, 587), Area: 262.0, Ratio: 0.00007, Extent: 0.13
+Rejected (Size/Extent): (811, 648), Area: 17768.0, Ratio: 0.00482, Extent: 0.20
+Rejected (Size/Extent): (1017, 478), Area: 155.5, Ratio: 0.00004, Extent: 0.64
+Rejected (Size/Extent): (1048, 472), Area: 101.5, Ratio: 0.00003, Extent: 0.62
+Rejected (Size/Extent): (1040, 618), Area: 3192.0, Ratio: 0.00087, Extent: 0.06
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 116
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)
+[PRE-CROP] Failed to find paper contour. Falling back to full image.
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Valid Center added: (1168, 1910), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 165.4
+Valid Center added: (1219, 1904), Area: 759.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.5
+Valid Center added: (1269, 1899), Area: 763.0, Ratio: 0.00021, Extent: 0.79, Intensity: 166.2
+Valid Center added: (1319, 1892), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 169.2
+Valid Center added: (1162, 1867), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 165.9
+Valid Center added: (1212, 1862), Area: 760.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.0
+Valid Center added: (1263, 1857), Area: 769.5, Ratio: 0.00021, Extent: 0.80, Intensity: 163.7
+Valid Center added: (1313, 1851), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 169.1
+Rejected (Size/Extent): (1235, 1838), Area: 342.0, Ratio: 0.00009, Extent: 0.48
+Valid Center added: (1156, 1826), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 165.5
+Valid Center added: (1206, 1820), Area: 746.0, Ratio: 0.00020, Extent: 0.80, Intensity: 163.4
+Valid Center added: (1257, 1815), Area: 772.0, Ratio: 0.00021, Extent: 0.80, Intensity: 162.9
+Valid Center added: (1307, 1809), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 166.7
+Valid Center added: (1150, 1785), Area: 714.5, Ratio: 0.00019, Extent: 0.82, Intensity: 162.9
+Valid Center added: (1200, 1779), Area: 745.0, Ratio: 0.00020, Extent: 0.80, Intensity: 160.7
+Valid Center added: (1250, 1773), Area: 759.0, Ratio: 0.00021, Extent: 0.79, Intensity: 161.9
+Valid Center added: (1301, 1768), Area: 746.0, Ratio: 0.00020, Extent: 0.78, Intensity: 167.0
+Valid Center added: (1144, 1744), Area: 726.5, Ratio: 0.00020, Extent: 0.81, Intensity: 164.0
+Valid Center added: (1194, 1738), Area: 745.5, Ratio: 0.00020, Extent: 0.83, Intensity: 162.9
+Valid Center added: (1244, 1733), Area: 743.0, Ratio: 0.00020, Extent: 0.77, Intensity: 169.4
+Valid Center added: (1294, 1727), Area: 748.5, Ratio: 0.00020, Extent: 0.78, Intensity: 171.0
+Valid Center added: (1138, 1703), Area: 713.0, Ratio: 0.00019, Extent: 0.82, Intensity: 167.2
+Valid Center added: (1188, 1697), Area: 734.0, Ratio: 0.00020, Extent: 0.79, Intensity: 166.3
+Valid Center added: (1237, 1691), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 168.4
+Valid Center added: (1287, 1685), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 171.6
+Valid Center added: (1132, 1662), Area: 700.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.9
+Valid Center added: (1180, 1656), Area: 724.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.0
+Valid Center added: (1230, 1650), Area: 727.5, Ratio: 0.00020, Extent: 0.81, Intensity: 172.7
+Valid Center added: (1280, 1644), Area: 720.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.4
+Valid Center added: (1125, 1621), Area: 698.5, Ratio: 0.00019, Extent: 0.80, Intensity: 170.1
+Valid Center added: (1174, 1615), Area: 718.5, Ratio: 0.00019, Extent: 0.80, Intensity: 169.3
+Rejected (Size/Extent): (1433, 1632), Area: 244.0, Ratio: 0.00007, Extent: 0.30
+Valid Center added: (1223, 1609), Area: 721.0, Ratio: 0.00020, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1273, 1603), Area: 721.0, Ratio: 0.00020, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1118, 1581), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 170.4
+Valid Center added: (1167, 1575), Area: 713.0, Ratio: 0.00019, Extent: 0.79, Intensity: 168.6
+Valid Center added: (1216, 1569), Area: 710.0, Ratio: 0.00019, Extent: 0.79, Intensity: 171.2
+Valid Center added: (1266, 1563), Area: 712.5, Ratio: 0.00019, Extent: 0.79, Intensity: 170.9
+Valid Center added: (1112, 1541), Area: 674.0, Ratio: 0.00018, Extent: 0.80, Intensity: 171.6
+Valid Center added: (1161, 1535), Area: 710.0, Ratio: 0.00019, Extent: 0.77, Intensity: 167.8
+Valid Center added: (1210, 1530), Area: 697.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.8
+Valid Center added: (1259, 1524), Area: 699.5, Ratio: 0.00019, Extent: 0.80, Intensity: 172.0
+Rejected (Size/Extent): (1427, 1502), Area: 163.5, Ratio: 0.00004, Extent: 0.48
+Valid Center added: (1106, 1502), Area: 675.0, Ratio: 0.00018, Extent: 0.80, Intensity: 169.7
+Valid Center added: (1154, 1496), Area: 704.0, Ratio: 0.00019, Extent: 0.81, Intensity: 166.9
+Valid Center added: (1203, 1490), Area: 703.0, Ratio: 0.00019, Extent: 0.81, Intensity: 169.3
+Valid Center added: (1252, 1484), Area: 696.5, Ratio: 0.00019, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1100, 1463), Area: 667.0, Ratio: 0.00018, Extent: 0.79, Intensity: 169.9
+Valid Center added: (1148, 1457), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Valid Center added: (1196, 1451), Area: 679.0, Ratio: 0.00018, Extent: 0.78, Intensity: 172.8
+Valid Center added: (1245, 1445), Area: 675.0, Ratio: 0.00018, Extent: 0.78, Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Valid Center added: (1094, 1424), Area: 658.0, Ratio: 0.00018, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1142, 1418), Area: 685.5, Ratio: 0.00019, Extent: 0.82, Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Valid Center added: (1190, 1412), Area: 672.5, Ratio: 0.00018, Extent: 0.83, Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Valid Center added: (1238, 1406), Area: 667.5, Ratio: 0.00018, Extent: 0.79, Intensity: 174.8
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Valid Center added: (1088, 1385), Area: 640.0, Ratio: 0.00017, Extent: 0.79, Intensity: 171.8
+Valid Center added: (1135, 1379), Area: 661.5, Ratio: 0.00018, Extent: 0.79, Intensity: 172.9
+Valid Center added: (1183, 1374), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Valid Center added: (1231, 1368), Area: 652.0, Ratio: 0.00018, Extent: 0.80, Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Valid Center added: (1082, 1346), Area: 640.5, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1129, 1341), Area: 654.5, Ratio: 0.00018, Extent: 0.81, Intensity: 172.5
+Valid Center added: (1177, 1336), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.3
+Valid Center added: (1224, 1330), Area: 646.0, Ratio: 0.00018, Extent: 0.80, Intensity: 176.1
+Valid Center added: (1075, 1309), Area: 623.0, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1123, 1304), Area: 649.5, Ratio: 0.00018, Extent: 0.83, Intensity: 173.1
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Valid Center added: (1170, 1298), Area: 641.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.1
+Valid Center added: (1218, 1292), Area: 632.5, Ratio: 0.00017, Extent: 0.78, Intensity: 176.6
+Valid Center added: (1069, 1273), Area: 612.5, Ratio: 0.00017, Extent: 0.78, Intensity: 174.7
+Valid Center added: (1116, 1267), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.2
+Valid Center added: (1163, 1261), Area: 612.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.9
+Valid Center added: (1211, 1256), Area: 616.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.3
+Valid Center added: (1062, 1237), Area: 578.0, Ratio: 0.00016, Extent: 0.79, Intensity: 176.6
+Valid Center added: (1109, 1232), Area: 589.0, Ratio: 0.00016, Extent: 0.81, Intensity: 178.7
+Valid Center added: (1156, 1227), Area: 587.0, Ratio: 0.00016, Extent: 0.81, Intensity: 180.1
+Rejected (Size/Extent): (1363, 1223), Area: 137.5, Ratio: 0.00004, Extent: 0.33
+Valid Center added: (1203, 1220), Area: 584.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.6
+Rejected (Size/Extent): (1364, 1200), Area: 120.5, Ratio: 0.00003, Extent: 0.27
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Valid Center added: (1055, 1202), Area: 552.5, Ratio: 0.00015, Extent: 0.82, Intensity: 178.0
+Valid Center added: (1102, 1197), Area: 557.5, Ratio: 0.00015, Extent: 0.80, Intensity: 180.0
+Valid Center added: (1148, 1192), Area: 567.0, Ratio: 0.00015, Extent: 0.81, Intensity: 182.1
+Valid Center added: (1195, 1186), Area: 562.0, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Valid Center added: (1048, 1169), Area: 512.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.6
+Valid Center added: (1094, 1164), Area: 537.0, Ratio: 0.00015, Extent: 0.83, Intensity: 178.3
+Rejected (Size/Extent): (1140, 1159), Area: 153.5, Ratio: 0.00004, Extent: 0.24
+Valid Center added: (1186, 1153), Area: 501.0, Ratio: 0.00014, Extent: 0.81, Intensity: 183.5
+Rejected (Size/Extent): (1041, 1138), Area: 135.0, Ratio: 0.00004, Extent: 0.23
+Rejected (Size/Extent): (1087, 1132), Area: 133.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1132, 1128), Area: 118.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (1178, 1122), Area: 504.0, Ratio: 0.00014, Extent: 0.82, Intensity: 184.0
+Valid Center added: (1036, 1104), Area: 596.5, Ratio: 0.00016, Extent: 0.82, Intensity: 170.9
+Valid Center added: (1081, 1099), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 171.7
+Valid Center added: (1126, 1094), Area: 590.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.9
+Valid Center added: (1171, 1088), Area: 587.5, Ratio: 0.00016, Extent: 0.81, Intensity: 179.9
+Valid Center added: (1032, 1067), Area: 571.5, Ratio: 0.00016, Extent: 0.81, Intensity: 175.4
+Valid Center added: (1076, 1062), Area: 577.0, Ratio: 0.00016, Extent: 0.79, Intensity: 179.1
+Valid Center added: (1122, 1057), Area: 571.0, Ratio: 0.00015, Extent: 0.81, Intensity: 184.3
+Valid Center added: (1166, 1053), Area: 556.5, Ratio: 0.00015, Extent: 0.80, Intensity: 184.5
+Valid Center added: (1027, 1031), Area: 555.0, Ratio: 0.00015, Extent: 0.79, Intensity: 178.3
+Valid Center added: (1071, 1027), Area: 570.5, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Valid Center added: (1116, 1022), Area: 560.5, Ratio: 0.00015, Extent: 0.80, Intensity: 185.8
+Valid Center added: (1161, 1017), Area: 552.5, Ratio: 0.00015, Extent: 0.79, Intensity: 186.0
+Valid Center added: (1021, 996), Area: 542.0, Ratio: 0.00015, Extent: 0.80, Intensity: 177.6
+Valid Center added: (1066, 991), Area: 564.0, Ratio: 0.00015, Extent: 0.77, Intensity: 179.7
+Valid Center added: (1111, 986), Area: 550.5, Ratio: 0.00015, Extent: 0.85, Intensity: 184.8
+Valid Center added: (1156, 982), Area: 544.0, Ratio: 0.00015, Extent: 0.81, Intensity: 186.4
+Valid Center added: (1016, 962), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 179.0
+Valid Center added: (1060, 957), Area: 550.0, Ratio: 0.00015, Extent: 0.79, Intensity: 179.6
+Rejected (Size/Extent): (1105, 951), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Valid Center added: (1150, 946), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 185.0
+Rejected (Size/Extent): (1010, 928), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1055, 922), Area: 138.0, Ratio: 0.00004, Extent: 0.21
+Valid Center added: (1100, 917), Area: 538.5, Ratio: 0.00015, Extent: 0.83, Intensity: 183.9
+Valid Center added: (1145, 911), Area: 526.5, Ratio: 0.00014, Extent: 0.81, Intensity: 184.8
+Valid Center added: (1005, 894), Area: 509.0, Ratio: 0.00014, Extent: 0.79, Intensity: 180.2
+Rejected (Size/Extent): (324, 1463), Area: 279150.5, Ratio: 0.07572, Extent: 0.94
+Rejected (Size/Extent): (1049, 889), Area: 135.5, Ratio: 0.00004, Extent: 0.20
+Valid Center added: (1094, 884), Area: 518.0, Ratio: 0.00014, Extent: 0.83, Intensity: 185.2
+Valid Center added: (1139, 878), Area: 515.0, Ratio: 0.00014, Extent: 0.79, Intensity: 184.2
+Rejected (Size/Extent): (597, 1433), Area: 274115.0, Ratio: 0.07436, Extent: 0.94
+Valid Center added: (999, 862), Area: 498.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.0
+Rejected (Size/Extent): (1043, 857), Area: 140.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (868, 1400), Area: 271943.5, Ratio: 0.07377, Extent: 0.94
+Rejected (Size/Extent): (1038, 825), Area: 113.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (1137, 1368), Area: 63515.0, Ratio: 0.01723, Extent: 0.22
+Rejected (Size/Extent): (178, 763), Area: 400.0, Ratio: 0.00011, Extent: 0.63
+Rejected (Size/Extent): (235, 759), Area: 286.0, Ratio: 0.00008, Extent: 0.61
+Rejected (Size/Extent): (902, 766), Area: 116.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (310, 739), Area: 101.5, Ratio: 0.00003, Extent: 0.42
+Rejected (Size/Extent): (452, 740), Area: 1580.0, Ratio: 0.00043, Extent: 0.12
+Rejected (Size/Extent): (935, 725), Area: 103.5, Ratio: 0.00003, Extent: 0.17
+Rejected (Size/Extent): (490, 721), Area: 138.0, Ratio: 0.00004, Extent: 0.41
+Rejected (Size/Extent): (468, 723), Area: 128.5, Ratio: 0.00003, Extent: 0.35
+Valid Center added: (773, 711), Area: 411.5, Ratio: 0.00011, Extent: 0.78, Intensity: 135.1
+Rejected (Size/Extent): (816, 738), Area: 376.0, Ratio: 0.00010, Extent: 0.17
+Rejected (Size/Extent): (176, 702), Area: 484.0, Ratio: 0.00013, Extent: 0.65
+Rejected (Size/Extent): (223, 698), Area: 289.0, Ratio: 0.00008, Extent: 0.60
+Rejected (Size/Extent): (894, 711), Area: 103.0, Ratio: 0.00003, Extent: 0.18
+Valid Center added: (852, 702), Area: 410.0, Ratio: 0.00011, Extent: 0.80, Intensity: 143.1
+Valid Center added: (1106, 699), Area: 396.5, Ratio: 0.00011, Extent: 0.77, Intensity: 139.6
+Valid Center added: (932, 694), Area: 391.0, Ratio: 0.00011, Extent: 0.81, Intensity: 140.6
+Rejected (Size/Extent): (809, 682), Area: 120.0, Ratio: 0.00003, Extent: 0.19
+Valid Center added: (1062, 677), Area: 372.0, Ratio: 0.00010, Extent: 0.78, Intensity: 138.7
+Rejected (Size/Extent): (442, 685), Area: 2085.0, Ratio: 0.00057, Extent: 0.12
+Rejected (Size/Extent): (890, 682), Area: 115.5, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (768, 669), Area: 113.0, Ratio: 0.00003, Extent: 0.19
+Rejected (Size/Extent): (805, 656), Area: 106.5, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (886, 656), Area: 107.0, Ratio: 0.00003, Extent: 0.25
+Rejected (Size/Extent): (175, 639), Area: 316.0, Ratio: 0.00009, Extent: 0.62
+Rejected (Size/Extent): (764, 641), Area: 102.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (801, 623), Area: 389.5, Ratio: 0.00011, Extent: 0.76, Intensity: 139.6
+Rejected (Size/Extent): (845, 644), Area: 248.0, Ratio: 0.00007, Extent: 0.15
+Valid Center added: (881, 615), Area: 385.0, Ratio: 0.00010, Extent: 0.80, Intensity: 137.4
+Rejected (Size/Extent): (923, 628), Area: 192.0, Ratio: 0.00005, Extent: 0.16
+Rejected (Size/Extent): (415, 624), Area: 1470.5, Ratio: 0.00040, Extent: 0.12
+Rejected (Size/Extent): (183, 576), Area: 103.0, Ratio: 0.00003, Extent: 0.61
+Rejected (Size/Extent): (157, 577), Area: 284.0, Ratio: 0.00008, Extent: 0.66
+Rejected (Size/Extent): (197, 573), Area: 118.5, Ratio: 0.00003, Extent: 0.55
+Rejected (Size/Extent): (334, 574), Area: 389.0, Ratio: 0.00011, Extent: 0.29
+Rejected (Size/Extent): (229, 572), Area: 404.0, Ratio: 0.00011, Extent: 0.55
+Rejected (Size/Extent): (794, 572), Area: 105.0, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (284, 567), Area: 155.5, Ratio: 0.00004, Extent: 0.15
+Rejected (Size/Extent): (392, 561), Area: 283.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (541, 552), Area: 377.5, Ratio: 0.00010, Extent: 0.55
+Rejected (Size/Extent): (437, 559), Area: 477.5, Ratio: 0.00013, Extent: 0.38
+Rejected (Size/Extent): (1071, 601), Area: 220.5, Ratio: 0.00006, Extent: 0.26
+Rejected (Size/Extent): (886, 550), Area: 283.5, Ratio: 0.00008, Extent: 0.07
+Rejected (Size/Extent): (751, 514), Area: 168.5, Ratio: 0.00005, Extent: 0.70
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Size/Extent): (998, 515), Area: 350.5, Ratio: 0.00010, Extent: 0.76
+Rejected (Size/Extent): (786, 510), Area: 139.5, Ratio: 0.00004, Extent: 0.61
+Rejected (Size/Extent): (826, 506), Area: 205.0, Ratio: 0.00006, Extent: 0.67
+Rejected (Size/Extent): (1028, 587), Area: 262.0, Ratio: 0.00007, Extent: 0.13
+Rejected (Size/Extent): (811, 648), Area: 17768.0, Ratio: 0.00482, Extent: 0.20
+Rejected (Size/Extent): (1017, 478), Area: 155.5, Ratio: 0.00004, Extent: 0.64
+Rejected (Size/Extent): (1048, 472), Area: 101.5, Ratio: 0.00003, Extent: 0.62
+Rejected (Size/Extent): (1040, 618), Area: 3192.0, Ratio: 0.00087, Extent: 0.06
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 116
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)
+[PRE-CROP] Failed to find paper contour. Falling back to full image.
+Image Size: 1440 x 2560, Area: 3686400
+Found 1417 total contours.
+Rejected (Size/Extent): (240, 2542), Area: 1571.0, Ratio: 0.00043, Extent: 0.55
+Rejected (Size/Extent): (1142, 2532), Area: 262.0, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (1289, 2516), Area: 1888.5, Ratio: 0.00051, Extent: 0.10
+Rejected (Size/Extent): (1280, 2466), Area: 1967.0, Ratio: 0.00053, Extent: 0.51
+Rejected (Size/Extent): (1198, 2399), Area: 243.0, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1300, 2398), Area: 168.5, Ratio: 0.00005, Extent: 0.36
+Rejected (Size/Extent): (1327, 2387), Area: 181.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1410, 2387), Area: 501.0, Ratio: 0.00014, Extent: 0.40
+Rejected (Size/Extent): (1367, 2383), Area: 211.5, Ratio: 0.00006, Extent: 0.39
+Rejected (Size/Extent): (1430, 2337), Area: 148.0, Ratio: 0.00004, Extent: 0.52
+Rejected (Size/Extent): (1362, 2327), Area: 182.0, Ratio: 0.00005, Extent: 0.56
+Rejected (Size/Extent): (1375, 2283), Area: 232.5, Ratio: 0.00006, Extent: 0.50
+Rejected (Size/Extent): (1245, 2273), Area: 364.5, Ratio: 0.00010, Extent: 0.29
+Rejected (Size/Extent): (1297, 2259), Area: 248.5, Ratio: 0.00007, Extent: 0.52
+Rejected (Size/Extent): (1376, 2247), Area: 116.0, Ratio: 0.00003, Extent: 0.64
+Rejected (Size/Extent): (1397, 2232), Area: 171.5, Ratio: 0.00005, Extent: 0.65
+Rejected (Size/Extent): (1291, 2234), Area: 195.0, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (1364, 2138), Area: 124.5, Ratio: 0.00003, Extent: 0.44
+Rejected (Size/Extent): (1413, 2153), Area: 388.5, Ratio: 0.00011, Extent: 0.35
+Rejected (Size/Extent): (1337, 2137), Area: 217.5, Ratio: 0.00006, Extent: 0.47
+Valid Center added: (207, 2091), Area: 1403.0, Ratio: 0.00038, Extent: 0.90, Intensity: 54.5
+Rejected (Size/Extent): (1409, 2075), Area: 233.0, Ratio: 0.00006, Extent: 0.30
+Rejected (Size/Extent): (792, 2092), Area: 13570.5, Ratio: 0.00368, Extent: 0.36
+Valid Center added: (1384, 1944), Area: 1407.5, Ratio: 0.00038, Extent: 0.92, Intensity: 62.0
+Valid Center added: (1168, 1910), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 165.4
+Valid Center added: (1219, 1904), Area: 759.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.5
+Valid Center added: (1269, 1899), Area: 763.0, Ratio: 0.00021, Extent: 0.79, Intensity: 166.2
+Valid Center added: (1319, 1892), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 169.2
+Valid Center added: (1162, 1867), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 165.9
+Valid Center added: (1212, 1862), Area: 760.5, Ratio: 0.00021, Extent: 0.79, Intensity: 165.0
+Valid Center added: (1263, 1857), Area: 769.5, Ratio: 0.00021, Extent: 0.80, Intensity: 163.7
+Valid Center added: (1313, 1851), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 169.1
+Rejected (Size/Extent): (1235, 1838), Area: 342.0, Ratio: 0.00009, Extent: 0.48
+Valid Center added: (1156, 1826), Area: 722.5, Ratio: 0.00020, Extent: 0.80, Intensity: 165.5
+Valid Center added: (1206, 1820), Area: 746.0, Ratio: 0.00020, Extent: 0.80, Intensity: 163.4
+Valid Center added: (1257, 1815), Area: 772.0, Ratio: 0.00021, Extent: 0.80, Intensity: 162.9
+Valid Center added: (1307, 1809), Area: 732.5, Ratio: 0.00020, Extent: 0.81, Intensity: 166.7
+Valid Center added: (1150, 1785), Area: 714.5, Ratio: 0.00019, Extent: 0.82, Intensity: 162.9
+Valid Center added: (1200, 1779), Area: 745.0, Ratio: 0.00020, Extent: 0.80, Intensity: 160.7
+Valid Center added: (1250, 1773), Area: 759.0, Ratio: 0.00021, Extent: 0.79, Intensity: 161.9
+Valid Center added: (1301, 1768), Area: 746.0, Ratio: 0.00020, Extent: 0.78, Intensity: 167.0
+Valid Center added: (1144, 1744), Area: 726.5, Ratio: 0.00020, Extent: 0.81, Intensity: 164.0
+Valid Center added: (1194, 1738), Area: 745.5, Ratio: 0.00020, Extent: 0.83, Intensity: 162.9
+Valid Center added: (1244, 1733), Area: 743.0, Ratio: 0.00020, Extent: 0.77, Intensity: 169.4
+Valid Center added: (1294, 1727), Area: 748.5, Ratio: 0.00020, Extent: 0.78, Intensity: 171.0
+Valid Center added: (1138, 1703), Area: 713.0, Ratio: 0.00019, Extent: 0.82, Intensity: 167.2
+Valid Center added: (1188, 1697), Area: 734.0, Ratio: 0.00020, Extent: 0.79, Intensity: 166.3
+Valid Center added: (1237, 1691), Area: 733.5, Ratio: 0.00020, Extent: 0.79, Intensity: 168.4
+Valid Center added: (1287, 1685), Area: 731.5, Ratio: 0.00020, Extent: 0.79, Intensity: 171.6
+Valid Center added: (1132, 1662), Area: 700.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.9
+Valid Center added: (1180, 1656), Area: 724.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.0
+Valid Center added: (1230, 1650), Area: 727.5, Ratio: 0.00020, Extent: 0.81, Intensity: 172.7
+Valid Center added: (1280, 1644), Area: 720.0, Ratio: 0.00020, Extent: 0.80, Intensity: 170.4
+Valid Center added: (1125, 1621), Area: 698.5, Ratio: 0.00019, Extent: 0.80, Intensity: 170.1
+Valid Center added: (1174, 1615), Area: 718.5, Ratio: 0.00019, Extent: 0.80, Intensity: 169.3
+Rejected (Size/Extent): (1433, 1632), Area: 244.0, Ratio: 0.00007, Extent: 0.30
+Valid Center added: (1223, 1609), Area: 721.0, Ratio: 0.00020, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1273, 1603), Area: 721.0, Ratio: 0.00020, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1118, 1581), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 170.4
+Valid Center added: (1167, 1575), Area: 713.0, Ratio: 0.00019, Extent: 0.79, Intensity: 168.6
+Valid Center added: (1216, 1569), Area: 710.0, Ratio: 0.00019, Extent: 0.79, Intensity: 171.2
+Valid Center added: (1266, 1563), Area: 712.5, Ratio: 0.00019, Extent: 0.79, Intensity: 170.9
+Valid Center added: (1112, 1541), Area: 674.0, Ratio: 0.00018, Extent: 0.80, Intensity: 171.6
+Valid Center added: (1161, 1535), Area: 710.0, Ratio: 0.00019, Extent: 0.77, Intensity: 167.8
+Valid Center added: (1210, 1530), Area: 697.0, Ratio: 0.00019, Extent: 0.83, Intensity: 170.8
+Valid Center added: (1259, 1524), Area: 699.5, Ratio: 0.00019, Extent: 0.80, Intensity: 172.0
+Rejected (Size/Extent): (1427, 1502), Area: 163.5, Ratio: 0.00004, Extent: 0.48
+Valid Center added: (1106, 1502), Area: 675.0, Ratio: 0.00018, Extent: 0.80, Intensity: 169.7
+Valid Center added: (1154, 1496), Area: 704.0, Ratio: 0.00019, Extent: 0.81, Intensity: 166.9
+Valid Center added: (1203, 1490), Area: 703.0, Ratio: 0.00019, Extent: 0.81, Intensity: 169.3
+Valid Center added: (1252, 1484), Area: 696.5, Ratio: 0.00019, Extent: 0.80, Intensity: 171.1
+Valid Center added: (1100, 1463), Area: 667.0, Ratio: 0.00018, Extent: 0.79, Intensity: 169.9
+Valid Center added: (1148, 1457), Area: 689.0, Ratio: 0.00019, Extent: 0.79, Intensity: 169.2
+Rejected (Low Contrast): (1438, 1441), Intensity: 212.0
+Valid Center added: (1196, 1451), Area: 679.0, Ratio: 0.00018, Extent: 0.78, Intensity: 172.8
+Valid Center added: (1245, 1445), Area: 675.0, Ratio: 0.00018, Extent: 0.78, Intensity: 174.7
+Rejected (Low Contrast): (1434, 1426), Intensity: 213.0
+Rejected (Low Contrast): (1439, 1410), Intensity: 222.0
+Valid Center added: (1094, 1424), Area: 658.0, Ratio: 0.00018, Extent: 0.78, Intensity: 170.1
+Valid Center added: (1142, 1418), Area: 685.5, Ratio: 0.00019, Extent: 0.82, Intensity: 168.6
+Rejected (Low Contrast): (1420, 1404), Intensity: 214.7
+Rejected (Low Contrast): (1432, 1401), Intensity: 220.8
+Valid Center added: (1190, 1412), Area: 672.5, Ratio: 0.00018, Extent: 0.83, Intensity: 174.0
+Rejected (Low Contrast): (1411, 1398), Intensity: 214.4
+Valid Center added: (1238, 1406), Area: 667.5, Ratio: 0.00018, Extent: 0.79, Intensity: 174.8
+Rejected (Low Contrast): (1431, 1389), Intensity: 214.1
+Rejected (Low Contrast): (1412, 1384), Intensity: 216.2
+Rejected (Low Contrast): (1406, 1374), Intensity: 214.4
+Valid Center added: (1088, 1385), Area: 640.0, Ratio: 0.00017, Extent: 0.79, Intensity: 171.8
+Valid Center added: (1135, 1379), Area: 661.5, Ratio: 0.00018, Extent: 0.79, Intensity: 172.9
+Valid Center added: (1183, 1374), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.9
+Rejected (Low Contrast): (1413, 1360), Intensity: 215.1
+Valid Center added: (1231, 1368), Area: 652.0, Ratio: 0.00018, Extent: 0.80, Intensity: 175.7
+Rejected (Low Contrast): (1422, 1356), Intensity: 211.1
+Valid Center added: (1082, 1346), Area: 640.5, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1129, 1341), Area: 654.5, Ratio: 0.00018, Extent: 0.81, Intensity: 172.5
+Valid Center added: (1177, 1336), Area: 650.0, Ratio: 0.00018, Extent: 0.83, Intensity: 174.3
+Valid Center added: (1224, 1330), Area: 646.0, Ratio: 0.00018, Extent: 0.80, Intensity: 176.1
+Valid Center added: (1075, 1309), Area: 623.0, Ratio: 0.00017, Extent: 0.79, Intensity: 173.5
+Valid Center added: (1123, 1304), Area: 649.5, Ratio: 0.00018, Extent: 0.83, Intensity: 173.1
+Rejected (Size/Extent): (1424, 1305), Area: 325.5, Ratio: 0.00009, Extent: 0.54
+Valid Center added: (1170, 1298), Area: 641.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.1
+Valid Center added: (1218, 1292), Area: 632.5, Ratio: 0.00017, Extent: 0.78, Intensity: 176.6
+Valid Center added: (1069, 1273), Area: 612.5, Ratio: 0.00017, Extent: 0.78, Intensity: 174.7
+Valid Center added: (1116, 1267), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.2
+Valid Center added: (1163, 1261), Area: 612.0, Ratio: 0.00017, Extent: 0.81, Intensity: 176.9
+Valid Center added: (1211, 1256), Area: 616.0, Ratio: 0.00017, Extent: 0.79, Intensity: 177.3
+Valid Center added: (1062, 1237), Area: 578.0, Ratio: 0.00016, Extent: 0.79, Intensity: 176.6
+Valid Center added: (1109, 1232), Area: 589.0, Ratio: 0.00016, Extent: 0.81, Intensity: 178.7
+Valid Center added: (1156, 1227), Area: 587.0, Ratio: 0.00016, Extent: 0.81, Intensity: 180.1
+Rejected (Size/Extent): (1363, 1223), Area: 137.5, Ratio: 0.00004, Extent: 0.33
+Valid Center added: (1203, 1220), Area: 584.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.6
+Rejected (Size/Extent): (1364, 1200), Area: 120.5, Ratio: 0.00003, Extent: 0.27
+Rejected (Size/Extent): (1423, 1206), Area: 284.0, Ratio: 0.00008, Extent: 0.32
+Valid Center added: (1055, 1202), Area: 552.5, Ratio: 0.00015, Extent: 0.82, Intensity: 178.0
+Valid Center added: (1102, 1197), Area: 557.5, Ratio: 0.00015, Extent: 0.80, Intensity: 180.0
+Valid Center added: (1148, 1192), Area: 567.0, Ratio: 0.00015, Extent: 0.81, Intensity: 182.1
+Valid Center added: (1195, 1186), Area: 562.0, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Rejected (Size/Extent): (1421, 1180), Area: 195.0, Ratio: 0.00005, Extent: 0.40
+Rejected (Size/Extent): (1372, 1179), Area: 521.0, Ratio: 0.00014, Extent: 0.37
+Valid Center added: (1048, 1169), Area: 512.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.6
+Valid Center added: (1094, 1164), Area: 537.0, Ratio: 0.00015, Extent: 0.83, Intensity: 178.3
+Rejected (Size/Extent): (1140, 1159), Area: 153.5, Ratio: 0.00004, Extent: 0.24
+Valid Center added: (1186, 1153), Area: 501.0, Ratio: 0.00014, Extent: 0.81, Intensity: 183.5
+Rejected (Size/Extent): (1041, 1138), Area: 135.0, Ratio: 0.00004, Extent: 0.23
+Rejected (Size/Extent): (1087, 1132), Area: 133.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1132, 1128), Area: 118.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (1178, 1122), Area: 504.0, Ratio: 0.00014, Extent: 0.82, Intensity: 184.0
+Valid Center added: (1036, 1104), Area: 596.5, Ratio: 0.00016, Extent: 0.82, Intensity: 170.9
+Valid Center added: (1081, 1099), Area: 610.0, Ratio: 0.00017, Extent: 0.81, Intensity: 171.7
+Valid Center added: (1126, 1094), Area: 590.5, Ratio: 0.00016, Extent: 0.78, Intensity: 178.9
+Valid Center added: (1171, 1088), Area: 587.5, Ratio: 0.00016, Extent: 0.81, Intensity: 179.9
+Valid Center added: (1032, 1067), Area: 571.5, Ratio: 0.00016, Extent: 0.81, Intensity: 175.4
+Valid Center added: (1076, 1062), Area: 577.0, Ratio: 0.00016, Extent: 0.79, Intensity: 179.1
+Valid Center added: (1122, 1057), Area: 571.0, Ratio: 0.00015, Extent: 0.81, Intensity: 184.3
+Valid Center added: (1166, 1053), Area: 556.5, Ratio: 0.00015, Extent: 0.80, Intensity: 184.5
+Valid Center added: (1027, 1031), Area: 555.0, Ratio: 0.00015, Extent: 0.79, Intensity: 178.3
+Valid Center added: (1071, 1027), Area: 570.5, Ratio: 0.00015, Extent: 0.81, Intensity: 181.0
+Valid Center added: (1116, 1022), Area: 560.5, Ratio: 0.00015, Extent: 0.80, Intensity: 185.8
+Valid Center added: (1161, 1017), Area: 552.5, Ratio: 0.00015, Extent: 0.79, Intensity: 186.0
+Valid Center added: (1021, 996), Area: 542.0, Ratio: 0.00015, Extent: 0.80, Intensity: 177.6
+Valid Center added: (1066, 991), Area: 564.0, Ratio: 0.00015, Extent: 0.77, Intensity: 179.7
+Valid Center added: (1111, 986), Area: 550.5, Ratio: 0.00015, Extent: 0.85, Intensity: 184.8
+Valid Center added: (1156, 982), Area: 544.0, Ratio: 0.00015, Extent: 0.81, Intensity: 186.4
+Valid Center added: (1016, 962), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 179.0
+Valid Center added: (1060, 957), Area: 550.0, Ratio: 0.00015, Extent: 0.79, Intensity: 179.6
+Rejected (Size/Extent): (1105, 951), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Valid Center added: (1150, 946), Area: 530.5, Ratio: 0.00014, Extent: 0.79, Intensity: 185.0
+Rejected (Size/Extent): (1010, 928), Area: 149.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (1055, 922), Area: 138.0, Ratio: 0.00004, Extent: 0.21
+Valid Center added: (1100, 917), Area: 538.5, Ratio: 0.00015, Extent: 0.83, Intensity: 183.9
+Valid Center added: (1145, 911), Area: 526.5, Ratio: 0.00014, Extent: 0.81, Intensity: 184.8
+Valid Center added: (1005, 894), Area: 509.0, Ratio: 0.00014, Extent: 0.79, Intensity: 180.2
+Rejected (Size/Extent): (324, 1463), Area: 279150.5, Ratio: 0.07572, Extent: 0.94
+Rejected (Size/Extent): (1049, 889), Area: 135.5, Ratio: 0.00004, Extent: 0.20
+Valid Center added: (1094, 884), Area: 518.0, Ratio: 0.00014, Extent: 0.83, Intensity: 185.2
+Valid Center added: (1139, 878), Area: 515.0, Ratio: 0.00014, Extent: 0.79, Intensity: 184.2
+Rejected (Size/Extent): (597, 1433), Area: 274115.0, Ratio: 0.07436, Extent: 0.94
+Valid Center added: (999, 862), Area: 498.5, Ratio: 0.00014, Extent: 0.80, Intensity: 179.0
+Rejected (Size/Extent): (1043, 857), Area: 140.5, Ratio: 0.00004, Extent: 0.22
+Rejected (Size/Extent): (868, 1400), Area: 271943.5, Ratio: 0.07377, Extent: 0.94
+Rejected (Size/Extent): (1038, 825), Area: 113.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (1137, 1368), Area: 63515.0, Ratio: 0.01723, Extent: 0.22
+Rejected (Size/Extent): (178, 763), Area: 400.0, Ratio: 0.00011, Extent: 0.63
+Rejected (Size/Extent): (235, 759), Area: 286.0, Ratio: 0.00008, Extent: 0.61
+Rejected (Size/Extent): (902, 766), Area: 116.0, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (310, 739), Area: 101.5, Ratio: 0.00003, Extent: 0.42
+Rejected (Size/Extent): (452, 740), Area: 1580.0, Ratio: 0.00043, Extent: 0.12
+Rejected (Size/Extent): (935, 725), Area: 103.5, Ratio: 0.00003, Extent: 0.17
+Rejected (Size/Extent): (490, 721), Area: 138.0, Ratio: 0.00004, Extent: 0.41
+Rejected (Size/Extent): (468, 723), Area: 128.5, Ratio: 0.00003, Extent: 0.35
+Valid Center added: (773, 711), Area: 411.5, Ratio: 0.00011, Extent: 0.78, Intensity: 135.1
+Rejected (Size/Extent): (816, 738), Area: 376.0, Ratio: 0.00010, Extent: 0.17
+Rejected (Size/Extent): (176, 702), Area: 484.0, Ratio: 0.00013, Extent: 0.65
+Rejected (Size/Extent): (223, 698), Area: 289.0, Ratio: 0.00008, Extent: 0.60
+Rejected (Size/Extent): (894, 711), Area: 103.0, Ratio: 0.00003, Extent: 0.18
+Valid Center added: (852, 702), Area: 410.0, Ratio: 0.00011, Extent: 0.80, Intensity: 143.1
+Valid Center added: (1106, 699), Area: 396.5, Ratio: 0.00011, Extent: 0.77, Intensity: 139.6
+Valid Center added: (932, 694), Area: 391.0, Ratio: 0.00011, Extent: 0.81, Intensity: 140.6
+Rejected (Size/Extent): (809, 682), Area: 120.0, Ratio: 0.00003, Extent: 0.19
+Valid Center added: (1062, 677), Area: 372.0, Ratio: 0.00010, Extent: 0.78, Intensity: 138.7
+Rejected (Size/Extent): (442, 685), Area: 2085.0, Ratio: 0.00057, Extent: 0.12
+Rejected (Size/Extent): (890, 682), Area: 115.5, Ratio: 0.00003, Extent: 0.20
+Rejected (Size/Extent): (768, 669), Area: 113.0, Ratio: 0.00003, Extent: 0.19
+Rejected (Size/Extent): (805, 656), Area: 106.5, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (886, 656), Area: 107.0, Ratio: 0.00003, Extent: 0.25
+Rejected (Size/Extent): (175, 639), Area: 316.0, Ratio: 0.00009, Extent: 0.62
+Rejected (Size/Extent): (764, 641), Area: 102.5, Ratio: 0.00003, Extent: 0.20
+Valid Center added: (801, 623), Area: 389.5, Ratio: 0.00011, Extent: 0.76, Intensity: 139.6
+Rejected (Size/Extent): (845, 644), Area: 248.0, Ratio: 0.00007, Extent: 0.15
+Valid Center added: (881, 615), Area: 385.0, Ratio: 0.00010, Extent: 0.80, Intensity: 137.4
+Rejected (Size/Extent): (923, 628), Area: 192.0, Ratio: 0.00005, Extent: 0.16
+Rejected (Size/Extent): (415, 624), Area: 1470.5, Ratio: 0.00040, Extent: 0.12
+Rejected (Size/Extent): (183, 576), Area: 103.0, Ratio: 0.00003, Extent: 0.61
+Rejected (Size/Extent): (157, 577), Area: 284.0, Ratio: 0.00008, Extent: 0.66
+Rejected (Size/Extent): (197, 573), Area: 118.5, Ratio: 0.00003, Extent: 0.55
+Rejected (Size/Extent): (334, 574), Area: 389.0, Ratio: 0.00011, Extent: 0.29
+Rejected (Size/Extent): (229, 572), Area: 404.0, Ratio: 0.00011, Extent: 0.55
+Rejected (Size/Extent): (794, 572), Area: 105.0, Ratio: 0.00003, Extent: 0.18
+Rejected (Size/Extent): (284, 567), Area: 155.5, Ratio: 0.00004, Extent: 0.15
+Rejected (Size/Extent): (392, 561), Area: 283.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (541, 552), Area: 377.5, Ratio: 0.00010, Extent: 0.55
+Rejected (Size/Extent): (437, 559), Area: 477.5, Ratio: 0.00013, Extent: 0.38
+Rejected (Size/Extent): (1071, 601), Area: 220.5, Ratio: 0.00006, Extent: 0.26
+Rejected (Size/Extent): (886, 550), Area: 283.5, Ratio: 0.00008, Extent: 0.07
+Rejected (Size/Extent): (751, 514), Area: 168.5, Ratio: 0.00005, Extent: 0.70
+Valid Center added: (109, 523), Area: 1015.5, Ratio: 0.00028, Extent: 0.85, Intensity: 99.5
+Rejected (Size/Extent): (998, 515), Area: 350.5, Ratio: 0.00010, Extent: 0.76
+Rejected (Size/Extent): (786, 510), Area: 139.5, Ratio: 0.00004, Extent: 0.61
+Rejected (Size/Extent): (826, 506), Area: 205.0, Ratio: 0.00006, Extent: 0.67
+Rejected (Size/Extent): (1028, 587), Area: 262.0, Ratio: 0.00007, Extent: 0.13
+Rejected (Size/Extent): (811, 648), Area: 17768.0, Ratio: 0.00482, Extent: 0.20
+Rejected (Size/Extent): (1017, 478), Area: 155.5, Ratio: 0.00004, Extent: 0.64
+Rejected (Size/Extent): (1048, 472), Area: 101.5, Ratio: 0.00003, Extent: 0.62
+Rejected (Size/Extent): (1040, 618), Area: 3192.0, Ratio: 0.00087, Extent: 0.06
+Valid Center added: (1112, 422), Area: 788.5, Ratio: 0.00021, Extent: 0.83, Intensity: 88.4
+Rejected (Size/Extent): (691, 1252), Area: 46153.0, Ratio: 0.01252, Extent: 0.02
+
+Total Valid Centers: 116
+Selected 4 corners: TL=[109. 523.], TR=[1112.  422.], BR=[1384. 1944.], BL=[ 207. 2091.]
+Rect Width: 1008.07 (Required: 576.00)
+Rect Height: 1571.06 (Required: 1024.00)

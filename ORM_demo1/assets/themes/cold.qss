@@ -1,0 +1,34 @@
+/* Cold Theme - Chỉ chứa màu sắc */
+
+QMainWindow { background-color: #E6F0FA; }
+QWidget { background-color: #E6F0FA; color: #1A365D; }
+QSplitter::handle { background-color: #C5D9ED; }
+QFrame#Panel { background-color: #F0F6FC; border: 1px solid #C5D9ED; }
+
+QPushButton { background-color: #D6E4F0; color: #2A4365; border: 1px solid #B2CBE1; }
+QPushButton:hover { background-color: #B8D0E6; border-color: #8DB3D4; }
+QPushButton:pressed { background-color: #A5C3DC; }
+QPushButton[variant="active"],
+QPushButton[variant="primary"] { background-color: #00A8CC; border-color: #008BAA; }
+QPushButton[variant="channel-red"] { color: #E53E3E; }
+QPushButton[variant="channel-green"] { color: #047857; }
+QPushButton[variant="channel-blue"] { color: #00A8CC; }
+
+QLabel { color: #1A365D; }
+QLineEdit { background-color: #FFFFFF; border: 1px solid #B2CBE1; color: #1A365D; }
+
+QTreeView::item:hover { background-color: #B8D0E6; }
+QTreeView::item:selected { background-color: #A3D8F4; color: #005F8A; }
+
+QToolButton { color: #1A365D; }
+QToolButton:hover { background-color: #B8D0E6; border-color: #8DB3D4; }
+QToolButton:pressed { background-color: #A5C3DC; }
+
+QMenu { background-color: #F0F6FC; border: 1px solid #B2CBE1; }
+QMenu::item { color: #1A365D; }
+QMenu::item:selected { background-color: #B8D0E6; }
+QMenu::separator { background-color: #C5D9ED; }
+
+QTabBar::tab { background-color: #D6E4F0; color: #6B8BAA; border: 1px solid #C5D9ED; }
+QTabBar::tab:selected { background-color: #F0F6FC; color: #1A365D; border-bottom-color: #F0F6FC; }
+QTabBar::tab:hover:!selected { background-color: #B8D0E6; }
