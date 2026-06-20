@@ -1,0 +1,292 @@
+/* Base - Cấu trúc & hiệu ứng chung cho tất cả Theme */
+/* File này KHÔNG chứa màu sắc, chỉ chứa bố cục và hành vi */
+
+QWidget {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 10pt;
+}
+
+QFrame#Panel {
+    border-radius: 8px;
+}
+
+/* Buttons */
+QPushButton {
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+QPushButton[variant="active"],
+QPushButton[variant="primary"] {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+QPushButton[variant="channel-red"],
+QPushButton[variant="channel-green"],
+QPushButton[variant="channel-blue"] {
+    font-weight: 700;
+}
+
+/* Input */
+QLineEdit {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* Tree View */
+QTreeView {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+QTreeView::item {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* Toolbar */
+QToolBar {
+    border: none;
+    background-color: transparent;
+}
+
+QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+QToolButton::menu-indicator {
+    image: none;
+}
+
+/* Menu */
+QMenu {
+    border-radius: 4px;
+    padding: 4px 0px;
+}
+
+QMenu::item {
+    padding: 6px 24px 6px 35px;
+}
+
+QMenu::icon {
+    padding-left: 8px;
+}
+
+QMenu::item:selected {
+    border-radius: 2px;
+}
+
+QMenu::separator {
+    height: 1px;
+    margin: 4px 8px;
+}
+
+/* ScrollArea */
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+/* TabWidget */
+QTabWidget::pane {
+    border: none;
+}
+
+QTabBar::tab {
+    padding: 6px 0px 6px 14px; /* Tăng padding phải để tạo chỗ cho nút đóng */
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::close-button {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==================================================
+   GLOBAL UTILITY CLASSES 
+================================================== */
+
+/* Headers & Titles */
+QLabel[class="explorer-title"] {
+    font-size: 9pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+QLabel[class="dialog-title"] {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+QLabel[class="dialog-title-success"] {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+QLabel[class="title"] {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QLabel[class="subtitle"] {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QLabel[class="subtitle-small"] {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QLabel[class="member-name"] {
+    font-size: 12px;
+}
+
+/* Score displays */
+QLabel[class="score-huge"] {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+QLabel[class="score-val"] {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+QLabel[class="score-label"] {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QLabel[class="score-count"] {
+    font-size: 14px;
+}
+
+QLabel[class="info-label"] {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+QLabel[class="error-label"] {
+    font-size: 13px;
+    font-style: italic;
+}
+
+QLabel[class="error-title"] {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Badges */
+QLabel[class="badge"] {
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Checkbox */
+QCheckBox[class="checkbox-success"] {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Consoles & Text Areas */
+QTextEdit[class="error-console"] {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+/* Containers & Cards */
+QFrame[class="card"] {
+    border-radius: 8px;
+}
+
+QFrame[class="card-border"] {
+    border-radius: 8px;
+}
+
+QFrame[class="result-container"] {
+    border-radius: 8px;
+}
+
+QLabel[class="data-box"] {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+QLabel[class="preview-box"] {
+    border-radius: 8px;
+    font-style: italic;
+}
+
+QFrame[class="separator-line"] {
+    border: none;
+}
+
+/* Chart */
+QLabel[class="chart-title"] {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+QLabel[class="chart-label"] {
+    font-size: 12px;
+}
+
+QProgressBar[class="chart-bar"] {
+    border-radius: 4px;
+    border: none;
+}
+QProgressBar[class="chart-bar"]::chunk {
+    border-radius: 4px;
+}
+
+/* Button Variants */
+QPushButton[variant="primary"],
+QPushButton[variant="success"],
+QPushButton[variant="secondary"],
+QPushButton[variant="danger"] {
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Center Panel Placeholder */
+QLabel[class="placeholder-text"] {
+    font-size: 14pt;
+}
+
+/* Zoom Control Widget */
+QWidget#ZoomControlWidget QPushButton {
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+QWidget#ZoomControlWidget QSpinBox {
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Bubble Answer Button */
+QPushButton[class="bubble-btn"] {
+    border-radius: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+}

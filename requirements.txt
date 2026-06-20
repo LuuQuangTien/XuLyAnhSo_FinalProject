@@ -1,0 +1,7 @@
+PyQt6
+scipy
+opencv-python
+numpy
+pandas
+openpyxl
+onnxruntime

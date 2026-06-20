@@ -1,0 +1,119 @@
+/* Dark Theme - Chỉ chứa màu sắc */
+
+QMainWindow { background-color: #121212; }
+QWidget { background-color: #121212; color: #E1E1E1; }
+QSplitter::handle { background-color: #333333; }
+QFrame#Panel { background-color: #1E1E1E; border: 1px solid #333333; }
+
+QPushButton { background-color: #2f2f34; color: #e6e6e8; border: 1px solid #44444a; }
+QPushButton:hover { background-color: #45454d; border-color: #6a6a75; }
+QPushButton:pressed { background-color: #222227; }
+QPushButton[variant="active"],
+QPushButton[variant="primary"] { background-color: #0e639c; border-color: #1177bb; }
+QPushButton[variant="channel-red"] { color: #ff5f5f; }
+QPushButton[variant="channel-green"] { color: #46d96c; }
+QPushButton[variant="channel-blue"] { color: #4f89ff; }
+
+QLabel { color: #E1E1E1; }
+QLineEdit { background-color: #2C2C2C; border: 1px solid #333333; color: #E1E1E1; }
+
+QTreeView::item:hover { background-color: #333333; }
+QTreeView::item:selected { background-color: #3d3d3d; color: #BB86FC; }
+
+QToolButton { color: #E1E1E1; }
+QToolButton:hover { background-color: #45454d; border-color: #6a6a75; }
+QToolButton:pressed { background-color: #222227; }
+
+QMenu { background-color: #2b2b30; border: 1px solid #44444a; }
+QMenu::item { color: #E1E1E1; }
+QMenu::item:selected { background-color: #45454d; }
+QMenu::separator { background-color: #44444a; }
+
+QTabBar::tab { background-color: #2b2b30; color: #999; border: 1px solid #44444a; }
+QTabBar::tab:selected { background-color: #1E1E1E; color: #E1E1E1; border-bottom-color: #1E1E1E; }
+QTabBar::tab:hover:!selected { background-color: #3a3a40; }
+
+/* ==================================================
+   GLOBAL UTILITY CLASSES (COLORS)
+================================================== */
+
+/* Headers & Titles */
+QLabel[class="explorer-title"] { color: #888; }
+QLabel[class="dialog-title"] { color: #4dabf7; }
+QLabel[class="dialog-title-success"] { color: #4CAF50; }
+QLabel[class="subtitle"] { color: #4CAF50; }
+QLabel[class="subtitle-small"] { color: #e9ecef; }
+QLabel[class="member-name"] { color: #E1E1E1; }
+
+/* Score displays */
+QLabel[class="score-huge"] { color: #fff; }
+/* QLabel[class="score-val"] color is set dynamically via style sheet */
+QLabel[class="score-label"] { color: #ced4da; }
+QLabel[class="score-count"] { color: #ccc; }
+QLabel[class="info-label"] { color: #ddd; }
+QLabel[class="error-label"] { color: #F44336; }
+QLabel[class="error-title"] { color: #fa5252; }
+
+/* Badges */
+QLabel[class="badge"] { background-color: #1c7ed6; color: #fff; }
+
+/* Checkbox */
+QCheckBox[class="checkbox-success"] { color: #4CAF50; }
+
+/* Consoles & Text Areas */
+QTextEdit[class="error-console"] { background-color: #1a1a1a; color: #ff8a80; border: 1px solid #333; }
+
+/* Containers & Cards */
+QFrame[class="card"] { background-color: #25262b; }
+QFrame[class="card-border"] { border: 1px solid #444; background-color: #111; }
+/* QFrame[class="result-container"] bg color is set dynamically via stylesheet */
+QLabel[class="data-box"] { background-color: #222; color: #ddd; }
+QLabel[class="preview-box"] { border: 2px dashed #666; color: #888; }
+QLabel[class="preview-box-active"] { border: 1px solid #555; background-color: #1e1e1e; border-radius: 8px; }
+QFrame[class="separator-line"] { background-color: #444; }
+
+/* Chart */
+QLabel[class="chart-title"] { color: #aaa; }
+QLabel[class="chart-label"] { color: #ccc; }
+QProgressBar[class="chart-bar"] { background-color: #333; }
+/* QProgressBar[class="chart-bar"]::chunk bg is set dynamically */
+
+/* Button Variants */
+QPushButton[variant="primary"] { background-color: #2196F3; color: white; }
+QPushButton[variant="success"] { background-color: #4CAF50; color: white; }
+QPushButton[variant="secondary"] { background-color: #444; color: white; }
+QPushButton[variant="danger"] { background-color: #F44336; color: white; }
+
+/* Center Panel */
+QLabel[class="placeholder-text"] { color: #888; }
+
+/* Zoom Control Widget */
+QWidget#ZoomControlWidget QPushButton {
+    background-color: rgba(40, 44, 52, 220);
+    color: #e0e0e0;
+    border: 1px solid #666;
+}
+QWidget#ZoomControlWidget QPushButton:hover {
+    background-color: rgba(70, 75, 85, 220);
+}
+QWidget#ZoomControlWidget QSpinBox {
+    background-color: rgba(40, 44, 52, 220);
+    color: #e0e0e0;
+    border: 1px solid #666;
+}
+
+/* Bubble Answer Button */
+QPushButton[class="bubble-btn"] {
+    border: 1px solid #777;
+    background-color: transparent;
+    color: #ccc;
+}
+QPushButton[class="bubble-btn"]:checked {
+    background-color: #2196F3;
+    border: 1px solid #2196F3;
+    color: white;
+}
+QPushButton[class="bubble-btn"]:hover:!checked {
+    background-color: #444;
+    color: white;
+}
