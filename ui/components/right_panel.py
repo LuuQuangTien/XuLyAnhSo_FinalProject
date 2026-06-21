@@ -1,4 +1,5 @@
-from PyQt6.QtWidgets import QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLabel, QScrollArea, QProgressBar
+from PyQt6.QtWidgets import QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLabel, QScrollArea, QProgressBar, QLineEdit, QFileDialog, QMessageBox
+import pandas as pd
 from PyQt6.QtCore import Qt
 from ui import strings
 
@@ -74,6 +75,17 @@ class RightPanel(QFrame):
         lbl_dash.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(lbl_dash)
         
+        # Chọn file Excel
+        row_excel = QHBoxLayout()
+        self.txt_excel_path = QLineEdit()
+        self.txt_excel_path.setReadOnly(True)
+        self.txt_excel_path.setPlaceholderText("Đường dẫn file Excel...")
+        btn_browse_excel = QPushButton("Mở")
+        btn_browse_excel.clicked.connect(self._browse_excel)
+        row_excel.addWidget(self.txt_excel_path)
+        row_excel.addWidget(btn_browse_excel)
+        layout.addLayout(row_excel)
+        
         self.lbl_total = QLabel("Số bài đã chấm: 0")
         self.lbl_total.setProperty("class", "info-label")
         layout.addWidget(self.lbl_total)
@@ -89,13 +101,13 @@ class RightPanel(QFrame):
         
         self.bars = {}
         categories = [
-            ("Giỏi (>=8)", "#4CAF50"),
-            ("Khá (6.5-8)", "#2196F3"),
-            ("TB (5-6.5)", "#FFC107"),
-            ("Yếu (<5)", "#F44336")
+            ("Giỏi (>=8)", "gioi"),
+            ("Khá (6.5-8)", "kha"),
+            ("TB (5-6.5)", "tb"),
+            ("Yếu (<5)", "yeu")
         ]
         
-        for key, color in categories:
+        for key, level in categories:
             row = QVBoxLayout()
             row.setSpacing(2)
             lbl = QLabel(f"{key}: 0")
@@ -104,7 +116,7 @@ class RightPanel(QFrame):
             bar.setTextVisible(False)
             bar.setFixedHeight(8)
             bar.setProperty("class", "chart-bar")
-            bar.setStyleSheet(f"QProgressBar::chunk {{ background-color: {color}; }}")
+            bar.setProperty("scoreLevel", level)
             bar.setMaximum(100)
             bar.setValue(0)
             
@@ -118,6 +130,43 @@ class RightPanel(QFrame):
 
         scroll.setWidget(container)
         main_layout.addWidget(scroll)
+
+    def _browse_excel(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Chọn file Excel kết quả", "", "Excel Files (*.xlsx *.xls)")
+        if path:
+            self.load_excel_stats(path)
+            
+    def load_excel_stats(self, excel_path: str):
+        self.txt_excel_path.setText(excel_path)
+        try:
+            df = pd.read_excel(excel_path)
+            
+            # Kiểm tra xem có cột "Điểm" hay không
+            if "Điểm" not in df.columns:
+                QMessageBox.warning(self, "Lỗi định dạng", "File Excel không có cột 'Điểm'. Không thể thống kê.")
+                return
+                
+            scores = pd.to_numeric(df["Điểm"], errors='coerce').dropna()
+            total = len(df)
+            avg = scores.mean() if total > 0 else 0
+            
+            gioi = len(scores[scores >= 8])
+            kha = len(scores[(scores >= 6.5) & (scores < 8)])
+            tb = len(scores[(scores >= 5) & (scores < 6.5)])
+            yeu = len(scores[scores < 5])
+            
+            stats = {
+                'total': total,
+                'avg': avg,
+                'gioi': gioi,
+                'kha': kha,
+                'tb': tb,
+                'yeu': yeu
+            }
+            self.update_dashboard(stats)
+            
+        except Exception as e:
+            QMessageBox.warning(self, "Lỗi đọc file", f"Không thể đọc file Excel: {e}")
 
     def update_dashboard(self, stats):
         total = stats.get('total', 0)
@@ -149,16 +198,22 @@ class RightPanel(QFrame):
         self.lbl_score_huge.setText(f"{final_score:.2f}")
         
         if final_score >= 8:
-            color = "#4CAF50" # Xanh lá (Giỏi)
+            level = "gioi"
         elif final_score >= 6.5:
-            color = "#2196F3" # Xanh dương (Khá)
+            level = "kha"
         elif final_score >= 5:
-            color = "#FFC107" # Vàng (TB)
+            level = "tb"
         else:
-            color = "#F44336" # Đỏ (Yếu)
+            level = "yeu"
             
-        self.single_result_container.setStyleSheet(f"border: 2px solid {color};")
-        self.lbl_score_huge.setStyleSheet(f"color: {color};")
+        self.single_result_container.setProperty("scoreLevel", level)
+        self.lbl_score_huge.setProperty("scoreLevel", level)
+        
+        self.single_result_container.style().unpolish(self.single_result_container)
+        self.single_result_container.style().polish(self.single_result_container)
+        
+        self.lbl_score_huge.style().unpolish(self.lbl_score_huge)
+        self.lbl_score_huge.style().polish(self.lbl_score_huge)
         
         correct = score.get('correct', 0)
         total = score.get('total', 0)

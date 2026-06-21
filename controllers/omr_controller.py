@@ -62,29 +62,10 @@ class OMRController:
             if dialog.exec() != QDialog.DialogCode.Accepted:
                 return None
                 
-            if dialog.is_auto_mode and sample_image is not None:
-                # Chạy detect
-                detected = OMRService.detect_templates(sample_image)
-                best_conf = detected[0][1] if detected else 0.0
-                
-                if best_conf >= 0.8:
-                    return detected[0][0]
-                else:
-                    QMessageBox.warning(self.view, "Độ tự tin thấp", 
-                        f"Độ tự tin cao nhất chỉ đạt {int(best_conf*100)}%.\nVui lòng chọn mẫu thủ công từ danh sách.")
-                    # Buộc chuyển sang manual mode và hiện danh sách
-                    dialog.force_manual_mode(detected)
-                    continue # Bắt người dùng chọn lại
-            else:
-                if dialog.selected_template == "AUTO":
-                    # Không có sample_image (ví dụ batch chưa tải ảnh), bỏ qua kiểm tra tự tin tạm thời,
-                    # hoặc báo lỗi. Trong batch ta có thể kiểm tra ở ảnh đầu tiên, nhưng để đơn giản ta bắt 
-                    # nó return "AUTO" để xử lý bên ngoài.
-                    return "AUTO"
-                if dialog.selected_template is None:
-                    QMessageBox.warning(self.view, "Lỗi", "Vui lòng chọn một mẫu!")
-                    continue
-                return dialog.selected_template
+            if dialog.selected_template is None:
+                QMessageBox.warning(self.view, "Lỗi", "Vui lòng chọn một mẫu!")
+                continue
+            return dialog.selected_template
 
     def handle_omr_batch(self):
         from ui.dialogs.batch_setup_dialog import BatchSetupDialog
@@ -99,7 +80,7 @@ class OMRController:
         template = dialog.selected_template
         
         image_extensions = {".jpg", ".jpeg", ".png", ".bmp"}
-        files = [f for f in os.listdir(input_dir) if os.path.splitext(f)[1].lower() in image_extensions]
+        files = sorted([f for f in os.listdir(input_dir) if os.path.splitext(f)[1].lower() in image_extensions])
         
         if not files:
             QMessageBox.information(self.view, "Thông báo", "Không tìm thấy ảnh nào trong thư mục đầu vào.")
@@ -309,8 +290,8 @@ class OMRController:
                     errors_log.append(f"{err['file']}: Lỗi tiền xử lý - {err['reason']}")
                     excel_data.append({
                         "Tên file": err['file'],
-                        "Số báo danh": "N/A",
-                        "Mã đề thi": "N/A",
+                        "Số báo danh": err.get('sbd', 'N/A'),
+                        "Mã đề thi": err.get('made', 'N/A'),
                         "Số câu đúng": "0/0",
                         "Điểm": 0,
                         "Ghi chú": f"Lỗi tiền xử lý: {err['reason']}"
@@ -323,20 +304,8 @@ class OMRController:
                 if hasattr(self.view, 'controller') and hasattr(self.view.controller, 'explorer'):
                     self.view.controller.explorer.import_folder_by_path(output_dir)
                 
-                gioi = kha = tb = yeu = 0
-                total_score = 0
-                for row in excel_data:
-                    sc = row.get("Điểm", 0)
-                    total_score += sc
-                    if sc >= 8: gioi += 1
-                    elif sc >= 6.5: kha += 1
-                    elif sc >= 5: tb += 1
-                    else: yeu += 1
-                
-                avg_score = total_score / len(excel_data) if len(excel_data) > 0 else 0
-                stats = {'total': success_count + error_count, 'avg': avg_score, 'gioi': gioi, 'kha': kha, 'tb': tb, 'yeu': yeu}
-                if hasattr(self.view, 'right_panel') and hasattr(self.view.right_panel, 'update_dashboard'):
-                    self.view.right_panel.update_dashboard(stats)
+                if hasattr(self.view, 'right_panel') and hasattr(self.view.right_panel, 'load_excel_stats'):
+                    self.view.right_panel.load_excel_stats(excel_path)
 
             summary_data = {
                 'success': success_count,

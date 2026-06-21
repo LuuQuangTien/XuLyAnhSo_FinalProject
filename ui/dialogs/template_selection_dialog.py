@@ -12,29 +12,13 @@ class TemplateSelectionDialog(QDialog):
         self.resize(500, 600)
         self.templates = templates
         self.selected_template = None
-        self.is_auto_mode = True
-        
         self.init_ui()
         
     def init_ui(self):
         layout = QVBoxLayout(self)
         
         # --- Mode Selection ---
-        mode_layout = QHBoxLayout()
-        self.btn_auto = QRadioButton("Tự động nhận diện (Khuyến nghị)")
-        self.btn_manual = QRadioButton("Chọn thủ công")
-        
-        self.btn_auto.setChecked(True)
-        
-        self.mode_group = QButtonGroup(self)
-        self.mode_group.addButton(self.btn_auto)
-        self.mode_group.addButton(self.btn_manual)
-        
-        mode_layout.addWidget(self.btn_auto)
-        mode_layout.addWidget(self.btn_manual)
-        layout.addLayout(mode_layout)
-        
-        self.btn_auto.toggled.connect(self.on_mode_changed)
+        # Removed Auto/Manual mode selection buttons
         
         # --- List Widget ---
         self.list_widget = QListWidget()
@@ -56,7 +40,6 @@ class TemplateSelectionDialog(QDialog):
         layout.addLayout(btn_layout)
         
         self.populate_list(self.templates)
-        self.on_mode_changed()
 
     def populate_list(self, templates_with_conf=None):
         """
@@ -114,16 +97,6 @@ class TemplateSelectionDialog(QDialog):
             list_item.setData(Qt.ItemDataRole.UserRole, template)
             self.list_widget.addItem(list_item)
 
-    def on_mode_changed(self):
-        self.is_auto_mode = self.btn_auto.isChecked()
-        self.list_widget.setEnabled(not self.is_auto_mode)
-
-    def force_manual_mode(self, templates_with_conf):
-        """Hàm này được gọi khi Auto bị fail, bắt buộc chuyển sang Manual và hiện điểm conf"""
-        self.btn_manual.setChecked(True)
-        self.populate_list(templates_with_conf)
-        self.list_widget.setCurrentRow(0)
-
     def on_item_double_clicked(self, item):
         template = item.data(Qt.ItemDataRole.UserRole)
         if not template:
@@ -158,13 +131,10 @@ class TemplateSelectionDialog(QDialog):
         dialog.exec()
 
     def on_ok_clicked(self):
-        if not self.is_auto_mode:
-            current_item = self.list_widget.currentItem()
-            if current_item:
-                self.selected_template = current_item.data(Qt.ItemDataRole.UserRole)
-            else:
-                self.selected_template = None
+        current_item = self.list_widget.currentItem()
+        if current_item:
+            self.selected_template = current_item.data(Qt.ItemDataRole.UserRole)
         else:
-            self.selected_template = "AUTO"
+            self.selected_template = None
             
         self.accept()

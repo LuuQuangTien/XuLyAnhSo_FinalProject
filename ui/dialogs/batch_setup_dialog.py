@@ -78,13 +78,21 @@ class BatchSetupDialog(QDialog):
         
         self.combo_device = QComboBox()
         self.combo_device.addItems(["Dùng CPU", "Dùng GPU (NVIDIA/DirectML)"])
-        self.combo_device.setEnabled(False)
+        self.combo_device.setVisible(False)
         
-        self.chk_use_ai.stateChanged.connect(lambda state: self.combo_device.setEnabled(state == Qt.CheckState.Checked.value))
+        self.lbl_device = QLabel("Thiết bị:")
+        self.lbl_device.setVisible(False)
+        
+        def on_ai_checked(state):
+            is_checked = state == Qt.CheckState.Checked.value
+            self.combo_device.setVisible(is_checked)
+            self.lbl_device.setVisible(is_checked)
+            
+        self.chk_use_ai.stateChanged.connect(on_ai_checked)
         self.combo_device.currentIndexChanged.connect(self.on_device_changed)
         
         ai_layout.addWidget(self.chk_use_ai)
-        ai_layout.addWidget(QLabel("Thiết bị:"))
+        ai_layout.addWidget(self.lbl_device)
         ai_layout.addWidget(self.combo_device)
         ai_layout.addStretch()
         left_layout.addLayout(ai_layout)
@@ -119,6 +127,9 @@ class BatchSetupDialog(QDialog):
         main_layout.addLayout(right_layout, 1)
         
         self.check_ready()
+        
+    def showEvent(self, event):
+        super().showEvent(event)
         self.on_template_changed()
         
     def populate_templates(self):
@@ -131,7 +142,6 @@ class BatchSetupDialog(QDialog):
                 name = getattr(t, "name", "Unknown")
             self.combo_template.addItem(name, t)
             
-        self.combo_template.addItem("Tự động nhận diện", "AUTO")
             
     def browse_input(self):
         dir_path = QFileDialog.getExistingDirectory(self, "Chọn thư mục ảnh")

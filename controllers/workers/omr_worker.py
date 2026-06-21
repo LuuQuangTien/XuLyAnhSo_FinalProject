@@ -105,7 +105,7 @@ class OMRBatchWorker(QThread):
 
                 valid_files.append((file, scan_res['template'], ai_level_used, temp_path))
             else:
-                report['errors'].append({'file': file, 'reason': scan_res['error']})
+                report['errors'].append({'file': file, 'reason': scan_res['error'], 'sbd': scan_res.get('sbd', ''), 'made': scan_res.get('made', '')})
                 
         if not self._is_cancelled:
             self.progress.emit(len(self.files), "Hoàn tất tiền xử lý.")

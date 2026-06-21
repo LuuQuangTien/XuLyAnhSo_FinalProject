@@ -150,9 +150,20 @@ class OMRService:
                 if isinstance(node_out, dict) and node_out.get("error"):
                     all_errors.append(node_out["error"])
             
+            # Luôn bắt lỗi SBD/Mã đề ở bất kỳ level nào (để lên báo cáo)
+            if "?" in sbd or not sbd:
+                all_errors.append("Lỗi đọc Số báo danh")
+            if "?" in made or not made:
+                all_errors.append("Lỗi đọc Mã đề thi")
+                
+            # Kiểm tra mã đề có trong file Excel không
+            answers = initial_context["input"].get("answers", {})
+            if made and "?" not in made and answers:
+                if isinstance(next(iter(answers.values()), None), dict): # Dạng nhiều mã đề
+                    if made not in answers:
+                        all_errors.append(f"Không tìm thấy mã đề '{made}' trong đáp án")
+            
             total_pixels = image.shape[0] * image.shape[1]
-            if ai_level == 0 and ("?" in sbd or "?" in made):
-                all_errors.append("Không đọc được SBD/Mã đề")
                 
             if all_errors and ai_level == 0 and total_pixels < 1000000:
                 all_errors.append("Gợi ý dùng AI")
@@ -165,7 +176,7 @@ class OMRService:
                 return {'is_valid': False, 'error': error, 'template': selected_template, 'sbd': sbd, 'made': made}
             
             return {
-                'is_valid': bool(sbd and made),
+                'is_valid': True,
                 'error': error, 
                 'template': selected_template,
                 'sbd': sbd,

@@ -290,3 +290,19 @@ QPushButton[class="bubble-btn"] {
     padding: 0px;
     margin: 0px;
 }
+
+/* Dynamic Score Styles */
+QProgressBar[scoreLevel="gioi"]::chunk { background-color: #4CAF50; }
+QProgressBar[scoreLevel="kha"]::chunk { background-color: #2196F3; }
+QProgressBar[scoreLevel="tb"]::chunk { background-color: #FFC107; }
+QProgressBar[scoreLevel="yeu"]::chunk { background-color: #F44336; }
+
+QFrame[class="result-container"][scoreLevel="gioi"] { border: 2px solid #4CAF50; }
+QFrame[class="result-container"][scoreLevel="kha"] { border: 2px solid #2196F3; }
+QFrame[class="result-container"][scoreLevel="tb"] { border: 2px solid #FFC107; }
+QFrame[class="result-container"][scoreLevel="yeu"] { border: 2px solid #F44336; }
+
+QLabel[class="score-huge"][scoreLevel="gioi"] { color: #4CAF50; }
+QLabel[class="score-huge"][scoreLevel="kha"] { color: #2196F3; }
+QLabel[class="score-huge"][scoreLevel="tb"] { color: #FFC107; }
+QLabel[class="score-huge"][scoreLevel="yeu"] { color: #F44336; }

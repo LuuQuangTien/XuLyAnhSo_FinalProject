@@ -24,6 +24,16 @@ class TemplateService:
                             continue
                             
                         data['_filepath'] = path
+                        
+                        # Auto-detect preview image if not specified in JSON
+                        if 'preview_image_path' not in data:
+                            base_name = os.path.splitext(file)[0]
+                            for ext in ['.jpg', '.png', '.jpeg']:
+                                img_path = os.path.join(TEMPLATE_DIR, f"{base_name}{ext}")
+                                if os.path.exists(img_path):
+                                    data['preview_image_path'] = img_path
+                                    break
+                                    
                         templates.append(data)
                 except Exception as e:
                     print(f"[TemplateService] Lỗi khi nạp {file}: {e}")

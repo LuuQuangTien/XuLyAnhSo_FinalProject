@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from services.grading_service.nodes.utils import count_bubble_pixels, create_bubble_mask
+from image_processing.extraction.bubble_analyzer import count_bubble_pixels, create_bubble_mask
 
 class Heuristic120Node:
     def execute(self, blocks, image_shape, **params):
@@ -186,13 +186,15 @@ class MCQScorerNode:
         score = 0
         total_q = 0
         wrong_list, missing_list, ruined_list = [], [], []
+        error_msg = ""
         
         current_answers = answers
         if answers and isinstance(next(iter(answers.values()), None), dict):
             if made and made in answers:
                 current_answers = answers[made]
             else:
-                current_answers = answers[next(iter(answers.keys()))]
+                error_msg = f"Lỗi: Không tìm thấy mã đề '{made}' trong đáp án."
+                current_answers = answers[next(iter(answers.keys()))] # Fallback to grade it anyway, but it has an error
                 
         for q_num, bubbled_list in detected_bubbles.items():
             chosen_answer = ",".join([options[b] for b in bubbled_list]) if bubbled_list else "Chưa chọn"
@@ -215,7 +217,8 @@ class MCQScorerNode:
             "results": results,
             "wrong_list": wrong_list,
             "missing_list": missing_list,
-            "ruined_list": ruined_list
+            "ruined_list": ruined_list,
+            "error": error_msg
         }
 
 
