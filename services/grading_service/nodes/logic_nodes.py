@@ -1,4 +1,5 @@
 import cv2
+import os
 import numpy as np
 from image_processing.extraction.bubble_analyzer import count_bubble_pixels, create_bubble_mask, count_projection_peak, evaluate_bubble_xor, get_bubble_centroid_vector
 
@@ -92,7 +93,7 @@ class Heuristic120Node:
         return {"sbd_block": sbd_block, "made_block": made_block, "question_blocks": bottom_blocks, "error": error}
 
 class SBDReaderNode:
-    def execute(self, thresh, block, **params):
+    def execute(self, thresh, block, image=None, **params):
         if not block: return {"result": ""}
         bx, by, bw, bh = block
         rows = params.get("rows", 10)
@@ -107,73 +108,120 @@ class SBDReaderNode:
         radius_y = max(5, int(bh * params.get("radius_ratio", 0.035) * aspect_orig))
         radius = (radius_x, radius_y)
         
-        # BỎ LÕI 70%, DÙNG 100% BÁN KÍNH CHO XOR
         circle_area = np.pi * radius_x * radius_y
         max_xor_allowed = circle_area * (1.0 - params.get("fill_threshold", 0.40))
         sbd_mask = create_bubble_mask(radius)
         
-        digits = []
-        global_dx = 0  # Tổng độ lệch thực tế
-        velocity = 0   # Vận tốc trôi (drift per column) do perspective distortion
-        
-        for j, cx in enumerate(cols_x):
-            # Dự đoán tâm của cột hiện tại dựa trên đà (momentum) của cột trước
-            predicted_offset = global_dx + velocity
-            current_cx = cx + predicted_offset
+        def attempt_read(current_thresh):
+            digits = []
+            global_dx = 0  # Tổng độ lệch thực tế
+            velocity = 0   # Vận tốc trôi (drift per column) do perspective distortion
             
-            def _get_sbd_bubbled(cx_target, dy_target=0):
-                tots = [evaluate_bubble_xor(thresh, cx_target, ry + dy_target, radius, sbd_mask) for ry in rows_y]
-                val_tots = [t for t in tots if t < max_xor_allowed]
-                if not val_tots: return [], tots
-                min_xor = min(val_tots)
-                r_thresh = 0.15 * circle_area + 0.85 * min_xor
-                return [i for i, t in enumerate(tots) if t <= r_thresh and t < max_xor_allowed], tots
+            for j, cx in enumerate(cols_x):
+                predicted_offset = global_dx + velocity
+                current_cx = cx + predicted_offset
                 
-            valid_indices, tots = _get_sbd_bubbled(current_cx)
-            
-            # Khắc phục 1: Nếu dính phải đường kẻ dọc (gây ra nhiều valid_indices do nhiễu), thử tìm xung quanh
-            if len(valid_indices) != 1:
-                for test_dx in [-4, 4, -6, 6, -8, 8, -2, 2]:
-                    test_valid, test_tots = _get_sbd_bubbled(current_cx + test_dx)
-                    if len(test_valid) == 1:
-                        valid_indices = test_valid
-                        tots = test_tots
-                        current_cx += test_dx
-                        break
-                        
-            # Khắc phục 2: Nếu vẫn mất dấu, dò tìm mỏ neo bằng ô đậm nhất
-            if len(valid_indices) != 1:
-                best_i = min(range(len(rows_y)), key=lambda i: tots[i])
-                if tots[best_i] < circle_area * 0.90:
-                    dx, dy = get_bubble_centroid_vector(thresh, current_cx, rows_y[best_i], radius)
-                    if abs(dx) > 0 or abs(dy) > 0:
-                        s_valid, _ = _get_sbd_bubbled(current_cx + dx, dy)
-                        if len(s_valid) == 1:
-                            valid_indices = s_valid
-                            current_cx += dx
+                def _get_sbd_bubbled(cx_target, dy_target=0):
+                    tots = [evaluate_bubble_xor(current_thresh, cx_target, ry + dy_target, radius, sbd_mask) for ry in rows_y]
+                    val_tots = [t for t in tots if t < max_xor_allowed]
+                    if not val_tots: return [], tots
+                    min_xor = min(val_tots)
+                    r_thresh = 0.15 * circle_area + 0.85 * min_xor
+                    return [i for i, t in enumerate(tots) if t <= r_thresh and t < max_xor_allowed], tots
+                    
+                valid_indices, tots = _get_sbd_bubbled(current_cx)
+                
+                # Khắc phục 1: Tránh nhiễu dọc
+                if len(valid_indices) != 1:
+                    for test_dx in [-4, 4, -6, 6, -8, 8, -2, 2]:
+                        test_valid, test_tots = _get_sbd_bubbled(current_cx + test_dx)
+                        if len(test_valid) == 1:
+                            valid_indices = test_valid
+                            tots = test_tots
+                            current_cx += test_dx
+                            break
                             
-            if len(valid_indices) == 1:
-                best_i = valid_indices[0]
-                dx, dy = get_bubble_centroid_vector(thresh, current_cx, rows_y[best_i], radius)
+                # Khắc phục 2: Dò tìm mỏ neo bằng ô đậm nhất
+                if len(valid_indices) != 1:
+                    best_i = min(range(len(rows_y)), key=lambda i: tots[i])
+                    if tots[best_i] < circle_area * 0.95:
+                        dx, dy = get_bubble_centroid_vector(current_thresh, current_cx, rows_y[best_i], radius)
+                        if abs(dx) > 0 or abs(dy) > 0:
+                            s_valid, _ = _get_sbd_bubbled(current_cx + dx, dy)
+                            if len(s_valid) == 1:
+                                valid_indices = s_valid
+                                current_cx += dx
+                                
+                if len(valid_indices) == 1:
+                    best_i = valid_indices[0]
+                    dx, dy = get_bubble_centroid_vector(current_thresh, current_cx, rows_y[best_i], radius)
+                    total_shift = (current_cx + dx) - (cx + predicted_offset)
+                    velocity = total_shift
+                    global_dx += total_shift
+                    digits.append(str(valid_indices[0]))
+                elif len(valid_indices) > 1:
+                    # Khắc phục 3: Nhiều ứng viên cùng lọt → chọn ô có XOR thấp nhất (tô đậm nhất)
+                    best_i = min(valid_indices, key=lambda i: tots[i])
+                    dx, dy = get_bubble_centroid_vector(current_thresh, current_cx, rows_y[best_i], radius)
+                    total_shift = (current_cx + dx) - (cx + predicted_offset)
+                    velocity = total_shift
+                    global_dx += total_shift
+                    digits.append(str(best_i))
+                else:
+                    digits.append("?")
+                    global_dx = predicted_offset
+                    
+            return digits
+
+        # Thử đọc bằng global thresh trước! Nhanh và chính xác với ngưỡng tiêu chuẩn.
+        debug_dir = params.get("debug_dir")
+        debug_prefix = params.get("debug_prefix", "")
+        if debug_dir and os.path.exists(debug_dir):
+            cv2.imwrite(os.path.join(debug_dir, f"{debug_prefix}{params.get('cols')}_cols_base_thresh.jpg"), thresh[by:by+bh, bx:bx+bw])
+            
+        base_digits = attempt_read(thresh)
+        base_q_count = base_digits.count("?")
+        if base_q_count == 0:
+            return {"result": "".join(base_digits)}
+
+        # Nếu bị mất nét (có dấu ?) và có ảnh gốc, kích hoạt cứu hộ Dynamic Threshold Iteration!
+        if image is not None:
+            best_digits = base_digits
+            best_q_count = base_q_count
+            
+            # Khởi tạo temp_thresh an toàn theo giới hạn ảnh
+            img_h, img_w = image.shape[:2]
+            y1, y2 = max(0, by), min(img_h, by + bh)
+            x1, x2 = max(0, bx), min(img_w, bx + bw)
+            
+            from image_processing.preprocessing.apply_adaptive_threshold import process as apply_thresh
+            # Bắt đầu từ 15 (tối ưu nhất) và giảm dần để vớt nét chì mờ
+            for C_val in [15, 12, 9, 6, 4]:
+                temp_thresh = thresh.copy()
+                roi = image[y1:y2, x1:x2]
+                if roi.size > 0:
+                    local_thresh = apply_thresh(roi, block_size=91, C=C_val, sharpen=False, blur=False)
+                    local_thresh = cv2.medianBlur(local_thresh, 3)
+                    
+                    if debug_dir and os.path.exists(debug_dir):
+                        cv2.imwrite(os.path.join(debug_dir, f"{debug_prefix}{params.get('cols')}_cols_dynamic_C{C_val}.jpg"), local_thresh)
+                        
+                    temp_thresh[y1:y2, x1:x2] = local_thresh
+                    
+                digits = attempt_read(temp_thresh)
+                q_count = digits.count("?")
                 
-                # Tổng lượng dịch chuyển so với DỰ ĐOÁN ban đầu
-                total_shift = (current_cx + dx) - (cx + predicted_offset)
+                if q_count == 0:
+                    return {"result": "".join(digits)} # Đã đọc trọn vẹn
                 
-                # Giới hạn sự thay đổi để tránh nhảy sai cột
-                correction = max(-7, min(7, total_shift))
-                true_offset = predicted_offset + correction
-                
-                # Cập nhật vận tốc trôi
-                velocity = true_offset - global_dx
-                global_dx = true_offset
-                
-                digits.append(str(valid_indices[0]))
-            else:
-                digits.append("?")
-                # Nếu mất dấu, tiếp tục trôi theo vận tốc cũ
-                global_dx = predicted_offset
-                
-        return {"result": "".join(digits)}
+                if q_count < best_q_count:
+                    best_q_count = q_count
+                    best_digits = digits
+                    
+            return {"result": "".join(best_digits)}
+            
+        else:
+            return {"result": "".join(attempt_read(thresh))}
 
 class SBDVisualizerNode:
     def execute(self, image, thresh, block, **params):
@@ -182,49 +230,28 @@ class SBDVisualizerNode:
         rows = params.get("rows", 10)
         cols = params.get("cols", 6)
         
+        # Gọi lại SBDReaderNode để lấy chính xác mảng digits đã xuất ra Excel
+        reader = SBDReaderNode()
+        res = reader.execute(thresh, block, image, **params)
+        digits = res.get("result", "")
+        
         rows_y = [int(by + bh * ((params["row_start"] + i * params["row_step"]) / params["row_total"])) for i in range(rows)]
         cols_x = [int(bx + bw * ((params["col_start"] + j * params["col_step"]) / params["col_total"])) for j in range(cols)]
         
-        radius = max(5, int(bw * params.get("radius_ratio", 0.035)))
-        method = params.get("method", "inner_core")
+        aspect_orig = 0.55 if cols > 4 else 0.30
+        radius_x = max(5, int(bw * params.get("radius_ratio", 0.035)))
+        radius_y = max(5, int(bh * params.get("radius_ratio", 0.035) * aspect_orig))
         
-        if method == "projection":
-            strip_h = max(3, int(radius * 0.8))
-            min_pixels = strip_h * 2 * params.get("fill_threshold", 0.4)
-            for j, cx in enumerate(cols_x):
-                max_pixels = 0
-                best_i = -1
-                for i, ry in enumerate(rows_y):
-                    total = count_projection_peak(thresh, cx, ry, radius)
-                    if total > max_pixels and total > min_pixels:
-                        max_pixels = total
-                        best_i = i
-                if best_i != -1:
-                    ry = rows_y[best_i]
-                    cv2.rectangle(image, (cx - radius, ry - strip_h), (cx + radius, ry + strip_h), (0, 255, 0), 2)
-        else:
-            # KHÔI PHỤC LÕI 70%
-            inner_radius = max(3, int(radius * 0.70))
-            min_pixels = int(np.pi * (inner_radius ** 2) * params.get("fill_threshold", 0.15))
-            sbd_mask = create_bubble_mask(inner_radius)
-            for j, cx in enumerate(cols_x):
-                totals = []
-                for i, ry in enumerate(rows_y):
-                    total = count_bubble_pixels(thresh, cx, ry, inner_radius, sbd_mask)
-                    totals.append(total)
-                
-                valid_totals = [t for t in totals if t > min_pixels]
-                if valid_totals:
-                    max_total = max(valid_totals)
-                    rel_threshold = max_total * 0.85
-                    valid_indices = [i for i, t in enumerate(totals) if t >= rel_threshold and t > min_pixels]
-                    
-                    if len(valid_indices) == 1:
-                        cv2.circle(image, (cx, rows_y[valid_indices[0]]), radius + 2, (0, 255, 0), 3)
-                    elif len(valid_indices) > 1:
-                        # Phá
-                        for idx in valid_indices:
-                            cv2.circle(image, (cx, rows_y[idx]), radius + 2, (0, 165, 255), 3)
+        for j, cx in enumerate(cols_x):
+            if j < len(digits):
+                d = digits[j]
+                if d.isdigit():
+                    ry = rows_y[int(d)]
+                    cv2.ellipse(image, (cx, ry), (radius_x + 2, radius_y + 2), 0, 0, 360, (0, 255, 0), 3)
+                else:
+                    # Phân vân
+                    for ry in rows_y:
+                        cv2.ellipse(image, (cx, ry), (radius_x + 2, radius_y + 2), 0, 0, 360, (0, 165, 255), 2)
                 
         return {"image": image}
 
@@ -238,21 +265,23 @@ class BubbleGridDetectorNode:
         median_bh = np.median([b[3] for b in blocks]) if blocks else 0
         _, _, first_bw, _ = blocks[0]
         q_radius = max(5, int(first_bw * params.get("radius_ratio", 0.05)))
+        median_bw = np.median([b[2] for b in blocks]) if blocks else 0
         method = params.get("method", "inner_core")
         
         if method == "projection":
             strip_h = max(3, int(q_radius * 0.8))
             min_pixels = strip_h * 2 * params.get("fill_threshold", 0.4)
             questions_per_block = params.get("questions_per_block", 30)
-            for block_idx, (bx, by, bw, bh_orig) in enumerate(blocks):
+            for block_idx, (bx, by, bw_orig, bh_orig) in enumerate(blocks):
                 bh = median_bh if params.get("use_median_height", True) and median_bh > 0 else bh_orig
+                bw = median_bw if params.get("use_median_width", True) and median_bw > 0 else bw_orig
                 rows_y = [int(by + bh * ((params["row_start"] + i * params["row_step"]) / params["row_total"])) for i in range(questions_per_block)]
                 cols_x = [int(bx + bw * ((params["col_start"] + j * params["col_step"]) / params["col_total"])) for j in range(4)]
                 for i, ry in enumerate(rows_y):
                     q_num = start_q + block_idx * questions_per_block + i
                     bubbled_list = []
                     for j, cx in enumerate(cols_x):
-                        total = count_projection_peak(thresh, cx, ry, q_radius)
+                        total = count_projection_peak(thresh, cx, ry, max(5, int(bw * params.get("radius_ratio", 0.05))))
                         if total > min_pixels:
                             bubbled_list.append(j)
                     results[str(q_num)] = bubbled_list
@@ -262,52 +291,66 @@ class BubbleGridDetectorNode:
             q_radius_x = max(5, int(first_bw * params.get("radius_ratio", 0.05)))
             q_radius_y = max(5, int(median_bh * params.get("radius_ratio", 0.05) * aspect_orig))
             q_radius_ellipse = (q_radius_x, q_radius_y)
-            
-            # BỎ LÕI 70%, DÙNG 100% BÁN KÍNH CHO XOR
             circle_area = np.pi * q_radius_x * q_radius_y
-            max_xor_allowed = circle_area * (1.0 - params.get("fill_threshold", 0.40))
             q_mask = create_bubble_mask(q_radius_ellipse)
+            
+            # Sử dụng "Lõi 70%" (Inner Core) để tính độ đậm (XOR).
+            # Điều này giúp bỏ qua viền in sẵn (Outline) vốn có thể bị in đậm trên ảnh tối.
+            # Ô không tô luôn có lõi rỗng, ô tô luôn có lõi đặc.
+            core_rx = max(3, int(q_radius_x * 0.70))
+            core_ry = max(3, int(q_radius_y * 0.70))
+            core_radius = (core_rx, core_ry)
+            core_area = np.pi * core_rx * core_ry
+            
+            # max_xor_allowed là ngưỡng để coi là "có mực" (ví dụ 60% lõi bị tô)
+            max_xor_allowed = core_area * (1.0 - params.get("fill_threshold", 0.40))
+            core_mask = create_bubble_mask(core_radius)
             questions_per_block = params.get("questions_per_block", 30)
             
-            for block_idx, (bx, by, bw, bh_orig) in enumerate(blocks):
+            for block_idx, (bx, by, bw_orig, bh_orig) in enumerate(blocks):
                 bh = median_bh if params.get("use_median_height", True) and median_bh > 0 else bh_orig
+                bw = median_bw if params.get("use_median_width", True) and median_bw > 0 else bw_orig
                 rows_y = [int(by + bh * ((params["row_start"] + i * params["row_step"]) / params["row_total"])) for i in range(questions_per_block)]
                 cols_x = [int(bx + bw * ((params["col_start"] + j * params["col_step"]) / params["col_total"])) for j in range(4)]
     
-                global_dy = 0  # Tích lũy độ lệch dọc qua các hàng
                 for i, ry in enumerate(rows_y):
                     q_num = start_q + block_idx * questions_per_block + i
-                    current_ry = ry + global_dy
                     
-                    # Bước 1: Thu thập điểm XOR của 4 ô (Càng nhỏ càng tốt)
-                    def _get_bubbled(ry_target, dx_target=0):
-                        tots = [evaluate_bubble_xor(thresh, cx + dx_target, ry_target, q_radius_ellipse, q_mask) for cx in cols_x]
-                        val_tots = [t for t in tots if t < max_xor_allowed]
+                    # Hàm đánh giá chung
+                    def _get_bubbled(ry_target, radius, mask, area, dx_target=0):
+                        max_allowed = area * (1.0 - params.get("fill_threshold", 0.40))
+                        tots = [evaluate_bubble_xor(thresh, cx + dx_target, ry_target, radius, mask) for cx in cols_x]
+                        val_tots = [t for t in tots if t < max_allowed]
                         if not val_tots: return [], tots
                         min_xor = min(val_tots)
-                        r_thresh = 0.15 * circle_area + 0.85 * min_xor
-                        return [j for j, t in enumerate(tots) if t <= r_thresh and t < max_xor_allowed], tots
+                        r_thresh = 0.15 * area + 0.85 * min_xor
+                        return [j for j, t in enumerate(tots) if t <= r_thresh and t < max_allowed], tots
 
-                    bubbled_list, tots = _get_bubbled(current_ry)
+                    # Lần 1: Dùng full 100% radius (Tốt cho ảnh nhiễu nhẹ)
+                    bubbled_list, tots = _get_bubbled(ry, q_radius_ellipse, q_mask, circle_area)
                     
+                    # Lần 2: Nếu phân vân (0 hoặc >1 đáp án), dùng lõi 70% (Tốt để khử tẩy xóa viền)
                     if len(bubbled_list) != 1:
-                        # Tìm ô có lượng nét chì nhiều nhất (XOR nhỏ nhất) trong tất cả 4 ô
+                        bubbled_list_core, tots_core = _get_bubbled(ry, core_radius, core_mask, core_area)
+                        if len(bubbled_list_core) == 1:
+                            bubbled_list = bubbled_list_core
+                            tots = tots_core
+                            
+                    # Lần 3: Thử tịnh tiến tâm nếu vẫn không tìm được 1 đáp án duy nhất
+                    if len(bubbled_list) != 1:
                         best_j = min(range(len(cols_x)), key=lambda j: tots[j])
-                        # Chỉ tịnh tiến nếu có nét chì thực sự (XOR < 90% diện tích)
                         if tots[best_j] < circle_area * 0.90:
-                            dx, dy = get_bubble_centroid_vector(thresh, cols_x[best_j], current_ry, q_radius_ellipse)
+                            dx, dy = get_bubble_centroid_vector(thresh, cols_x[best_j], ry, q_radius_ellipse)
                             if dx != 0 or dy != 0:
-                                s_bubbled, _ = _get_bubbled(current_ry + dy, dx_target=dx)
+                                s_bubbled, _ = _get_bubbled(ry + dy, q_radius_ellipse, q_mask, circle_area, dx_target=dx)
                                 if len(s_bubbled) == 1:
                                     bubbled_list = s_bubbled
-                                    global_dy += max(-2, min(2, dy))
-                                    
-                    if len(bubbled_list) == 1:
-                        # Cập nhật mỏ neo liên tục từ các hàng đã chấm tốt
-                        best_j = bubbled_list[0]
-                        dx, dy = get_bubble_centroid_vector(thresh, cols_x[best_j], current_ry, q_radius_ellipse)
-                        global_dy += max(-2, min(2, dy))
-                                
+                                else:
+                                    # Fallback tịnh tiến với lõi 70%
+                                    s_bubbled_core, _ = _get_bubbled(ry + dy, core_radius, core_mask, core_area, dx_target=dx)
+                                    if len(s_bubbled_core) == 1:
+                                        bubbled_list = s_bubbled_core
+                                        
                     results[str(q_num)] = bubbled_list
                 
         return {"detected_bubbles": results}

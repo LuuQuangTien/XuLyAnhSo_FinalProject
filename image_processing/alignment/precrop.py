@@ -19,6 +19,8 @@ def crop_paper_from_background(image, log_txt):
     # 1. Bilateral Filter: Làm mịn vân gỗ, nhiễu hột nhưng GIỮ LẠI ĐỘ SẮC NÉT của mép giấy
     blurred = cv2.bilateralFilter(gray, 9, 75, 75)
     
+    cv2.imwrite(log_txt.replace(".txt", "_precrop_blurred.jpg"), blurred)
+    
     # Auto-Canny: Tự động căn ngưỡng Canny dựa trên độ chói trung bình của ảnh
     v = np.median(blurred)
     sigma = 0.33

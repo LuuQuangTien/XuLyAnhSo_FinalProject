@@ -21,7 +21,7 @@ class DocumentAlignerNode:
         return {"image": aligned, "error": error_msg}
 
 class AdaptiveThresholdNode:
-    def execute(self, image, block_size=None, dynamic_ratio=45, C=10, sharpen=True, **params):
+    def execute(self, image, block_size=None, dynamic_ratio=45, C=10, sharpen=True, debug_dir=None, debug_prefix="", **params):
         if block_size is None:
             w = image.shape[1]
             block_size = int(w / dynamic_ratio)
@@ -30,12 +30,20 @@ class AdaptiveThresholdNode:
             if block_size < 11:
                 block_size = 11
                 
+        debug_path = os.path.join(debug_dir, debug_prefix) if debug_dir and debug_prefix else ""
+                
         # Thresh 1: Dùng để tìm khối (Block size nhỏ)
-        thresh = apply_adaptive_threshold(image, block_size=block_size, C=C, sharpen=sharpen, blur=True)
+        thresh = apply_adaptive_threshold(image, block_size=block_size, C=C, sharpen=sharpen, blur=True, debug_path=debug_path)
         
         # Thresh 2: Chuyên dụng cho đọc nét chì bong bóng (Block size rất lớn để chống "rỗng ruột")
-        # Trả C về 15 để loại bỏ nhiễu giấy. block_size=91 đủ lớn để lấy nền giấy làm chuẩn.
-        bubble_thresh = apply_adaptive_threshold(image, block_size=91, C=15, sharpen=False, blur=False)
+        # Dynamic C: Đo độ sáng GỐC (trước normalize_illumination) để quyết định C
+        # Ảnh tối (mean~40) → C=5, Ảnh sáng (mean~180) → C=15
+        import numpy as np
+        from image_processing.utils.image_utils import to_grayscale
+        raw_gray = to_grayscale(image)
+        mean_brightness = np.mean(raw_gray)
+        bubble_C = max(5, int(15 * (mean_brightness / 180.0)))
+        bubble_thresh = apply_adaptive_threshold(image, block_size=91, C=bubble_C, sharpen=False, blur=False, debug_path=debug_path)
         
         # Tùy chọn: Xóa viền in sẵn bằng Morphology Opening
         remove_outlines = params.get("remove_outlines", False)
@@ -48,11 +56,8 @@ class AdaptiveThresholdNode:
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
         bubble_thresh = cv2.dilate(bubble_thresh, kernel, iterations=1)
         
-        # LƯU ẢNH DEBUG THRESHOLD ĐỂ KIỂM TRA MẮT CÚ
-        try:
-            cv2.imwrite(r"d:\tam\stu\xulianhso\ORM_demo1 (1)\resources\ketqua\no_ai\logs\bubble_thresh_debug.jpg", bubble_thresh)
-        except Exception:
-            pass
+        if debug_path:
+            cv2.imwrite(f"{debug_path}05_bubble_thresh_dilated.jpg", bubble_thresh)
             
         return {"image": thresh, "bubble_thresh": bubble_thresh}
 class BlockExtractorNode:

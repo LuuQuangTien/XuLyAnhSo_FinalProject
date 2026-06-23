@@ -49,12 +49,17 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     block_size = int(width / 20)
     if block_size % 2 == 0: block_size += 1
     if block_size < 31: block_size = 31
+    
+    # Tính toán ngưỡng C động (Dynamic C) dựa trên độ sáng trung bình của bức ảnh
+    # Ảnh càng tối thì C càng nhỏ (tối thiểu = 5) để tránh làm mất các marker màu đen bị chìm trong nền tối
+    mean_v = np.mean(gray)
+    c_val = max(5, int(15 * (mean_v / 180.0)))
         
     thresh = cv2.adaptiveThreshold(
         blurred, 255, 
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
         cv2.THRESH_BINARY_INV, 
-        block_size, 15
+        block_size, c_val
     )
     
     cnts, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)

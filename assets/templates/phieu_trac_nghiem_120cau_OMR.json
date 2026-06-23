@@ -1,116 +1,237 @@
 {
   "id": "phieu_trac_nghiem_120cau_OMR",
-  "name": "Phiếu 120 Câu OMR (Auto Rotation)",
+  "name": "Phi\u1ebfu 120 C\u00e2u OMR (Auto Rotation)",
   "nodes": [
+    {
+      "id": "standardize",
+      "type": "ImageStandardizer",
+      "inputs": {
+        "image": "@input.image"
+      },
+      "params": {
+        "min_width": 1400,
+        "max_width": 2000
+      }
+    },
     {
       "id": "align",
       "type": "DocumentAligner",
-      "inputs": { "image": "@input.image", "debug_dir": "@input.debug_dir", "debug_prefix": "@input.debug_prefix", "use_ai": "@input.use_ai" },
-      "params": { "method": "four_corners" }
+      "inputs": {
+        "image": "@standardize.image",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix",
+        "use_ai": "@input.use_ai"
+      },
+      "params": {
+        "method": "four_corners"
+      }
     },
     {
       "id": "thresh",
       "type": "AdaptiveThreshold",
-      "inputs": { "image": "@align.image" },
-      "params": { "block_size": 31, "C": 7, "sharpen": true, "remove_outlines": false }
+      "inputs": {
+        "image": "@align.image",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix"
+      },
+      "params": {
+        "block_size": 31,
+        "C": 7,
+        "sharpen": true,
+        "remove_outlines": true
+      }
     },
     {
       "id": "extract",
       "type": "BlockExtractor",
-      "inputs": { "thresh_image": "@thresh.image", "original_image": "@align.image", "debug_dir": "@input.debug_dir", "debug_prefix": "@input.debug_prefix" },
-      "params": { "min_area": 15000, "max_aspect_ratio": 2.5 }
+      "inputs": {
+        "thresh_image": "@thresh.image",
+        "original_image": "@align.image",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix"
+      },
+      "params": {
+        "min_area": 15000,
+        "max_aspect_ratio": 2.5
+      }
     },
     {
       "id": "classify",
       "type": "Heuristic120",
-      "inputs": { "blocks": "@extract.blocks", "image_shape": "@extract.image_shape" },
+      "inputs": {
+        "blocks": "@extract.blocks",
+        "image_shape": "@extract.image_shape",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix"
+      },
       "params": {
-         "top_split_y": 0.45,
-         "bottom_split_y": 0.2,
-         "right_split_x": 0.45,
-         "tall_block_ratio": 2.5,
-         "sbd_split_ratio": 0.65,
-         "fallback_sbd": [0.5391, 0.0185, 0.2647, 0.2288],
-         "fallback_made": [0.8255, 0.0185, 0.1473, 0.2288],
-         "fallback_q_y": 0.2841,
-         "fallback_q_h": 0.7085,
-         "fallback_q_w": 0.2120,
-         "fallback_q_xs": [0.0272, 0.2717, 0.5163, 0.7609]
+        "top_split_y": 0.45,
+        "bottom_split_y": 0.2,
+        "right_split_x": 0.45,
+        "tall_block_ratio": 2.5,
+        "sbd_split_ratio": 0.65,
+        "fallback_sbd": [
+          0.5391,
+          0.0185,
+          0.2647,
+          0.2288
+        ],
+        "fallback_made": [
+          0.8255,
+          0.0185,
+          0.1473,
+          0.2288
+        ],
+        "fallback_q_y": 0.2841,
+        "fallback_q_h": 0.7085,
+        "fallback_q_w": 0.212,
+        "fallback_q_xs": [
+          0.0272,
+          0.2717,
+          0.5163,
+          0.7609
+        ]
       }
     },
     {
       "id": "read_sbd",
       "type": "SBDReader",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block" },
-      "params": { 
-          "rows": 10, "cols": 6,
-          "radius_ratio": 0.043, "fill_threshold": 0.15,
-          "row_start": 9.75, "row_step": 5.5, "row_total": 62.0,
-          "col_start": 9.1, "col_step": 7.2, "col_total": 48.7
+      "inputs": {
+        "thresh": "@thresh.bubble_thresh",
+        "block": "@classify.sbd_block",
+        "image": "@align.image",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix"
+      },
+      "params": {
+        "rows": 10,
+        "cols": 6,
+        "radius_ratio": 0.043,
+        "fill_threshold": 0.15,
+        "row_start": 9.75,
+        "row_step": 5.5,
+        "row_total": 62.0,
+        "col_start": 9.1,
+        "col_step": 7.2,
+        "col_total": 48.7
       }
     },
     {
       "id": "vis_sbd",
       "type": "SBDVisualizer",
-      "inputs": { "image": "@align.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block" },
-      "params": { 
-          "rows": 10, "cols": 6,
-          "radius_ratio": 0.043, "fill_threshold": 0.40,
-          "row_start": 9.75, "row_step": 5.5, "row_total": 62.0,
-          "col_start": 9.1, "col_step": 7.2, "col_total": 48.7
+      "inputs": {
+        "image": "@align.image",
+        "thresh": "@thresh.bubble_thresh",
+        "block": "@classify.sbd_block"
+      },
+      "params": {
+        "rows": 10,
+        "cols": 6,
+        "radius_ratio": 0.043,
+        "fill_threshold": 0.4,
+        "row_start": 9.75,
+        "row_step": 5.5,
+        "row_total": 62.0,
+        "col_start": 9.1,
+        "col_step": 7.2,
+        "col_total": 48.7
       }
     },
     {
       "id": "read_made",
       "type": "SBDReader",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block" },
-      "params": { 
-          "rows": 10, "cols": 3,
-          "radius_ratio": 0.077, "fill_threshold": 0.40,
-          "row_start": 9.75, "row_step": 5.5, "row_total": 62.0,
-          "col_start": 9.1, "col_step": 7.2, "col_total": 27.1
+      "inputs": {
+        "thresh": "@thresh.bubble_thresh",
+        "block": "@classify.made_block",
+        "image": "@align.image",
+        "debug_dir": "@input.debug_dir",
+        "debug_prefix": "@input.debug_prefix"
+      },
+      "params": {
+        "rows": 10,
+        "cols": 3,
+        "radius_ratio": 0.077,
+        "fill_threshold": 0.4,
+        "row_start": 9.75,
+        "row_step": 5.5,
+        "row_total": 62.0,
+        "col_start": 9.1,
+        "col_step": 7.2,
+        "col_total": 27.1
       }
     },
     {
       "id": "vis_made",
       "type": "SBDVisualizer",
-      "inputs": { "image": "@vis_sbd.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block" },
-      "params": { 
-          "rows": 10, "cols": 3,
-          "radius_ratio": 0.077, "fill_threshold": 0.15,
-          "row_start": 9.75, "row_step": 5.5, "row_total": 62.0,
-          "col_start": 9.1, "col_step": 7.2, "col_total": 27.1
+      "inputs": {
+        "image": "@vis_sbd.image",
+        "thresh": "@thresh.bubble_thresh",
+        "block": "@classify.made_block"
+      },
+      "params": {
+        "rows": 10,
+        "cols": 3,
+        "radius_ratio": 0.077,
+        "fill_threshold": 0.15,
+        "row_start": 9.75,
+        "row_step": 5.5,
+        "row_total": 62.0,
+        "col_start": 9.1,
+        "col_step": 7.2,
+        "col_total": 27.1
       }
     },
     {
       "id": "detect_q",
       "type": "BubbleGridDetector",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "blocks": "@classify.question_blocks" },
-      "params": { 
-          "questions_per_block": 30,
-          "use_median_height": true,
-          "radius_ratio": 0.056, "fill_threshold": 0.40,
-          "row_start": 3.2, "row_step": 6.4, "row_total": 192.0,
-          "col_start": 11.4375, "col_step": 7.875, "col_total": 39.0
+      "inputs": {
+        "thresh": "@thresh.bubble_thresh",
+        "blocks": "@classify.question_blocks"
+      },
+      "params": {
+        "questions_per_block": 30,
+        "use_median_height": true,
+        "radius_ratio": 0.056,
+        "fill_threshold": 0.4,
+        "row_start": 3.2,
+        "row_step": 6.4,
+        "row_total": 192.0,
+        "col_start": 11.4375,
+        "col_step": 7.875,
+        "col_total": 39.0
       }
     },
     {
       "id": "score_q",
       "type": "MCQScorer",
-      "inputs": { "detected_bubbles": "@detect_q.detected_bubbles", "answers": "@input.answers", "made": "@read_made.result" }
+      "inputs": {
+        "detected_bubbles": "@detect_q.detected_bubbles",
+        "answers": "@input.answers",
+        "made": "@read_made.result"
+      }
     },
     {
       "id": "vis_q",
       "type": "MCQVisualizer",
-      "inputs": { "image": "@vis_made.image", "detected_bubbles": "@detect_q.detected_bubbles", "answers": "@input.answers", "blocks": "@classify.question_blocks", "made": "@read_made.result" },
-      "params": { 
-          "questions_per_block": 30,
-          "use_median_height": true,
-          "radius_ratio": 0.056,
-          "row_start": 3.2, "row_step": 6.4, "row_total": 192.0,
-          "col_start": 11.4375, "col_step": 7.875, "col_total": 39.0,
-          "draw_thick": 3,
-          "draw_offset": 2
+      "inputs": {
+        "image": "@vis_made.image",
+        "detected_bubbles": "@detect_q.detected_bubbles",
+        "answers": "@input.answers",
+        "blocks": "@classify.question_blocks",
+        "made": "@read_made.result"
+      },
+      "params": {
+        "questions_per_block": 30,
+        "use_median_height": true,
+        "radius_ratio": 0.056,
+        "row_start": 3.2,
+        "row_step": 6.4,
+        "row_total": 192.0,
+        "col_start": 11.4375,
+        "col_step": 7.875,
+        "col_total": 39.0,
+        "draw_thick": 3,
+        "draw_offset": 2
       }
     }
   ]

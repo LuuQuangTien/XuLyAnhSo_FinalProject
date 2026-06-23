@@ -1,0 +1,74 @@
+[PRE-CROP] Thất bại! Kể cả dùng Convex Hull cũng không tìm được viền giấy. Giữ nguyên ảnh gốc.
+Image Size: 1400 x 2097, Area: 2935800
+Found 335 total contours.
+Rejected (Size/Extent): (1003, 2069), Area: 6912.5, Ratio: 0.00235, Extent: 0.16
+Rejected (Size/Extent): (303, 2037), Area: 6082.5, Ratio: 0.00207, Extent: 0.25
+Valid Center added: (1259.5, 1997.1), Area: 242.0, Ratio: 0.00008, Extent: 0.80, Intensity: 88.0
+Valid Center added: (92.7, 1955.6), Area: 1527.5, Ratio: 0.00052, Extent: 0.87, Intensity: 81.8
+Rejected (Size/Extent): (1390, 1898), Area: 667.5, Ratio: 0.00023, Extent: 0.40
+Rejected (Size/Extent): (425, 1733), Area: 169.0, Ratio: 0.00006, Extent: 0.57
+Rejected (Size/Extent): (405, 1731), Area: 143.0, Ratio: 0.00005, Extent: 0.39
+Rejected (Size/Extent): (1380, 1412), Area: 242.0, Ratio: 0.00008, Extent: 0.38
+Rejected (Size/Extent): (60, 1300), Area: 1750.0, Ratio: 0.00060, Extent: 0.52
+Rejected (Size/Extent): (429, 1085), Area: 188.5, Ratio: 0.00006, Extent: 0.79
+Valid Center added: (842.8, 878.0), Area: 654.5, Ratio: 0.00022, Extent: 0.78, Intensity: 100.9
+Valid Center added: (792.7, 876.8), Area: 546.5, Ratio: 0.00019, Extent: 0.78, Intensity: 88.7
+Valid Center added: (891.8, 876.7), Area: 579.5, Ratio: 0.00020, Extent: 0.79, Intensity: 37.8
+Valid Center added: (742.9, 876.6), Area: 645.0, Ratio: 0.00022, Extent: 0.80, Intensity: 95.7
+Rejected (Size/Extent): (247, 1316), Area: 285054.5, Ratio: 0.09710, Extent: 0.96
+Rejected (Size/Extent): (519, 1317), Area: 292689.5, Ratio: 0.09970, Extent: 0.95
+Rejected (Size/Extent): (802, 1319), Area: 302372.5, Ratio: 0.10299, Extent: 0.93
+Rejected (Size/Extent): (1088, 1319), Area: 325801.0, Ratio: 0.11098, Extent: 0.96
+Rejected (Size/Extent): (419, 558), Area: 1223.5, Ratio: 0.00042, Extent: 0.62
+Rejected (Size/Extent): (171, 554), Area: 148.0, Ratio: 0.00005, Extent: 0.58
+Valid Center added: (131.7, 553.2), Area: 286.0, Ratio: 0.00010, Extent: 0.47, Intensity: 75.6
+Rejected (Size/Extent): (107, 556), Area: 190.5, Ratio: 0.00006, Extent: 0.47
+Rejected (Size/Extent): (217, 547), Area: 155.5, Ratio: 0.00005, Extent: 0.55
+Rejected (Size/Extent): (196, 549), Area: 130.5, Ratio: 0.00004, Extent: 0.37
+Rejected (Size/Extent): (156, 549), Area: 170.5, Ratio: 0.00006, Extent: 0.65
+Rejected (Size/Extent): (417, 513), Area: 1200.5, Ratio: 0.00041, Extent: 0.55
+Rejected (Size/Extent): (175, 505), Area: 127.5, Ratio: 0.00004, Extent: 0.45
+Rejected (Size/Extent): (158, 506), Area: 168.0, Ratio: 0.00006, Extent: 0.57
+Valid Center added: (114.9, 506.5), Area: 248.5, Ratio: 0.00008, Extent: 0.50, Intensity: 73.3
+Rejected (Size/Extent): (225, 501), Area: 151.5, Ratio: 0.00005, Extent: 0.57
+Rejected (Size/Extent): (202, 501), Area: 132.5, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (138, 504), Area: 141.5, Ratio: 0.00005, Extent: 0.44
+Rejected (Size/Extent): (382, 461), Area: 1587.5, Ratio: 0.00054, Extent: 0.55
+Valid Center added: (119.5, 454.9), Area: 265.0, Ratio: 0.00009, Extent: 0.48, Intensity: 67.9
+Valid Center added: (142.8, 453.9), Area: 302.0, Ratio: 0.00010, Extent: 0.76, Intensity: 98.8
+Rejected (Size/Extent): (164, 453), Area: 227.5, Ratio: 0.00008, Extent: 0.62
+Rejected (Size/Extent): (382, 409), Area: 1533.0, Ratio: 0.00052, Extent: 0.53
+Rejected (Size/Extent): (122, 405), Area: 173.0, Ratio: 0.00006, Extent: 0.39
+Valid Center added: (160.5, 402.5), Area: 259.0, Ratio: 0.00009, Extent: 0.58, Intensity: 83.8
+Valid Center added: (140.5, 401.5), Area: 445.0, Ratio: 0.00015, Extent: 0.67, Intensity: 98.1
+Rejected (Size/Extent): (407, 350), Area: 1413.5, Ratio: 0.00048, Extent: 0.56
+Valid Center added: (212.8, 344.2), Area: 248.0, Ratio: 0.00008, Extent: 0.50, Intensity: 67.6
+Valid Center added: (136.7, 344.5), Area: 253.5, Ratio: 0.00009, Extent: 0.61, Intensity: 73.8
+Rejected (Size/Extent): (196, 343), Area: 187.5, Ratio: 0.00006, Extent: 0.48
+Rejected (Size/Extent): (117, 346), Area: 225.0, Ratio: 0.00008, Extent: 0.30
+Rejected (Size/Extent): (168, 344), Area: 534.0, Ratio: 0.00018, Extent: 0.44
+Rejected (Size/Extent): (422, 295), Area: 1392.0, Ratio: 0.00047, Extent: 0.55
+Rejected (Size/Extent): (250, 291), Area: 172.0, Ratio: 0.00006, Extent: 0.60
+Valid Center added: (142.1, 291.5), Area: 353.5, Ratio: 0.00012, Extent: 0.76, Intensity: 86.3
+Rejected (Size/Extent): (173, 288), Area: 196.5, Ratio: 0.00007, Extent: 0.40
+Rejected (Size/Extent): (229, 289), Area: 194.5, Ratio: 0.00007, Extent: 0.37
+Valid Center added: (192.5, 287.4), Area: 238.5, Ratio: 0.00008, Extent: 0.54, Intensity: 59.2
+Rejected (Size/Extent): (259, 279), Area: 371.0, Ratio: 0.00013, Extent: 0.36
+Rejected (Size/Extent): (853, 458), Area: 123203.5, Ratio: 0.04197, Extent: 0.96
+Valid Center added: (108.0, 270.6), Area: 1706.5, Ratio: 0.00058, Extent: 0.70, Intensity: 41.8
+Rejected (Size/Extent): (1118, 447), Area: 71623.5, Ratio: 0.02440, Extent: 0.95
+Valid Center added: (1235.8, 205.4), Area: 1632.0, Ratio: 0.00056, Extent: 0.90, Intensity: 21.4
+Rejected (Size/Extent): (3, 833), Area: 5258.0, Ratio: 0.00179, Extent: 0.65
+Rejected (Size/Extent): (365, 149), Area: 920.0, Ratio: 0.00031, Extent: 0.67
+Rejected (Size/Extent): (700, 933), Area: 35967.5, Ratio: 0.01225, Extent: 0.01
+
+Total Valid Centers: 18
+[GEOMETRIC SEARCH] Tìm thấy bằng FAST SEARCH: Score=1496130, PenaltyFactor=0.75
+
+[ORIENTATION CHECK] Areas: TL=1706.5, TR=1632.0, BR=242.0, BL=1527.5
+[ORIENTATION CHECK] Ảnh đúng chiều (Marker nhỏ nhất nằm đúng ở góc Bottom-Right).
+
+Final Quad Angles: [93.8 87.5 87.2 91.5]
+Selected 4 corners: TL=[108.01455 270.56012], TR=[1235.7981   205.35243], BR=[1259.5469 1997.0758], BL=[  92.703766 1955.5645  ]
+Rect Width: 1129.67 (Required: 560.00)
+Rect Height: 1685.07 (Required: 838.80)

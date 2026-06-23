@@ -126,6 +126,14 @@ class OMRService:
         if w > h:
             return {'is_valid': False, 'error': 'Lỗi: Ảnh nằm ngang. Yêu cầu chụp dọc.', 'template': None}
             
+        # TỰ ĐỘNG THU NHỎ ẢNH ĐỂ TĂNG TỐC ĐỘ CHẤM (MAX HEIGHT = 1600)
+        # Giúp đồng bộ kích thước với hàm grade_image để các hệ số (kernel size, roi size) hoạt động chuẩn xác
+        max_dim = 1600
+        if max(h, w) > max_dim:
+            scale = max_dim / float(max(h, w))
+            new_w, new_h = int(w * scale), int(h * scale)
+            image = cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_AREA)
+            
         ai_error = ""
         if ai_level == 2:
             restore_out = ONNXRestorationNode().execute(image, model_path="assets/models/realesr-general-x4v3.onnx", max_width_before_inference=800, ai_device=ai_device)
@@ -143,7 +151,7 @@ class OMRService:
             full_nodes = selected_template.get("nodes", [])
             prescan_nodes = []
             for n in full_nodes:
-                if n.get("type") in ["DocumentAligner", "AdaptiveThreshold", "BlockExtractor", "Heuristic120", "Heuristic40", "SBDReader"]:
+                if n.get("type") in ["ImageStandardizer", "DocumentAligner", "AdaptiveThreshold", "BlockExtractor", "Heuristic120", "Heuristic40", "SBDReader"]:
                     prescan_nodes.append(n)
                     
             initial_context = {

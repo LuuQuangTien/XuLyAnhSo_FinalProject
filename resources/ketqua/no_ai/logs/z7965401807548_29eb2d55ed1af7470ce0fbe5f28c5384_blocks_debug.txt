@@ -1,0 +1,8 @@
+Total contours found in closed_thresh: 393
+ACCEPTED: Area=339240, Aspect=0.21, Box=(899,491,264,1285)
+ACCEPTED: Area=342076, Aspect=0.21, Box=(610,489,266,1286)
+ACCEPTED: Area=335884, Aspect=0.20, Box=(321,489,262,1282)
+ACCEPTED: Area=339240, Aspect=0.21, Box=(28,486,264,1285)
+ACCEPTED: Area=80223, Aspect=0.44, Box=(981,32,187,429)
+ACCEPTED: Area=142136, Aspect=0.75, Box=(640,26,326,436)
+REJECTED (Aspect > 2.5): Area=17952, Aspect=6.90, Box=(148,0,352,51)
