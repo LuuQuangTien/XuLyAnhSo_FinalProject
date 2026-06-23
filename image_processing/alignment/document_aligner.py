@@ -14,7 +14,7 @@ from image_processing.utils.geometry_utils import order_points, angle_between
 
 from image_processing.alignment.ai_helper import get_ai_paper_bounding_box
 from image_processing.alignment.precrop import crop_paper_from_background
-from image_processing.alignment.geometric_search import _get_debug_paths, deduce_4th_corner_from_3, fix_corners, find_best_geometric_quad
+from image_processing.alignment.geometric_search import _get_debug_paths, fix_corners, find_best_geometric_quad
 
 def clear_ai_cache():
     try:
@@ -24,7 +24,7 @@ def clear_ai_cache():
     except:
         pass
 
-def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"):
+def align_document(image, debug_dir=None, debug_prefix="", method="four_corners", use_ai=False):
     """
     Tìm 4 điểm đen định vị ở 4 góc và nắn thẳng hình ảnh (Perspective Transform).
     Returns: (aligned_image, error_msg)
@@ -32,8 +32,7 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     error_msg = ""
     h_orig, w_orig = image.shape[:2]
     if w_orig > h_orig:
-        image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
-        error_msg = "Ảnh nằm ngang, đã tự động xoay dọc."
+        return image, "Lỗi: Ảnh bị chụp nằm ngang. Vui lòng chụp ảnh theo chiều dọc (không xoay ngang điện thoại)."
     log_txt, log_jpg = _get_debug_paths(debug_dir, debug_prefix)
     
     image = crop_paper_from_background(image, log_txt)
@@ -78,18 +77,26 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
             aspect_ratio = float(w) / h if h != 0 else 0
             area_ratio = contour_area / float(image_area)
             
-            mask = np.zeros(gray.shape, dtype=np.uint8)
-            cv2.drawContours(mask, [c], -1, 255, -1)
-            mean_intensity = cv2.mean(gray, mask=mask)[0]
+            roi_gray = gray[y:y+h, x:x+w]
+            mask_roi = np.zeros(roi_gray.shape, dtype=np.uint8)
+            c_local = c - [x, y]
+            cv2.drawContours(mask_roi, [c_local], -1, 255, -1)
+            mean_intensity = cv2.mean(roi_gray, mask=mask_roi)[0] if roi_gray.size > 0 else 0
             
             if mean_intensity > 210:
                 f.write(f"Rejected (Low Contrast): ({int(x+w/2)}, {int(y+h/2)}), Intensity: {mean_intensity:.1f}\n")
                 continue
-                
-            if 0.0001 < area_ratio < 0.005 and 0.5 <= aspect_ratio <= 2.0 and extent > 0.5:
-                cX, cY = int(x + w/2), int(y + h/2)
+            # BƯỚC 1: TÌM 3 GÓC LỚN (COARSE SEARCH). Hạ ngưỡng diện tích xuống 0.00008 để bắt các góc vẽ tay bị nhỏ.
+            if 0.00008 < area_ratio < 0.005 and 0.5 <= aspect_ratio <= 2.5 and extent > 0.45:
+                # Dùng Moments (centroid) thay vì tâm BoundingRect để tránh lệch khi chấm đen bị biến dạng phối cảnh
+                M_contour = cv2.moments(c)
+                if M_contour["m00"] > 0:
+                    cX = M_contour["m10"] / M_contour["m00"]
+                    cY = M_contour["m01"] / M_contour["m00"]
+                else:
+                    cX, cY = float(x + w/2), float(y + h/2)
                 centers.append((cX, cY, contour_area))
-                f.write(f"Valid Center added: ({cX}, {cY}), Area: {contour_area}, Ratio: {area_ratio:.5f}, Extent: {extent:.2f}, Intensity: {mean_intensity:.1f}\n")
+                f.write(f"Valid Center added: ({cX:.1f}, {cY:.1f}), Area: {contour_area}, Ratio: {area_ratio:.5f}, Extent: {extent:.2f}, Intensity: {mean_intensity:.1f}\n")
             elif contour_area > 100:
                 f.write(f"Rejected (Size/Extent): ({int(x+w/2)}, {int(y+h/2)}), Area: {contour_area}, Ratio: {area_ratio:.5f}, Extent: {extent:.2f}\n")
                 
@@ -97,60 +104,71 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
         
     debug_img = image.copy()
     for (cX, cY, _) in centers:
-        cv2.circle(debug_img, (cX, cY), 10, (255, 0, 0), -1)
+        cv2.circle(debug_img, (int(round(cX)), int(round(cY))), 10, (255, 0, 0), -1)
         
-    if method == "three_corners":
-        if len(centers) < 3:
-            cv2.putText(debug_img, "FAILED: Less than 3 centers", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
-            cv2.imwrite(log_jpg, debug_img)
-            return image, "Lỗi: Không nhận diện đủ 3 góc định vị (Ảnh mờ, mất góc hoặc quá lệch)"
-            
-        # SỬ DỤNG AI SILUETA ĐỂ LỌC NHIỄU CHO MẪU 3 GÓC
-        bbox = get_ai_paper_bounding_box(image, log_txt, debug_prefix)
-        if bbox is not None:
-            bx, by, bw, bh = bbox
-            
-            # Xuất ảnh debug AI Box cho chế độ 3 góc
-            ai_debug_img = image.copy()
-            cv2.rectangle(ai_debug_img, (bx, by), (bx + bw, by + bh), (0, 0, 255), 4)
-            ai_debug_path = log_txt.replace("align_debug.txt", "ai_box.jpg")
-            cv2.imwrite(ai_debug_path, ai_debug_img)
-            with open(log_txt, "a", encoding="utf-8") as f:
-                f.write(f"[3-CORNERS] Đã xuất ảnh debug AI Box ra: {ai_debug_path}\n")
-                
-            filtered_centers = []
-            pad = 50 # Nới rộng bbox một chút để an toàn
-            for c in centers:
-                cx, cy, area = c
-                if bx - pad <= cx <= bx + bw + pad and by - pad <= cy <= by + bh + pad:
-                    filtered_centers.append(c)
-            
-            with open(log_txt, "a", encoding="utf-8") as f:
-                f.write(f"[3-CORNERS] AI lọc viền: giữ lại {len(filtered_centers)}/{len(centers)} chấm đen.\n")
-                
-            if len(filtered_centers) >= 3:
-                centers = filtered_centers
-            else:
-                with open(log_txt, "a", encoding="utf-8") as f:
-                    f.write(f"[3-CORNERS] AI lọc xong chỉ còn {len(filtered_centers)} điểm, bỏ qua AI filter để dùng Fallback.\n")
-                    
-        from image_processing.alignment.geometric_search import find_best_geometric_triplet
+    if len(centers) < 3:
+        cv2.putText(debug_img, "FAILED: Less than 3 centers", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
+        cv2.imwrite(log_jpg, debug_img)
+        return image, "Lỗi: Không nhận diện đủ 3 góc định vị (Ảnh mờ, mất góc hoặc quá lệch)"
         
-        # Pass bbox if AI was successful, otherwise None
-        top_3 = find_best_geometric_triplet(centers, log_txt, bbox if 'bbox' in locals() else None)
-        pts = deduce_4th_corner_from_3(top_3, log_txt)
-        pts = np.array(pts, dtype="float32")
-        rect = order_points(pts)
-    else:
-        if len(centers) < 4:
-            cv2.putText(debug_img, "FAILED: Less than 4 centers", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
+    filtered_centers = find_best_geometric_quad(centers, image, log_txt, debug_dir, debug_prefix, use_ai=use_ai, debug_img=debug_img)
+    
+    if len(filtered_centers) < 4:
+        cv2.putText(debug_img, "FAILED: Could not find 4th corner", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
+        cv2.imwrite(log_jpg, debug_img)
+        return image, "Lỗi: Nội suy góc thứ 4 thất bại. Hãy chụp rõ góc dưới cùng bên phải."
+    
+    # Mảng 4 điểm và diện tích tương ứng
+    pts_and_areas = [(c[0], c[1], c[2]) for c in filtered_centers]
+    pts = np.array([[c[0], c[1]] for c in pts_and_areas], dtype="float32")
+    rect = order_points(pts)
+    
+    # ---------------------------------------------------------
+    # AUTO-ROTATION LOGIC DỰA VÀO GÓC ĐỊNH HƯỚNG (GÓC NHỎ NHẤT)
+    # ---------------------------------------------------------
+    # order_points trả về [TL, TR, BR, BL] trên không gian 2D của bức ảnh hiện tại.
+    # Ta tìm diện tích (contour_area) của 4 điểm này để biết góc đánh dấu (nhỏ nhất) đang nằm ở đâu.
+    ordered_areas = []
+    for pt in rect:
+        # Ánh xạ điểm trong rect về pts_and_areas (dùng khoảng cách gần nhất)
+        dists = [np.hypot(pt[0] - p[0], pt[1] - p[1]) for p in pts_and_areas]
+        min_idx_dist = np.argmin(dists)
+        ordered_areas.append(pts_and_areas[min_idx_dist][2])
+        
+    min_area_idx = np.argmin(ordered_areas)
+    
+    # TỪ CHỐI CHẤM NẾU ẢNH BỊ LẬT HOẶC XOAY (DỰA VÀO VỊ TRÍ GÓC MARKER NHỎ NHẤT)
+    if min_area_idx != 2:
+        error_reasons = {
+            0: "lật ngược (180 độ)",
+            1: "xoay ngang",
+            3: "xoay ngang"
+        }
+        
+        # Nếu góc nhỏ nhất nằm ở vị trí xoay ngang (1 hoặc 3)
+        # Bổ sung Heuristic: Với giấy vẽ tay, học sinh có thể vẽ góc BL nhỏ hơn cả góc BR.
+        # Ta kiểm tra tỷ lệ hình học: Nếu tứ giác rõ ràng là hình chữ nhật đứng (Height > Width), 
+        # thì chắc chắn nó không bị xoay ngang. Ta bỏ qua lỗi này!
+        w_top = np.hypot(rect[0][0] - rect[1][0], rect[0][1] - rect[1][1])
+        h_left = np.hypot(rect[0][0] - rect[3][0], rect[0][1] - rect[3][1])
+        
+        is_portrait = h_left > w_top * 1.1
+        
+        if (min_area_idx in [1, 3] and is_portrait):
+            with open(log_txt, "a", encoding="utf-8") as f:
+                f.write("[ORIENTATION CHECK] Cảnh báo: Diện tích góc nhỏ nhất sai vị trí, nhưng hình dáng tứ giác là dọc (Portrait). Bỏ qua lỗi xoay ngang do giấy vẽ tay.\n")
+        else:
+            reason = error_reasons.get(min_area_idx, "sai chiều")
+            cv2.putText(debug_img, f"FAILED: Anh bi {reason}", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3)
             cv2.imwrite(log_jpg, debug_img)
-            return image, "Lỗi: Không nhận diện đủ 4 góc định vị (Ảnh mờ, mất góc hoặc quá lệch)"
-            
-        filtered_centers = find_best_geometric_quad(centers, image, log_txt, debug_dir, debug_prefix)
-        pts = np.array([[c[0], c[1]] for c in filtered_centers])
-        rect = order_points(pts)
-        rect = fix_corners(rect, gray, debug_dir, debug_prefix)
+            return image, f"Lỗi: Ảnh bị {reason}. Vui lòng xoay đúng chiều trước khi đưa vào hệ thống."
+        
+    with open(log_txt, "a", encoding="utf-8") as f:
+        f.write(f"\n[ORIENTATION CHECK] Areas: TL={ordered_areas[0]}, TR={ordered_areas[1]}, BR={ordered_areas[2]}, BL={ordered_areas[3]}\n")
+        f.write("[ORIENTATION CHECK] Ảnh đúng chiều (Marker nhỏ nhất nằm đúng ở góc Bottom-Right).\n\n")
+
+    # Chữa lành góc nếu cần
+    rect = fix_corners(rect, gray, debug_dir, debug_prefix)
     
     (tl, tr, br, bl) = rect
     
@@ -174,6 +192,10 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     cv2.circle(debug_img, tuple(tr.astype(int)), 20, (0, 255, 0), -1)
     cv2.circle(debug_img, tuple(br.astype(int)), 20, (0, 255, 0), -1)
     cv2.circle(debug_img, tuple(bl.astype(int)), 20, (0, 255, 0), -1)
+    
+    # Vẽ các đường thẳng nối 4 góc để dễ quan sát (Hình bình hành/Tứ giác)
+    pts_to_draw = np.array([tl, tr, br, bl], dtype=np.int32)
+    cv2.polylines(debug_img, [pts_to_draw], isClosed=True, color=(0, 255, 0), thickness=4)
     
     w_rect = np.sqrt(((tr[0] - tl[0]) ** 2) + ((tr[1] - tl[1]) ** 2))
     h_rect = np.sqrt(((bl[0] - tl[0]) ** 2) + ((bl[1] - tl[1]) ** 2))

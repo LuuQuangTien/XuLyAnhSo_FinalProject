@@ -4,7 +4,7 @@ import numpy as np
 
 _ONNX_SESSIONS = {}
 
-def restore_image_onnx(image, model_path="assets/models/RealESR-AnimeVideo-v3_x4.onnx", max_width_before_inference=800, ai_device='CPU'):
+def restore_image_onnx(image, model_path="assets/models/realesr-general-x4v3.onnx", max_width_before_inference=800, ai_device='CPU'):
     if image is None: return image, ""
     
     # Bóp nhỏ ảnh trước khi nội suy x4 để tránh tràn RAM

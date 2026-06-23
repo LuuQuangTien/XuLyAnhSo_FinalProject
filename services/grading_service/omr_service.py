@@ -3,6 +3,7 @@ OMR Service — Lớp Facade mỏng điều phối toàn bộ quy trình chấm 
 Thực thi như một Pipeline Executor dựa trên Data-Driven Configuration (JSON) theo chuẩn DAG Node Engine.
 """
 import numpy as np
+import cv2
 from services.grading_service.template_service import TemplateService
 from services.grading_service.nodes.engine import NodeEngine
 from services.grading_service.nodes import NODE_CLASS_MAPPINGS
@@ -21,9 +22,17 @@ class OMRService:
         if image is None:
             return image, "Không có ảnh hợp lệ.", {'correct': 0, 'total': 0, 'final_score': 0}
         
+        # TỰ ĐỘNG THU NHỎ ẢNH ĐỂ TĂNG TỐC ĐỘ CHẤM (MAX HEIGHT = 1600)
+        h, w = image.shape[:2]
+        max_dim = 1600
+        if max(h, w) > max_dim:
+            scale = max_dim / float(max(h, w))
+            new_w, new_h = int(w * scale), int(h * scale)
+            image = cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_AREA)
+            
         if not cached_context:
             if ai_level == 2:
-                restore_out = ONNXRestorationNode().execute(image, model_path="assets/models/RealESR-AnimeVideo-v3_x4.onnx", max_width_before_inference=800, ai_device=ai_device)
+                restore_out = ONNXRestorationNode().execute(image, model_path="assets/models/realesr-general-x4v3.onnx", max_width_before_inference=800, ai_device=ai_device)
                 image = restore_out.get("image", image)
             
         if template is None or isinstance(template, str):
@@ -40,7 +49,8 @@ class OMRService:
             "image": image,
             "answers": answers,
             "debug_dir": debug_dir,
-            "debug_prefix": debug_prefix
+            "debug_prefix": debug_prefix,
+            "use_ai": ai_level > 0
         }
         
         try:
@@ -118,7 +128,7 @@ class OMRService:
             
         ai_error = ""
         if ai_level == 2:
-            restore_out = ONNXRestorationNode().execute(image, model_path="assets/models/RealESR-AnimeVideo-v3_x4.onnx", max_width_before_inference=800, ai_device=ai_device)
+            restore_out = ONNXRestorationNode().execute(image, model_path="assets/models/realesr-general-x4v3.onnx", max_width_before_inference=800, ai_device=ai_device)
             image = restore_out.get("image", image)
             ai_error = restore_out.get("error", "")
 
@@ -137,7 +147,7 @@ class OMRService:
                     prescan_nodes.append(n)
                     
             initial_context = {
-                "input": { "image": image, "answers": {}, "debug_dir": debug_dir, "debug_prefix": debug_prefix }
+                "input": { "image": image, "answers": {}, "debug_dir": debug_dir, "debug_prefix": debug_prefix, "use_ai": ai_level > 0 }
             }
             
             final_context = OMRService._engine.execute_pipeline(prescan_nodes, initial_context)

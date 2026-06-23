@@ -12,9 +12,9 @@ def download_models_if_needed():
     
     models_to_download = [
         {
-            "name": "RealESR-AnimeVideo-v3_x4.onnx",
-            "url": "https://drive.google.com/uc?id=1UzASVotKdKCfohxbFsIIRmo7OjJZqxuW&export=download",
-            "desc": "AI Model Khôi Phục Ảnh (2.5MB)"
+            "name": "realesr-general-x4v3.onnx",
+            "url": "https://drive.google.com/uc?id=1feEBc6t3WqSGT_lzHXyX-fqjyvc2y364&export=download",
+            "desc": "AI Model Khôi Phục Ảnh (4.6MB)"
         },
         {
             "name": "silueta.onnx",
