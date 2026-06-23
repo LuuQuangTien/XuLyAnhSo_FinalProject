@@ -38,6 +38,8 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     image = crop_paper_from_background(image, log_txt)
     
     gray = to_grayscale(image)
+    mean_brightness = np.mean(gray)
+    
     height, width = image.shape[:2]
     image_area = width * height
     
@@ -49,12 +51,20 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     block_size = int(width / 20)
     if block_size % 2 == 0: block_size += 1
     if block_size < 31: block_size = 31
+    
+    # Dynamic C: Hạ hằng số C xuống thấp để không "xóa sổ" các điểm đen trên nền tối
+    if mean_brightness < 90:
+        C_val = 5
+    elif mean_brightness < 130:
+        C_val = 10
+    else:
+        C_val = 15
         
     thresh = cv2.adaptiveThreshold(
         blurred, 255, 
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
         cv2.THRESH_BINARY_INV, 
-        block_size, 15
+        block_size, C_val
     )
     
     cnts, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -62,6 +72,7 @@ def align_document(image, debug_dir=None, debug_prefix="", method="four_corners"
     
     with open(log_txt, "a", encoding="utf-8") as f:
         f.write(f"Image Size: {width} x {height}, Area: {image_area}\n")
+        f.write(f"Mean Brightness: {mean_brightness:.1f}, Using adaptiveThreshold C={C_val}\n")
         f.write(f"Found {len(cnts)} total contours.\n")
         
         for c in cnts:

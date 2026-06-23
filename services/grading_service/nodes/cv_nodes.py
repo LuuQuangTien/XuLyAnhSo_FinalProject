@@ -20,8 +20,15 @@ class DocumentAlignerNode:
         aligned, error_msg = align_document(image, debug_dir, debug_prefix, method=method, use_ai=use_ai)
         return {"image": aligned, "error": error_msg}
 
+class ImageBrightenerNode:
+    def execute(self, image, **params):
+        if image is None: return {"image": None}
+        from image_processing.preprocessing.brightness import auto_brighten_image
+        brightened = auto_brighten_image(image)
+        return {"image": brightened}
+
 class AdaptiveThresholdNode:
-    def execute(self, image, block_size=None, dynamic_ratio=45, C=10, sharpen=True, **params):
+    def execute(self, image, block_size=None, dynamic_ratio=45, C=10, sharpen=True, debug_dir=None, debug_prefix="", **params):
         if block_size is None:
             w = image.shape[1]
             block_size = int(w / dynamic_ratio)
@@ -49,10 +56,12 @@ class AdaptiveThresholdNode:
         bubble_thresh = cv2.dilate(bubble_thresh, kernel, iterations=1)
         
         # LƯU ẢNH DEBUG THRESHOLD ĐỂ KIỂM TRA MẮT CÚ
-        try:
-            cv2.imwrite(r"d:\tam\stu\xulianhso\ORM_demo1 (1)\resources\ketqua\no_ai\logs\bubble_thresh_debug.jpg", bubble_thresh)
-        except Exception:
-            pass
+        if debug_dir and debug_prefix:
+            try:
+                out_path = os.path.join(debug_dir, f"{debug_prefix}_thresh.jpg")
+                cv2.imwrite(out_path, bubble_thresh)
+            except Exception:
+                pass
             
         return {"image": thresh, "bubble_thresh": bubble_thresh}
 class BlockExtractorNode:

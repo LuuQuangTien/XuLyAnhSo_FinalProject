@@ -8,6 +8,7 @@ from services.grading_service.template_service import TemplateService
 from services.grading_service.nodes.engine import NodeEngine
 from services.grading_service.nodes import NODE_CLASS_MAPPINGS
 from services.grading_service.nodes.cv_nodes import ONNXRestorationNode
+from image_processing.preprocessing.brightness import auto_brighten_image
 
 class OMRService:
     
@@ -43,24 +44,65 @@ class OMRService:
 
         nodes_config = template.get("nodes", [])
         
-        # Thiết lập bối cảnh ban đầu (Global inputs)
-        initial_context = cached_context.copy() if cached_context else {}
-        initial_context["input"] = {
-            "image": image,
-            "answers": answers,
-            "debug_dir": debug_dir,
-            "debug_prefix": debug_prefix,
-            "use_ai": ai_level > 0
-        }
+        def _build_context(img, prefix):
+            ctx = cached_context.copy() if cached_context else {}
+            ctx["input"] = {
+                "image": img,
+                "answers": answers,
+                "debug_dir": debug_dir,
+                "debug_prefix": prefix,
+                "use_ai": ai_level > 0
+            }
+            return ctx
+        
+        def _check_pass_failed(ctx):
+            """Kiểm tra xem kết quả có 'thất bại' không: lỗi pipeline, SBD lỗi, Mã đề lỗi, hoặc ảnh quá tối."""
+            if ctx.get("error"):
+                return True
+            sbd = ctx.get("read_sbd", {}).get("result", "")
+            made = ctx.get("read_made", {}).get("result", "")
+            if not sbd or "?" in sbd:
+                return True
+            if not made or "?" in made:
+                return True
+                
+            # Kiểm tra mã đề có hợp lệ không
+            ans = ctx.get("input", {}).get("answers", {})
+            if made and ans and isinstance(next(iter(ans.values()), None), dict):
+                if made not in ans:
+                    return True
+                    
+            # Nếu ảnh quá tối (< 110), Tie-breaker dễ bị ảo giác do viền đen của giấy, coi như thất bại để kích hoạt vòng 2
+            img = ctx.get("input", {}).get("image")
+            if img is not None:
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+                if np.mean(gray) < 110:
+                    return True
+                    
+            return False
         
         try:
-            # Chạy toàn bộ đồ thị (DAG) tuần tự
+            # ========== VÒNG 1: CHẠY VỚI ẢNH GỐC ==========
+            initial_context = _build_context(image, debug_prefix)
             final_context = OMRService._engine.execute_pipeline(nodes_config, initial_context)
             
-            # Trích xuất kết quả từ output của các Node
-            # Do thiết kế ta biết các node cuối có tên là score_q, vis_q, read_sbd, v.v.
-            # Tuy nhiên, để linh hoạt, ta rà soát context
+            # ========== VÒNG 2: CỨU HỘ NẾU VÒNG 1 THẤT BẠI ==========
+            if _check_pass_failed(final_context):
+                brightened_image = auto_brighten_image(image)
+                # Chỉ retry nếu ảnh thực sự được làm sáng (tránh lặp vô nghĩa)
+                if not np.array_equal(brightened_image, image):
+                    retry_prefix = debug_prefix + "_retry" if debug_prefix else "retry"
+                    retry_context = _build_context(brightened_image, retry_prefix)
+                    retry_result = OMRService._engine.execute_pipeline(nodes_config, retry_context)
+                    # Chỉ dùng kết quả retry nếu nó TỐT HƠN (không lỗi pipeline)
+                    if not retry_result.get("error"):
+                        final_context = retry_result
             
+            error = final_context.get("error")
+            if error:
+                return image, error, {'correct': 0, 'total': 0, 'final_score': 0}
+            
+            # Trích xuất kết quả từ output của các Node
             score_data = final_context.get("score_q", {})
             sbd_data = final_context.get("read_sbd", {})
             made_data = final_context.get("read_made", {})
@@ -150,7 +192,46 @@ class OMRService:
                 "input": { "image": image, "answers": {}, "debug_dir": debug_dir, "debug_prefix": debug_prefix, "use_ai": ai_level > 0 }
             }
             
+            def _check_pass_failed(ctx):
+                if ctx.get("error"): return True
+                sbd = ctx.get("read_sbd", {}).get("result", "")
+                made = ctx.get("read_made", {}).get("result", "")
+                if not sbd or "?" in sbd: return True
+                if not made or "?" in made: return True
+                
+                ans = ctx.get("input", {}).get("answers", {})
+                if made and ans and isinstance(next(iter(ans.values()), None), dict):
+                    if made not in ans: return True
+                    
+                img = ctx.get("input", {}).get("image")
+                if img is not None:
+                    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+                    if np.mean(gray) < 110: return True
+                    
+                return False
+            
             final_context = OMRService._engine.execute_pipeline(prescan_nodes, initial_context)
+            
+            # CƠ CHẾ DỰ PHÒNG CHO PRE_SCAN
+            if _check_pass_failed(final_context):
+                brightened_image = auto_brighten_image(image)
+                if not np.array_equal(brightened_image, image):
+                    retry_context = {
+                        "input": { 
+                            "image": brightened_image, "answers": {}, 
+                            "debug_dir": debug_dir, 
+                            "debug_prefix": debug_prefix + "_retry" if debug_prefix else "retry", 
+                            "use_ai": ai_level > 0 
+                        }
+                    }
+                    retry_result = OMRService._engine.execute_pipeline(prescan_nodes, retry_context)
+                    if not retry_result.get("error"):
+                        final_context = retry_result
+                        
+            error = final_context.get("error")
+            if error:
+                # Trả về ngay nếu có lỗi lớn từ Node (VD: Lỗi cắt góc)
+                pass
             
             sbd = final_context.get("read_sbd", {}).get("result", "")
             made = final_context.get("read_made", {}).get("result", "")

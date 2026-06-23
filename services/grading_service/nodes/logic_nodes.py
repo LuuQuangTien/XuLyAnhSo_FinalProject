@@ -92,8 +92,13 @@ class Heuristic120Node:
         return {"sbd_block": sbd_block, "made_block": made_block, "question_blocks": bottom_blocks, "error": error}
 
 class SBDReaderNode:
-    def execute(self, thresh, block, **params):
+    def execute(self, thresh, block, image=None, debug_dir=None, debug_prefix="", **params):
         if not block: return {"result": ""}
+        if image is not None:
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+        else:
+            gray = None
+            
         bx, by, bw, bh = block
         rows = params.get("rows", 10)
         cols = params.get("cols", 6)
@@ -113,6 +118,7 @@ class SBDReaderNode:
         sbd_mask = create_bubble_mask(radius)
         
         digits = []
+        all_col_indices = []
         global_dx = 0  # Tổng độ lệch thực tế
         velocity = 0   # Vận tốc trôi (drift per column) do perspective distortion
         
@@ -152,6 +158,31 @@ class SBDReaderNode:
                             valid_indices = s_valid
                             current_cx += dx
                             
+            # TIE-BREAKER: Local Contrast Stretching nếu phân vân do tẩy xóa hoặc nét quá mờ (0 hoặc >1 nét)
+            # Khác với MCQ, SBD và Mã đề bắt buộc phải có 1 đáp án/cột, nên ta dùng Tie-breaker để "cứu" cả trường hợp trống.
+            if len(valid_indices) != 1 and gray is not None:
+                x_start = max(0, int(current_cx - radius_x * 2))
+                x_end = min(gray.shape[1], int(current_cx + radius_x * 2))
+                y_start = max(0, int(min(rows_y) - radius_y * 2))
+                y_end = min(gray.shape[0], int(max(rows_y) + radius_y * 2))
+                
+                roi = gray[y_start:y_end, x_start:x_end]
+                if roi.size > 0:
+                    roi_norm = cv2.normalize(roi, None, 0, 255, cv2.NORM_MINMAX)
+                    _, roi_thresh = cv2.threshold(roi_norm, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+                    
+                    def _get_sbd_bubbled_roi():
+                        tots_roi = [evaluate_bubble_xor(roi_thresh, current_cx - x_start, ry - y_start, radius, sbd_mask) for ry in rows_y]
+                        val_tots = [t for t in tots_roi if t < max_xor_allowed]
+                        if not val_tots: return [], tots_roi
+                        min_xor = min(val_tots)
+                        r_thresh = 0.15 * circle_area + 0.85 * min_xor
+                        return [i for i, t in enumerate(tots_roi) if t <= r_thresh and t < max_xor_allowed], tots_roi
+                        
+                    tie_valid, _ = _get_sbd_bubbled_roi()
+                    if len(tie_valid) == 1:
+                        valid_indices = tie_valid
+                            
             if len(valid_indices) == 1:
                 best_i = valid_indices[0]
                 dx, dy = get_bubble_centroid_vector(thresh, current_cx, rows_y[best_i], radius)
@@ -168,15 +199,48 @@ class SBDReaderNode:
                 global_dx = true_offset
                 
                 digits.append(str(valid_indices[0]))
+                all_col_indices.append(valid_indices)
             else:
                 digits.append("?")
+                all_col_indices.append(valid_indices)
                 # Nếu mất dấu, tiếp tục trôi theo vận tốc cũ
                 global_dx = predicted_offset
                 
-        return {"result": "".join(digits)}
+        result_str = "".join(digits)
+        
+        # LƯU ẢNH LỖI ĐỂ DEBUG NẾU ĐỌC SBD/MÃ ĐỀ THẤT BẠI
+        if "?" in result_str and debug_dir and debug_prefix:
+            try:
+                import os
+                crop = image[int(by):int(by+bh), int(bx):int(bx+bw)].copy() if image is not None else thresh[int(by):int(by+bh), int(bx):int(bx+bw)].copy()
+                
+                if len(crop.shape) == 2:
+                    crop = cv2.cvtColor(crop, cv2.COLOR_GRAY2BGR)
+                    
+                # Vẽ đánh dấu lên ảnh lỗi để biết tại sao phân vân
+                for j, indices in enumerate(all_col_indices):
+                    local_cx = cols_x[j] - int(bx)
+                    if len(indices) == 1:
+                        local_ry = rows_y[indices[0]] - int(by)
+                        cv2.circle(crop, (local_cx, local_ry), radius_x + 2, (0, 255, 0), 2)
+                    elif len(indices) > 1:
+                        for idx in indices:
+                            local_ry = rows_y[idx] - int(by)
+                            cv2.circle(crop, (local_cx, local_ry), radius_x + 2, (0, 165, 255), 2)
+                    else:
+                        cv2.rectangle(crop, (local_cx - radius_x, 0), (local_cx + radius_x, crop.shape[0]), (0, 0, 255), 1)
+
+                prefix = "SBD" if params.get("cols", 6) > 4 else "MADE"
+                safe_result = result_str.replace("?", "X")
+                out_path = os.path.join(debug_dir, f"{debug_prefix}_ERROR_{prefix}_{safe_result}.jpg")
+                cv2.imwrite(out_path, crop)
+            except Exception:
+                pass
+                
+        return {"result": result_str}
 
 class SBDVisualizerNode:
-    def execute(self, image, thresh, block, **params):
+    def execute(self, image, thresh, block, result=None, **params):
         if not block: return {"image": image}
         bx, by, bw, bh = block
         rows = params.get("rows", 10)
@@ -188,52 +252,70 @@ class SBDVisualizerNode:
         radius = max(5, int(bw * params.get("radius_ratio", 0.035)))
         method = params.get("method", "inner_core")
         
-        if method == "projection":
-            strip_h = max(3, int(radius * 0.8))
-            min_pixels = strip_h * 2 * params.get("fill_threshold", 0.4)
+        if result and len(result) == cols:
+            # Ưu tiên kết quả đã chốt từ SBDReader (có logic fix phức tạp)
             for j, cx in enumerate(cols_x):
-                max_pixels = 0
-                best_i = -1
-                for i, ry in enumerate(rows_y):
-                    total = count_projection_peak(thresh, cx, ry, radius)
-                    if total > max_pixels and total > min_pixels:
-                        max_pixels = total
-                        best_i = i
-                if best_i != -1:
-                    ry = rows_y[best_i]
-                    cv2.rectangle(image, (cx - radius, ry - strip_h), (cx + radius, ry + strip_h), (0, 255, 0), 2)
+                char = result[j]
+                if char.isdigit():
+                    idx = int(char)
+                    if 0 <= idx < len(rows_y):
+                        cv2.circle(image, (cx, rows_y[idx]), radius + 2, (0, 255, 0), 3)
+                else:
+                    self._draw_fallback_col(image, thresh, cx, rows_y, radius, params)
         else:
-            # KHÔI PHỤC LÕI 70%
-            inner_radius = max(3, int(radius * 0.70))
-            min_pixels = int(np.pi * (inner_radius ** 2) * params.get("fill_threshold", 0.15))
-            sbd_mask = create_bubble_mask(inner_radius)
             for j, cx in enumerate(cols_x):
-                totals = []
-                for i, ry in enumerate(rows_y):
-                    total = count_bubble_pixels(thresh, cx, ry, inner_radius, sbd_mask)
-                    totals.append(total)
-                
-                valid_totals = [t for t in totals if t > min_pixels]
-                if valid_totals:
-                    max_total = max(valid_totals)
-                    rel_threshold = max_total * 0.85
-                    valid_indices = [i for i, t in enumerate(totals) if t >= rel_threshold and t > min_pixels]
-                    
-                    if len(valid_indices) == 1:
-                        cv2.circle(image, (cx, rows_y[valid_indices[0]]), radius + 2, (0, 255, 0), 3)
-                    elif len(valid_indices) > 1:
-                        # Phá
-                        for idx in valid_indices:
-                            cv2.circle(image, (cx, rows_y[idx]), radius + 2, (0, 165, 255), 3)
+                self._draw_fallback_col(image, thresh, cx, rows_y, radius, params)
                 
         return {"image": image}
 
+    def _draw_fallback_col(self, image, thresh, cx, rows_y, radius, params):
+        method = params.get("method", "inner_core")
+        if method == "projection":
+            strip_h = max(3, int(radius * 0.8))
+            min_pixels = strip_h * 2 * params.get("fill_threshold", 0.4)
+            max_pixels = 0
+            best_i = -1
+            for i, ry in enumerate(rows_y):
+                total = count_projection_peak(thresh, cx, ry, radius)
+                if total > max_pixels and total > min_pixels:
+                    max_pixels = total
+                    best_i = i
+            if best_i != -1:
+                ry = rows_y[best_i]
+                cv2.rectangle(image, (cx - radius, ry - strip_h), (cx + radius, ry + strip_h), (0, 255, 0), 2)
+        else:
+            inner_radius = max(3, int(radius * 0.70))
+            min_pixels = int(np.pi * (inner_radius ** 2) * params.get("fill_threshold", 0.15))
+            sbd_mask = create_bubble_mask(inner_radius)
+            totals = []
+            for i, ry in enumerate(rows_y):
+                total = count_bubble_pixels(thresh, cx, ry, inner_radius, sbd_mask)
+                totals.append(total)
+            
+            valid_totals = [t for t in totals if t > min_pixels]
+            if valid_totals:
+                max_total = max(valid_totals)
+                rel_threshold = max_total * 0.85
+                valid_indices = [i for i, t in enumerate(totals) if t >= rel_threshold and t > min_pixels]
+                
+                if len(valid_indices) == 1:
+                    cv2.circle(image, (cx, rows_y[valid_indices[0]]), radius + 2, (0, 255, 0), 3)
+                elif len(valid_indices) > 1:
+                    # Phá
+                    for idx in valid_indices:
+                        cv2.circle(image, (cx, rows_y[idx]), radius + 2, (0, 165, 255), 3)
+
 
 class BubbleGridDetectorNode:
-    def execute(self, thresh, blocks, start_q=1, **params):
+    def execute(self, thresh, blocks, start_q=1, image=None, **params):
         """Trích xuất bong bóng được tô. Output: mapping q_num -> list indices"""
         if not blocks: return {"detected_bubbles": {}}
         
+        if image is not None:
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+        else:
+            gray = None
+            
         results = {}
         median_bh = np.median([b[3] for b in blocks]) if blocks else 0
         _, _, first_bw, _ = blocks[0]
@@ -307,6 +389,32 @@ class BubbleGridDetectorNode:
                         best_j = bubbled_list[0]
                         dx, dy = get_bubble_centroid_vector(thresh, cols_x[best_j], current_ry, q_radius_ellipse)
                         global_dy += max(-2, min(2, dy))
+                    elif gray is not None and len(bubbled_list) > 1:
+                        # TIE-BREAKER: Kéo giãn tương phản cục bộ chỉ khi có TỪ 2 ĐÁP ÁN TRỞ LÊN
+                        # Tránh việc ép một câu trống (0 đáp án) thành có đáp án từ nhiễu giấy.
+                        x_start = max(0, int(min(cols_x) - q_radius_x * 2))
+                        x_end = min(gray.shape[1], int(max(cols_x) + q_radius_x * 2))
+                        y_start = max(0, int(current_ry - q_radius_y * 2))
+                        y_end = min(gray.shape[0], int(current_ry + q_radius_y * 2))
+                        
+                        roi = gray[y_start:y_end, x_start:x_end]
+                        if roi.size > 0:
+                            # Ép pixel sáng nhất thành trắng, tối nhất thành đen thui
+                            roi_norm = cv2.normalize(roi, None, 0, 255, cv2.NORM_MINMAX)
+                            # Otsu tự động tìm ngưỡng chuẩn nhất chỉ cho riêng 4 ô này
+                            _, roi_thresh = cv2.threshold(roi_norm, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+                            
+                            def _get_bubbled_roi():
+                                tots = [evaluate_bubble_xor(roi_thresh, cx - x_start, current_ry - y_start, q_radius_ellipse, q_mask) for cx in cols_x]
+                                val_tots = [t for t in tots if t < max_xor_allowed]
+                                if not val_tots: return [], tots
+                                min_xor = min(val_tots)
+                                tie_valid = [j for j, t in enumerate(tots) if t == min_xor]
+                                return tie_valid, tots
+                                
+                            tie_bubbled_list, _ = _get_bubbled_roi()
+                            if len(tie_bubbled_list) == 1:
+                                bubbled_list = tie_bubbled_list
                                 
                     results[str(q_num)] = bubbled_list
                 
@@ -328,8 +436,16 @@ class MCQScorerNode:
             if made and made in answers:
                 current_answers = answers[made]
             else:
-                error_msg = f"Lỗi: Không tìm thấy mã đề '{made}' trong đáp án."
-                current_answers = answers[next(iter(answers.keys()))] # Fallback to grade it anyway, but it has an error
+                error_msg = f"Lỗi: Không tìm thấy mã đề '{made}' trong đáp án. Đã dừng chấm điểm."
+                return {
+                    "score": 0,
+                    "total_q": 0,
+                    "results": results,
+                    "wrong_list": [],
+                    "missing_list": [],
+                    "ruined_list": [],
+                    "error": error_msg
+                }
                 
         for q_num, bubbled_list in detected_bubbles.items():
             chosen_answer = ",".join([options[b] for b in bubbled_list]) if bubbled_list else "Chưa chọn"

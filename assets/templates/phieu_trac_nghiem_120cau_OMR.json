@@ -11,7 +11,7 @@
     {
       "id": "thresh",
       "type": "AdaptiveThreshold",
-      "inputs": { "image": "@align.image" },
+      "inputs": { "image": "@align.image", "debug_dir": "@input.debug_dir", "debug_prefix": "@input.debug_prefix" },
       "params": { "block_size": 31, "C": 7, "sharpen": true, "remove_outlines": false }
     },
     {
@@ -41,10 +41,10 @@
     {
       "id": "read_sbd",
       "type": "SBDReader",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block" },
+      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block", "image": "@align.image", "debug_dir": "@input.debug_dir", "debug_prefix": "@input.debug_prefix" },
       "params": { 
           "rows": 10, "cols": 6,
-          "radius_ratio": 0.043, "fill_threshold": 0.15,
+          "radius_ratio": 0.043, "fill_threshold": 0.35,
           "row_start": 9.75, "row_step": 5.5, "row_total": 62.0,
           "col_start": 9.1, "col_step": 7.2, "col_total": 48.7
       }
@@ -52,7 +52,7 @@
     {
       "id": "vis_sbd",
       "type": "SBDVisualizer",
-      "inputs": { "image": "@align.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block" },
+      "inputs": { "image": "@align.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.sbd_block", "result": "@read_sbd.result" },
       "params": { 
           "rows": 10, "cols": 6,
           "radius_ratio": 0.043, "fill_threshold": 0.40,
@@ -63,7 +63,7 @@
     {
       "id": "read_made",
       "type": "SBDReader",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block" },
+      "inputs": { "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block", "image": "@align.image", "debug_dir": "@input.debug_dir", "debug_prefix": "@input.debug_prefix" },
       "params": { 
           "rows": 10, "cols": 3,
           "radius_ratio": 0.077, "fill_threshold": 0.40,
@@ -74,7 +74,7 @@
     {
       "id": "vis_made",
       "type": "SBDVisualizer",
-      "inputs": { "image": "@vis_sbd.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block" },
+      "inputs": { "image": "@vis_sbd.image", "thresh": "@thresh.bubble_thresh", "block": "@classify.made_block", "result": "@read_made.result" },
       "params": { 
           "rows": 10, "cols": 3,
           "radius_ratio": 0.077, "fill_threshold": 0.15,
@@ -85,7 +85,7 @@
     {
       "id": "detect_q",
       "type": "BubbleGridDetector",
-      "inputs": { "thresh": "@thresh.bubble_thresh", "blocks": "@classify.question_blocks" },
+      "inputs": { "thresh": "@thresh.bubble_thresh", "blocks": "@classify.question_blocks", "image": "@align.image" },
       "params": { 
           "questions_per_block": 30,
           "use_median_height": true,
